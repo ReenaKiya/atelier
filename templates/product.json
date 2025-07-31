@@ -108,7 +108,7 @@
                 "case": "none",
                 "color": "var(--color-foreground)",
                 "padding-block-start": 0,
-                "padding-block-end": 50,
+                "padding-block-end": 21,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
               },
