@@ -123,7 +123,7 @@
             {% raw %}  {% assign product = page.metafields.custom.single_product.value %} {{ product.title }} {% endraw %}
           </div>
           <div class="metafield">
-            {{page.metafields.custom.single_product.value.title }}
+           {% assign product = page.metafields.custom.single_product.value %} {{ product.title }}
           </div>
         </div>
       </div>
