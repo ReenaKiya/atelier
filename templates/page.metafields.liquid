@@ -85,10 +85,10 @@
             {{  page.metafields.custom.list_of_media.value }}
           </div>
           <div class="metafield input">
-            {% raw %} {% for image in page.metafields.custom.list_of_media %} {{ image }} {% endfor %}{% endraw %}
+            {% raw %} {% for image in page.metafields.custom.list_of_media.value %} {{ image }} {% endfor %}{% endraw %}
           </div>
           <div class="metafield">
-            {% for image in page.metafields.custom.list_of_media %} {{ image }} {% endfor %}
+            {% for image in page.metafields.custom.list_of_media.value %} {{ image }} {% endfor %}
           </div>
         </div>
       </div>
