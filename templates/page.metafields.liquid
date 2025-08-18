@@ -11,13 +11,13 @@
             {% raw %} page.metafields.custom.simple_text  {% endraw %}
           </div>
           <div class="metafield">
-            {{ page.metafields.custom.simple_text }}
+            {{page.metafields.custom.simple_text }}
           </div>
           <div class="metafield input">
             {% raw %} page.metafields.custom.simple_text.value  {% endraw %}
           </div>
           <div class="metafield">
-            {{ page.metafields.custom.simple_text.value }}
+            {{page.metafields.custom.simple_text.value }}
           </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
             {% raw %} page.metafields.custom.simple_text_list{% endraw %}
           </div>
           <div class="metafield">
-            {{ page.metafields.custom.simple_text_list }}
+            {{page.metafields.custom.simple_text_list }}
           </div>
           <div class="metafield input">
             {% raw %} 
@@ -53,19 +53,19 @@
             {% raw %}  page.metafields.custom.media {% endraw %}
           </div>
           <div class="metafield">
-            {{ page.metafields.custom.media }}
+            {{page.metafields.custom.media }}
           </div>
           <div class="metafield input">
             {% raw %}  page.metafields.custom.media.value {% endraw %}
           </div>
           <div class="metafield">
-            {{ page.metafields.custom.media.value }}
+            {{page.metafields.custom.media.value }}
           </div>
           <div class="metafield input">
             {% raw %}  page.metafields.custom.media.value | img_tag {% endraw %}
           </div>
           <div class="metafield">
-            {{  page.metafields.custom.media.value | img_tag }}
+            {{page.metafields.custom.media.value | img_tag }}
           </div>
         </div>
       </div>
@@ -144,7 +144,10 @@
           </div>
           <div class="metafield input">
             {% raw %} 
-             
+             {% assign product_list = page.metafields.custom.list_of_products.value %}
+              {% for product in product_list  %}
+               {{ product }}
+                {% endfor %}
             {% endraw %}
           </div>
           <div class="metafield">
