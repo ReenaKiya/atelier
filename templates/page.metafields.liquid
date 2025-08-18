@@ -62,10 +62,10 @@
             {{ page.metafields.custom.media.value }}
           </div>
           <div class="metafield input">
-            {% raw %}  {% endraw %}
+            {% raw %}  page.metafields.custom.media.value | img_url {% endraw %}
           </div>
           <div class="metafield">
-            {{ '' }}
+            {{  page.metafields.custom.media.value | img_url }}
           </div>
         </div>
       </div>
