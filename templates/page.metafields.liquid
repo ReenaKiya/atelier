@@ -146,14 +146,14 @@
             {% raw %} 
              {% assign product_list = page.metafields.custom.list_of_products.value %}
               {% for product in product_list  %}
-               {{ product }}
+               {{ product.title }}
                 {% endfor %}
             {% endraw %}
           </div>
           <div class="metafield">
             {% assign product_list = page.metafields.custom.list_of_products.value %}
               {% for product in product_list  %}
-               {{ product }}
+               {{ product.title }}
                 {% endfor %}
           </div>
           <div class="metafield input">
