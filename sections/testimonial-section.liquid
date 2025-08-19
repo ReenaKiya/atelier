@@ -1,47 +1,4 @@
-{% schema %}
-{
-  "name": "Testimonial Section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Section Heading",
-      "default": "What Our Customers Say"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "testimonial",
-      "name": "Testimonial",
-      "settings": [
-        {
-          "type": "text",
-          "id": "author",
-          "label": "Author Name",
-          "default": "John Doe"
-        },
-        {
-          "type": "textarea",
-          "id": "quote",
-          "label": "Testimonial Text",
-          "default": "This product is amazing! I would definitely recommend it to anyone."
-        },
-        {
-          "type": "image_picker",
-          "id": "author_image",
-          "label": "Author Image"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Testimonial Section",
-      "category": "Product"
-    }
-  ]
-}
-{% endschema %}
+
 
 <div class="testimonial-section page-width">
   {% if section.settings.heading != blank %}
@@ -96,3 +53,50 @@
   margin-bottom: 1rem;
 }
 </style>
+
+
+
+{% schema %}
+{
+  "name": "Testimonial Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "What Our Customers Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name",
+          "default": "John Doe"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Testimonial Text",
+          "default": "This product is amazing! I would definitely recommend it to anyone."
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Section",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
