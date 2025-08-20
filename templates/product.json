@@ -669,6 +669,28 @@
     },
     "testimonial_section_bGaUMy": {
       "type": "testimonial-section",
+      "blocks": {
+        "testimonial_iEF7CC": {
+          "type": "testimonial",
+          "settings": {
+            "author": "John Doe",
+            "quote": "This product is amazing! I would definitely recommend it to anyone.",
+            "author_image": "shopify://shop_images/1.jpg"
+          }
+        },
+        "testimonial_tKaC4j": {
+          "type": "testimonial",
+          "settings": {
+            "author": "John Doe",
+            "quote": "This product is amazing! I would definitely recommend it to anyone.",
+            "author_image": "shopify://shop_images/ser_5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_iEF7CC",
+        "testimonial_tKaC4j"
+      ],
       "name": "Testimonial Section",
       "settings": {
         "heading": "What Our Customers Say"
