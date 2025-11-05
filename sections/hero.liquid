@@ -465,12 +465,13 @@
 }
 
 .hero__slideshow > *:nth-child(1) {
-  animation: heroSlideShow 12s infinite;
+  animation: heroSlideShow {{ section.settings.slideshow_speed | times: 2 }}s infinite;
 }
 
 .hero__slideshow > *:nth-child(2) {
-  animation: heroSlideShow 12s infinite 6s;
+  animation: heroSlideShow {{ section.settings.slideshow_speed | times: 2 }}s infinite {{ section.settings.slideshow_speed }}s;
 }
+
 
 @keyframes heroSlideShow {
   0% { opacity: 1; }
