@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>The Elements <br/>of Style</h1>",
+            "text": "<p>NEW IN</p><h2><strong>WHIPPED SOAP</strong></h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
