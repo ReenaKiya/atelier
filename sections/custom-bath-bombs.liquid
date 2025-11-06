@@ -1,0 +1,35 @@
+{% schema %}
+{
+  "name": "Bath Bombs Info",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Bath Bombs, Skincare & Home Treats"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "At Bella Forever, we bring you the best in self-care—from soothing bath bombs to nourishing skincare and cosy home essentials. Carefully selected for quality, safety, and feel-good results, our products are designed to help you relax, refresh, and treat yourself or someone special. Discover the perfect way to turn everyday routines into moments of joy."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bath Bombs Info Section"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="section-spacing">
+  <div class="container">
+    <div class="text-center">
+      <h2 style="font-weight: bold; font-size: 26px;">
+        {{ section.settings.heading }}
+      </h2>
+      <p>{{ section.settings.description }}</p>
+    </div>
+  </div>
+</section>
