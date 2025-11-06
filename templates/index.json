@@ -203,7 +203,7 @@
             "background_color": "#ffffff",
             "heading_color": "#000000",
             "paragraph_color": "#000000",
-            "max_width": 800,
+            "max_width": 1200,
             "padding_top": 40,
             "padding_bottom": 40,
             "padding_horizontal": 20
