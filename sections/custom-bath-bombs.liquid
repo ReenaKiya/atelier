@@ -11,7 +11,9 @@
       <h2 style="font-weight: bold; font-size: 26px;">
         {{ section.settings.heading }}
       </h2>
-      <p>{{ section.settings.description }}</p>
+      <p style="font-size: {{ section.settings.description_font_size }}px;">
+        {{ section.settings.description }}
+      </p>
     </div>
   </div>
 </section>
@@ -57,6 +59,16 @@
       "step": 10,
       "unit": "px",
       "default": 60
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Description font size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     }
   ],
   "presets": [
