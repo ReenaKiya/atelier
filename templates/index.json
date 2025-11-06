@@ -121,10 +121,37 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_8NVQTX": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>At Bella Forever, we bring you the best in self-care—from soothing bath bombs to nourishing skincare and cosy home essentials. Carefully selected for quality, safety, and feel-good results, our products are designed to help you relax, refresh, and treat yourself or someone special. Discover the perfect way to turn everyday routines into moments of joy.<br/><br/></p>",
+            "width": "fit-content",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "text_h33Pmj"
+        "text_h33Pmj",
+        "text_8NVQTX"
       ],
       "name": "t:names.custom_section",
       "settings": {
