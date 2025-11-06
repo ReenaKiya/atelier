@@ -98,7 +98,11 @@
       "name": "Bath Bombs Info Section",
       "settings": {
         "heading": "Bath Bombs, Skincare & Home Treats",
-        "description": "At Bella Forever, we bring you the best in self-care—from soothing bath bombs to nourishing skincare and cosy home essentials. Carefully selected for quality, safety, and feel-good results, our products are designed to help you relax, refresh, and treat yourself or someone special. Discover the perfect way to turn everyday routines into moments of joy."
+        "description": "At Bella Forever, we bring you the best in self-care—from soothing bath bombs to nourishing skincare and cosy home essentials. Carefully selected for quality, safety, and feel-good results, our products are designed to help you relax, refresh, and treat yourself or someone special. Discover the perfect way to turn everyday routines into moments of joy.",
+        "bg_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "description_font_size": 20
       }
     },
     "hero_KyA47L": {
