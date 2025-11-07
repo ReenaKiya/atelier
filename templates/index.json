@@ -107,8 +107,15 @@
     },
     "as_seen_in_Fd8yFr": {
       "type": "as-seen-in",
+      "custom_css": [
+        "h2{font-family: Poppins, sans-serif}"
+      ],
       "name": "As Seen In",
-      "settings": {}
+      "settings": {
+        "heading": "As seen in",
+        "h2_font_size": 20,
+        "h2_font_weight": "700"
+      }
     }
   },
   "order": [
