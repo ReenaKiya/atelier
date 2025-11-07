@@ -16,6 +16,13 @@
         --logo-list-items-per-row: 4;
       }
     }
+
+    /* Dynamic H2 styling from schema settings */
+    .shopify-section--logo-list .h2 {
+      font-size: {{ section.settings.h2_font_size }}px;
+      font-weight: {{ section.settings.h2_font_weight }};
+      margin-bottom: 20px;
+    }
   </style>
 
   <div class="section-spacing">
@@ -23,8 +30,8 @@
       <div class="section-stack">
         <div class="section-header justify-self-center text-center">
           <div class="prose">
-            <h2 class="h2" style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">
-              As seen in
+            <h2 class="h2">
+              {{ section.settings.heading }}
             </h2>
           </div>
         </div>
@@ -36,4 +43,90 @@
               width="300"
               height="90"
               loading="lazy"
-              s
+              style="--image-max-width: 250px"
+              class="constrained-image"
+            >
+          </div>
+
+          <div class="logo-list__item">
+            <img
+              src="//bellaforever.co.uk/cdn/shop/files/bella_forever_in_plant_based.jpg?v=1701455340&width=300"
+              alt="Bella Forever in Plant Based"
+              width="300"
+              height="90"
+              loading="lazy"
+              style="--image-max-width: 250px"
+              class="constrained-image"
+            >
+          </div>
+
+          <div class="logo-list__item">
+            <img
+              src="//bellaforever.co.uk/cdn/shop/files/bella_forever_pick_me_up_7e36a41a-13d3-4d3e-bd06-0e85a45dffb6.png?v=1734791060&width=300"
+              alt="Bella Forever in Pick Me Up"
+              width="300"
+              height="90"
+              loading="lazy"
+              style="--image-max-width: 250px"
+              class="constrained-image"
+            >
+          </div>
+
+          <div class="logo-list__item">
+            <img
+              src="//bellaforever.co.uk/cdn/shop/files/bella_forever_in_vegan_life.jpg?v=1701455358&width=300"
+              alt="Bella Forever in Vegan Life"
+              width="300"
+              height="90"
+              loading="lazy"
+              style="--image-max-width: 250px"
+              class="constrained-image"
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "As Seen In",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As seen in"
+    },
+    {
+      "type": "range",
+      "id": "h2_font_size",
+      "label": "Heading font size",
+      "min": 12,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "h2_font_weight",
+      "label": "Heading font weight",
+      "default": "700",
+      "options": [
+        { "value": "400", "label": "Normal (400)" },
+        { "value": "500", "label": "Medium (500)" },
+        { "value": "600", "label": "Semi Bold (600)" },
+        { "value": "700", "label": "Bold (700)" },
+        { "value": "800", "label": "Extra Bold (800)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "As Seen In"
+    }
+  ]
+}
+{% endschema %}
