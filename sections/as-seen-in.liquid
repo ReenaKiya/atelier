@@ -1,33 +1,37 @@
 <section class="shopify-section shopify-section--logo-list">
- <style>
-  .logo-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
-    padding: 50px 70px; /* 👈 Added padding: top-bottom 50px, left-right 70px */
-  }
-
-  @media screen and (min-width: 700px) {
-    .logo-list {
-      grid-template-columns: repeat(3, 1fr);
+  <style>
+    .container.container--xl {
+      max-width: 1168px; /* 👈 Restricts width */
+      margin: 0 auto; /* 👈 Centers the container */
     }
-  }
 
-  @media screen and (min-width: 1000px) {
     .logo-list {
-      grid-template-columns: repeat(4, 1fr);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      padding: 50px 70px; /* top-bottom 50px, left-right 70px */
     }
-  }
 
-  .logo-list__item img {
-    max-width: 250px;
-    height: auto;
-    display: block;
-  }
-</style>
+    @media screen and (min-width: 700px) {
+      .logo-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
+    @media screen and (min-width: 1000px) {
+      .logo-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .logo-list__item img {
+      max-width: 250px;
+      height: auto;
+      display: block;
+    }
+  </style>
 
   <div class="section-spacing">
     <div class="container container--xl">
