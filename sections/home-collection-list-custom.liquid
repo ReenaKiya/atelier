@@ -1,28 +1,112 @@
-<!-- home-collection-list-custom.liquid -->
-<section id="shopify-section-template--15724424528078__collection_list_8VnDgC" class="shopify-section shopify-section--collection-list">
+<section class="shopify-section shopify-section--logo-list">
   <style>
-    /* your full CSS here */
+    .logo-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      justify-items: center;
+      align-items: center;
+      padding: 50px 70px;
+    }
+
+    @media screen and (min-width: 700px) {
+      .logo-list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 1000px) {
+      .logo-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .logo-list__item img {
+      max-width: 250px;
+      height: auto;
+      display: block;
+    }
+
+    /* Added container max-width + center alignment */
+    .container {
+      max-width: 1168px;
+      margin: 0 auto;
+    }
   </style>
-  <div class="section-spacing section-spacing--tight ">
-    <div class="container">
+
+  <div class="section-spacing">
+    <div class="container container--xl">
       <div class="section-stack">
-        <!-- your full collection list HTML here -->
+        <div class="section-header justify-self-center text-center">
+          <div class="prose">
+            <h2
+              class="h2"
+              style="font-size: 20px; font-weight: 700; letter-spacing: 0.18em; margin-bottom: 20px;"
+            >
+              As seen in
+            </h2>
+          </div>
+        </div>
+
+        <!-- ✅ Your collection list is now inserted here -->
+        <div class="collection-list wrap">
+          <a
+            href="/collections/essential-oil-bath-bombs"
+            class="collection-card is-selected group"
+          >
+            <div
+              class="content-over-media content-over-media--auto"
+              style="--content-over-media-overlay: 0 0 0 / 0.3;"
+            >
+              <img
+                src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
+                alt="Essential Oil Bath Bombs - Bella Forever "
+                width="3024"
+                height="3024"
+                loading="lazy"
+                class="zoom-image group-hover:zoom"
+                draggable="false"
+              />
+              <div
+                class="collection-card__content prose prose--tight place-self-end-start text-start"
+                style="--text-color: 255 255 255; color: rgb(var(--text-color)); --border-color: var(--text-color) / 0.15;"
+              >
+                <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
+                <button type="button" class="button">SHOP NOW</button>
+              </div>
+            </div>
+          </a>
+
+          <!-- ✨ Add the rest of your collection cards here (same structure as above) -->
+          <!-- Example: -->
+          <a href="/collections/bath-bombs-for-kids" class="collection-card group">
+            <div
+              class="content-over-media content-over-media--auto"
+              style="--content-over-media-overlay: 0 0 0 / 0.3;"
+            >
+              <img
+                src="//bellaforever.co.uk/cdn/shop/files/piggy-bath-bomb.png?v=1759236075&width=2000"
+                alt="piggy-bath-bomb"
+                width="2000"
+                height="2000"
+                loading="lazy"
+                class="zoom-image group-hover:zoom"
+                draggable="false"
+              />
+              <div
+                class="collection-card__content prose prose--tight place-self-end-start text-start"
+                style="--text-color: 255 255 255; color: rgb(var(--text-color)); --border-color: var(--text-color) / 0.15;"
+              >
+                <p class="h3">BATH BOMBS FOR KIDS</p>
+                <button type="button" class="button">SHOP NOW</button>
+              </div>
+            </div>
+          </a>
+
+          <!-- Continue adding remaining collections here... -->
+        </div>
+        <!-- ✅ End of collection list -->
       </div>
     </div>
   </div>
 </section>
-
-
-
-{% schema %}
-{
-  "name": "Custom Collection List",
-  "settings": [],
-  "presets": [
-    {
-      "name": "Custom Collection List Section"
-    }
-  ]
-}
-{% endschema %}
-
