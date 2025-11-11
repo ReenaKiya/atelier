@@ -32,97 +32,21 @@
       max-width: 1184px;
       margin: 0 auto;
     }
-  </style>
 
-  <div class="section-spacing">
-    <div class="container container--xl">
-      <div class="section-stack">
-        <div class="section-header justify-self-center text-center">
-          <div class="prose">
-            <h2
-              class="h2"
-              style="font-size: 20px; font-weight: 700; letter-spacing: 0.18em; margin-bottom: 20px;"
-            >
-              As seen in
-            </h2>
-          </div>
-        </div>
-
-        <!-- ✅ Collection list starts -->
-        <div class="collection-list wrap">
-          <a
-            href="/collections/essential-oil-bath-bombs"
-            class="collection-card is-selected group"
-          >
-            <div
-              class="content-over-media content-over-media--auto"
-              style="--content-over-media-overlay: 0 0 0 / 0.3;"
-            >
-              <img
-                src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-                alt="Essential Oil Bath Bombs - Bella Forever"
-                width="3024"
-                height="3024"
-                loading="lazy"
-                class="zoom-image group-hover:zoom"
-                draggable="false"
-              />
-              <div
-                class="collection-card__content prose prose--tight place-self-end-start text-start"
-                style="--text-color: 255 255 255; color: rgb(var(--text-color)); --border-color: var(--text-color) / 0.15;"
-              >
-                <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-                <button type="button" class="button">SHOP NOW</button>
-              </div>
-            </div>
-          </a>
-
-          <!-- (Repeat collection cards as before) -->
-
-          <a href="/collections/bath-bombs-for-kids" class="collection-card group">
-            <div
-              class="content-over-media content-over-media--auto"
-              style="--content-over-media-overlay: 0 0 0 / 0.3;"
-            >
-              <img
-                src="//bellaforever.co.uk/cdn/shop/files/piggy-bath-bomb.png?v=1759236075&width=2000"
-                alt="Piggy Bath Bomb"
-                width="2000"
-                height="2000"
-                loading="lazy"
-                class="zoom-image group-hover:zoom"
-                draggable="false"
-              />
-              <div
-                class="collection-card__content prose prose--tight place-self-end-start text-start"
-                style="--text-color: 255 255 255; color: rgb(var(--text-color)); --border-color: var(--text-color) / 0.15;"
-              >
-                <p class="h3">BATH BOMBS FOR KIDS</p>
-                <button type="button" class="button">SHOP NOW</button>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-{% schema %}
-{
-  "name": "As Seen In Section",
-  "settings": [
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading Text",
-      "default": "As seen in"
+    /* ✅ Make section-stack a grid layout */
+    .section-stack {
+      display: grid;
+      gap: 40px;
     }
-  ],
-  "presets": [
-    {
-      "name": "As Seen In Section"
+
+    /* ✅ Make collection-list.wrap a flex layout */
+    .collection-list.wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: stretch;
     }
-  ]
-}
-{% endschema %}
+
+    .collection-card {
+      flex: 1 1 calc
