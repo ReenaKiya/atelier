@@ -27,8 +27,15 @@
 
     .image-overlay img {
       display: block;
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
+    
+    }
+
+    .zoom-image group-hover:zoom{
+transform-origin: center;
+    transition: scale 8s 
+cubic-bezier(.25, .46, .45, .94);
     }
 
     /* ✅ Center text over image */
