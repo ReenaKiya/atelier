@@ -133,11 +133,66 @@
             "button_text": "SHOP NOW",
             "link": ""
           }
+        },
+        "image_block_9pPXaK": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/w3.png",
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "image_block_8m7QQL": {
+          "type": "image_block",
+          "settings": {
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "image_block_NATQbC": {
+          "type": "image_block",
+          "settings": {
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "image_block_cLcR3n": {
+          "type": "image_block",
+          "settings": {
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "image_block_caaaRN": {
+          "type": "image_block",
+          "settings": {
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        },
+        "image_block_CfczwT": {
+          "type": "image_block",
+          "settings": {
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "image_block_MDWair",
-        "image_block_PFDE8E"
+        "image_block_PFDE8E",
+        "image_block_9pPXaK",
+        "image_block_8m7QQL",
+        "image_block_NATQbC",
+        "image_block_cLcR3n",
+        "image_block_caaaRN",
+        "image_block_CfczwT"
       ],
       "name": "As Seen In Section",
       "settings": {
