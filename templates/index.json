@@ -115,6 +115,20 @@
     },
     "home_collection_list_custom_bUtjkC": {
       "type": "home-collection-list-custom",
+      "blocks": {
+        "image_block_MDWair": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/img-3a.jpg",
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_block_MDWair"
+      ],
       "name": "As Seen In Section",
       "settings": {
         "heading": "As seen in"
