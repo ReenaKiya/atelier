@@ -40,10 +40,16 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      color: white;
+     
+      z-index: 2; /* make sure it’s above the overlay */
+    }
+    .collection-card__content p {
+       color: white;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      z-index: 2; /* make sure it’s above the overlay */
+      font-size: 15px;
+    font-weight: 600;
+    font-family: Poppins, sans-serif;
     }
 
     /* ✅ Button styling */
