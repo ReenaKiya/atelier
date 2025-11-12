@@ -173,6 +173,7 @@
         "image_block_caaaRN": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/1617070027170.jpg",
             "title": "ESSENTIAL OILS BATH BOMBS",
             "button_text": "SHOP NOW",
             "link": ""
@@ -181,6 +182,7 @@
         "image_block_CfczwT": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/1617070027170.jpg",
             "title": "ESSENTIAL OILS BATH BOMBS",
             "button_text": "SHOP NOW",
             "link": ""
