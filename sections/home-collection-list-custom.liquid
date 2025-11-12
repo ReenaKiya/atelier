@@ -1,51 +1,69 @@
 <section class="shopify-section shopify-section--logo-list">
   <style>
+    /* ✅ Overlay base setup */
+    .content-over-media {
+      position: relative;
+      overflow: hidden;
+    }
 
-.image-overlay {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
+    /* ✅ Gradient or color overlay over the image */
+    .content-over-media::before {
+      content: "";
+      background: var(--content-over-media-gradient-overlay, rgb(var(--content-over-media-overlay, 0 0 0 / 0.3)));
+      border-radius: inherit;
+      z-index: 1;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
 
-.image-overlay img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+    /* ✅ Image overlay wrapper */
+    .image-overlay {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+    }
 
-/* ✅ Center the content over the image */
-.image-overlay .collection-card__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  z-index: 2;
-}
+    .image-overlay img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-/* ✅ Button styling */
-.image-overlay .button {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 10px;
-  transition: all 0.3s ease;
-}
+    /* ✅ Center text over image */
+    .image-overlay .collection-card__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      z-index: 2; /* make sure it’s above the overlay */
+    }
 
-/* ✅ Optional hover effect */
-.image-overlay .button:hover {
-  background-color: black;
-  color: white;
-}
+    /* ✅ Button styling */
+    .image-overlay .button {
+      background-color: white;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 10px;
+      transition: all 0.3s ease;
+    }
 
+    .image-overlay .button:hover {
+      background-color: black;
+      color: white;
+    }
 
-
+    /* ✅ Layout styling below */
 
     .logo-list {
       display: grid;
@@ -74,19 +92,16 @@
       display: block;
     }
 
-    /* ✅ Updated container max-width + center alignment */
     .container {
       max-width: 1184px;
       margin: 0 auto;
     }
 
-    /* ✅ Make section-stack a grid layout */
     .section-stack {
       display: grid;
       gap: 40px;
     }
 
-    /* ✅ Make collection-list.wrap a flex layout */
     .collection-list.wrap {
       display: flex;
       flex-wrap: wrap;
@@ -136,188 +151,31 @@
 
         <!-- ✅ Collection list starts -->
         <div class="collection-list wrap">
-        <a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>  
-
-         
-        
-
-         
-         
-
-         
-         
-
-          
-
-
-<a
-  href="/collections/essential-oil-bath-bombs"
-  class="collection-card is-selected group"
->
-  <div class="content-over-media image-overlay">
-    <img
-      src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
-      alt="Essential Oil Bath Bombs - Bella Forever"
-      width="3024"
-      height="3024"
-      loading="lazy"
-      class="zoom-image group-hover:zoom"
-      draggable="false"
-    />
-
-    <!-- ✅ Centered text overlay -->
-    <div
-      class="collection-card__content prose prose--tight text-center"
-    >
-      <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
-      <button type="button" class="button">SHOP NOW</button>
-    </div>
-  </div>
-</a>
-
+          <a
+            href="/collections/essential-oil-bath-bombs"
+            class="collection-card is-selected group"
+          >
+            <div
+              class="content-over-media image-overlay"
+              style="--content-over-media-overlay: 0 0 0 / 0.4;"
+            >
+              <img
+                src="//bellaforever.co.uk/cdn/shop/collections/essential-oil-bath-bombs-7270228.png?v=1762198842&width=3024"
+                alt="Essential Oil Bath Bombs - Bella Forever"
+                width="3024"
+                height="3024"
+                loading="lazy"
+                class="zoom-image group-hover:zoom"
+                draggable="false"
+              />
+              <div
+                class="collection-card__content prose prose--tight text-center"
+              >
+                <p class="h3">ESSENTIAL OILS BATH BOMBS</p>
+                <button type="button" class="button">SHOP NOW</button>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
