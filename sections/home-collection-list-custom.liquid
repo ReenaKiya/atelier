@@ -1,5 +1,39 @@
 <section class="shopify-section shopify-section--logo-list">
   <style>
+
+.image-overlay {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.image-overlay img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-overlay .collection-card__content {
+  position: absolute;
+  bottom: 20px; /* distance from bottom */
+  left: 20px; /* distance from left */
+  z-index: 2;
+  color: white;
+}
+
+.image-overlay .button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+
+
+
     .logo-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
