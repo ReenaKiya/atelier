@@ -155,6 +155,7 @@
         "image_block_NATQbC": {
           "type": "image_block",
           "settings": {
+            "image": "shopify://shop_images/5766638053525.jpg",
             "title": "ESSENTIAL OILS BATH BOMBS",
             "button_text": "SHOP NOW",
             "link": ""
