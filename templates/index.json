@@ -170,15 +170,6 @@
             "link": ""
           }
         },
-        "image_block_caaaRN": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/1617070027170.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
         "image_block_CfczwT": {
           "type": "image_block",
           "settings": {
@@ -196,7 +187,6 @@
         "image_block_8m7QQL",
         "image_block_NATQbC",
         "image_block_cLcR3n",
-        "image_block_caaaRN",
         "image_block_CfczwT"
       ],
       "name": "As Seen In Section",
@@ -204,112 +194,55 @@
         "heading": "As seen in"
       }
     },
-    "176302740712049b71": {
+    "1763029342ba147607": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_e236871_EM96Uf": {
-          "type": "ai_gen_block_e236871",
+        "ai_gen_block_e5d1dc9_7dTreV": {
+          "type": "ai_gen_block_e5d1dc9",
           "settings": {
-            "heading": "Featured Products",
-            "heading_alignment": "center",
             "collection": "baby-cloths",
             "products_to_show": 12,
-            "card_width": 280,
-            "card_gap": 20,
-            "card_border_radius": 8,
+            "heading": "Featured Products",
+            "subheading": "Discover our latest collection",
+            "heading_alignment": "center",
+            "heading_size": 36,
+            "subheading_size": 16,
+            "heading_color": "#000000",
+            "subheading_color": "#666666",
+            "card_spacing": 20,
+            "card_border_radius": 12,
             "card_background": "#ffffff",
-            "plus_icon_size": 40,
-            "plus_icon_bg": "#000000",
-            "plus_icon_color": "#ffffff",
+            "card_shadow_horizontal": 0,
+            "card_shadow_vertical": 4,
+            "card_shadow_blur": 20,
+            "card_shadow_opacity": 10,
             "product_title_size": 16,
             "product_title_color": "#000000",
-            "price_size": 16,
+            "price_size": 18,
             "price_color": "#000000",
+            "compare_price_color": "#999999",
             "show_rating": true,
             "default_rating": 5,
-            "show_rating_count": true,
-            "default_rating_count": 120,
+            "default_review_count": 20,
             "star_size": 16,
-            "star_color": "#FFD700",
+            "star_color": "#FFB800",
             "star_empty_color": "#E0E0E0",
-            "rating_text_color": "#666666",
+            "review_text_color": "#666666",
             "show_navigation": true,
-            "nav_button_bg": "#ffffff",
-            "nav_button_hover_bg": "#f5f5f5",
-            "nav_button_border": "#e6e6e6",
+            "nav_button_background": "#ffffff",
+            "nav_button_border": "#e0e0e0",
             "nav_button_color": "#000000",
-            "heading_size": 32,
-            "heading_color": "#000000",
-            "background_color": "#ffffff",
-            "section_padding": 50
+            "nav_button_hover_background": "#000000",
+            "nav_button_hover_color": "#ffffff",
+            "section_padding_top": 60,
+            "section_padding_bottom": 60,
+            "background_color": "#f9f9f9"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_e236871_EM96Uf"
-      ],
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "color_scheme": "",
-        "background_media": "none",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
-    },
-    "1763027680ff297490": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_b603543_DBHU3U": {
-          "type": "ai_gen_block_b603543",
-          "settings": {
-            "collection": "frontpage",
-            "heading": "Featured Products",
-            "heading_alignment": "left",
-            "heading_size": 32,
-            "heading_color": "#000000",
-            "card_width": 280,
-            "product_gap": 20,
-            "card_border_radius": 8,
-            "card_background": "#ffffff",
-            "product_title_size": 16,
-            "product_title_color": "#000000",
-            "product_price_size": 16,
-            "product_price_color": "#000000",
-            "show_ratings": true,
-            "default_rating": 5,
-            "star_color": "#FFD700",
-            "plus_icon_bg": "#000000",
-            "plus_icon_color": "#ffffff",
-            "section_padding": 40,
-            "background_color": "#f9f9f9",
-            "scrollbar_color": "#cccccc"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_b603543_DBHU3U"
+        "ai_gen_block_e5d1dc9_7dTreV"
       ],
       "settings": {
         "content_direction": "column",
@@ -345,7 +278,6 @@
     "custom_bath_bombs_LtEWEt",
     "as_seen_in_Fd8yFr",
     "home_collection_list_custom_bUtjkC",
-    "176302740712049b71",
-    "1763027680ff297490"
+    "1763029342ba147607"
   ]
 }
