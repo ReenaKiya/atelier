@@ -178,6 +178,15 @@
             "button_text": "SHOP NOW",
             "link": ""
           }
+        },
+        "image_block_E3HpFx": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/1617070027170.jpg",
+            "title": "ESSENTIAL OILS BATH BOMBS",
+            "button_text": "SHOP NOW",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -187,7 +196,8 @@
         "image_block_8m7QQL",
         "image_block_NATQbC",
         "image_block_cLcR3n",
-        "image_block_CfczwT"
+        "image_block_CfczwT",
+        "image_block_E3HpFx"
       ],
       "name": "As Seen In Section",
       "settings": {
