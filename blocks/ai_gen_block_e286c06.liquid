@@ -318,31 +318,11 @@
 
                 <div class="ai-product-info-{{ ai_gen_id }}">
                   <h3 class="ai-product-title-{{ ai_gen_id }}">{{ product.title }}</h3>
+<!-- Judge.me Star Rating Widget -->
+<div class="jdgm-widget jdgm-preview-badge" data-id="{{ product.id }}">
+  {{ product.metafields.judgeme.badge }}
+</div>
 
-                  {% if block.settings.show_rating %}
-                    <div class="ai-product-rating-{{ ai_gen_id }}">
-                      <div class="ai-product-stars-{{ ai_gen_id }}">
-                        {% for i in (1..5) %}
-                          {% if i <= block.settings.default_rating %}
-                            <span class="ai-product-star-{{ ai_gen_id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                              </svg>
-                            </span>
-                          {% else %}
-                            <span class="ai-product-star-{{ ai_gen_id }} ai-product-star-empty-{{ ai_gen_id }}">
-                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                              </svg>
-                            </span>
-                          {% endif %}
-                        {% endfor %}
-                      </div>
-                      {% if block.settings.show_review_count %}
-                        <span class="ai-product-rating-count-{{ ai_gen_id }}">({{ block.settings.default_review_count }})</span>
-                      {% endif %}
-                    </div>
-                  {% endif %}
 
                   <div class="ai-product-price-{{ ai_gen_id }}">
                     {{ product.price | money }}
