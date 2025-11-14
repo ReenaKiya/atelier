@@ -237,10 +237,10 @@
             "show_rating": true,
             "default_rating": 5,
             "show_review_count": true,
-            "default_review_count": 25,
+            "default_review_count": 240,
             "star_color": "#e40ca7",
             "star_empty_color": "#e6e6e6",
-            "rating_text_color": "#e40ca7",
+            "rating_text_color": "#000000",
             "show_navigation": true,
             "nav_button_background": "#ffffff",
             "nav_button_border": "#000000",
@@ -260,9 +260,8 @@
         "ai_gen_block_e286c06_q8xYTf"
       ],
       "custom_css": [
-        "/* Remove border from carousel image cards */.carousel-card,.product-card,.card {border: none !important;}",
-        " /* Make review stars and numbers pink */.product-card__reviews,.review-stars,.review-count,.star-rating,.reviews-rating {color: #ff69b4 !important;}",
-        ".review-stars svg,.star-rating svg {fill: #ff69b4 !important;}"
+        "/* Product title letter spacing */.product-card__title {letter-spacing: 0.18em;}",
+        "/* Reviews text styling */.rating-text {margin-left: 4px; font-size: 0.9em;}"
       ],
       "settings": {
         "content_direction": "column",
