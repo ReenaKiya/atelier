@@ -277,6 +277,38 @@
       height: 16px;
     }
   }
+
+
+
+  /* Judge.me star rating styling for carousel */
+.jdgm-widget {
+  margin: 10px 0;
+  text-align: center;
+  min-height: 20px;
+}
+
+.jdgm-preview-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.jdgm-preview-badge .jdgm-star {
+  font-size: 16px;
+}
+
+.jdgm-preview-badge .jdgm-rev-widg__summary-text {
+  font-size: 13px;
+  color: #666;
+  margin-left: 5px;
+}
+
+/* Ensure stars are visible on your premium design */
+.carousel-product-card .jdgm-widget {
+  padding: 8px 0;
+}
+
 {% endstyle %}
 
 <product-carousel-{{ ai_gen_id }} class="ai-product-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
