@@ -102,46 +102,67 @@
     "
   >
     {{ children }}
-{% if product.metafields.reviews.rating.value %}
-  {% assign rating = product.metafields.reviews.rating.value %}
-  {% assign review_count = product.metafields.reviews.count.value | default: 0 %}
+    {%- comment -%}
+  Show stars, rating number, and review count.
+  Requires product.metafields.reviews.rating (decimal) and optionally
+  product.metafields.reviews.count (integer).
+{%- endcomment -%}
 
-  <div class="product-rating" style="margin-top:6px; display:flex; align-items:center; gap:4px; font-size:14px;">
-    
-    
-    {% assign full_stars = rating | floor %}
-    {% assign half_star = rating | modulo: 1 %}
-    {% if half_star >= 0.25 and half_star <= 0.75 %}
-      {% assign half_star = 1 %}
-    {% else %}
-      {% assign half_star = 0 %}
-    {% endif %}
-    {% assign empty_stars = 5 | minus: full_stars | minus: half_star %}
+{% if product and product.metafields.reviews and product.metafields.reviews.rating.value != blank %}
+  {%- comment -%} Coerce to number {% endcomment -%}
+  {% assign rating = product.metafields.reviews.rating.value | times: 1 %} 
+  {% assign review_count = product.metafields.reviews.count.value | default: 0 | times: 1 %}
 
-    <span class="stars">
+  {%- comment -%} Compute full / half / empty stars robustly {% endcomment -%}
+  {% assign full_stars = rating | floor %}
+  {% assign decimal = rating | minus: full_stars %}
+  {% if decimal >= 0.75 %}
+    {% assign full_stars = full_stars | plus: 1 %}
+    {% assign half_star = 0 %}
+  {% elsif decimal >= 0.25 %}
+    {% assign half_star = 1 %}
+  {% else %}
+    {% assign half_star = 0 %}
+  {% endif %}
+  {% assign empty_stars = 5 | minus: full_stars | minus: half_star %}
+
+  <div class="product-rating" style="margin-top:6px; display:flex; align-items:center; gap:8px; font-size:14px;">
+    <span class="stars" aria-hidden="true" style="display:inline-flex; gap:2px; align-items:center;">
+      {%- comment -%} Full star SVG {% endcomment -%}
       {% for i in (1..full_stars) %}
-        ★
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 .587l3.668 7.431L23.5 9.75l-5.75 5.602L19.334 24 12 19.897 4.666 24l1.584-8.648L.5 9.75l7.832-1.732z" />
+        </svg>
       {% endfor %}
 
+      {%- comment -%} Half star SVG {% endcomment -%}
       {% if half_star == 1 %}
-        ☆   {# optional: use "⯨" or a half-star svg if you want #}
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="half-grad-{{ block.id }}-{{ product.id }}" x1="0" x2="1">
+              <stop offset="50%" stop-color="currentColor" />
+              <stop offset="50%" stop-color="transparent" />
+            </linearGradient>
+          </defs>
+          <path d="M12 .587l3.668 7.431L23.5 9.75l-5.75 5.602L19.334 24 12 19.897 4.666 24l1.584-8.648L.5 9.75l7.832-1.732z" fill="url(#half-grad-{{ block.id }}-{{ product.id }})" stroke="currentColor" />
+        </svg>
       {% endif %}
 
+      {%- comment -%} Empty star SVG {% endcomment -%}
       {% for i in (1..empty_stars) %}
-        ☆
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 .587l3.668 7.431L23.5 9.75l-5.75 5.602L19.334 24 12 19.897 4.666 24l1.584-8.648L.5 9.75l7.832-1.732z" fill="none" stroke="currentColor" />
+        </svg>
       {% endfor %}
     </span>
 
-    
-    <span class="rating-number">({{ rating }})</span>
+    <span class="rating-number" aria-label="rating">({{ rating }})</span>
 
-    
     {% if review_count > 0 %}
-      <span class="rating-text">{{ review_count }} reviews</span>
+      <span class="rating-text"> {{ review_count }} reviews</span>
     {% endif %}
   </div>
 {% endif %}
-
 
     {% if block.settings.show_product_button %}
     <a
