@@ -212,7 +212,7 @@
             "card_width_mobile": 220,
             "card_gap": 20,
             "card_background": "#ffffff",
-            "card_border_width": 1,
+            "card_border_width": 0,
             "card_border_color": "#e6e6e6",
             "hover_lift": 8,
             "hover_shadow_size": 10,
@@ -251,7 +251,7 @@
       ],
       "custom_css": [
         "/* Remove border from carousel image cards */.carousel-card,.product-card,.card {border: none !important;}",
-        "/* Make review stars and numbers pink */.product-card__reviews,.review-stars,.review-count,.star-rating,.reviews-rating {color: #ff69b4 !important;}",
+        " /* Make review stars and numbers pink */.product-card__reviews,.review-stars,.review-count,.star-rating,.reviews-rating {color: #ff69b4 !important;}",
         ".review-stars svg,.star-rating svg {fill: #ff69b4 !important;}"
       ],
       "settings": {
