@@ -102,13 +102,52 @@
     "
   >
     {{ children }}
+{% if product.metafields.reviews.rating.value %}
+  {% assign rating = product.metafields.reviews.rating.value %}
+  {% assign review_count = product.metafields.reviews.count.value | default: 0 %}
 
-    {% if product.metafields.reviews.rating.value %}
-  <div class="product-rating" style="margin-top:5px;">
-    <span class="rating-number">{{ product.metafields.reviews.rating.value }}</span>
-    <span class="rating-text"> reviews</span>
+  <div class="product-rating" style="margin-top:6px; display:flex; align-items:center; gap:4px; font-size:14px;">
+    
+    {%- comment -%}
+      STAR DISPLAY: ★★★★☆
+    {%- endcomment -%}
+    {% assign full_stars = rating | floor %}
+    {% assign half_star = rating | modulo: 1 %}
+    {% if half_star >= 0.25 and half_star <= 0.75 %}
+      {% assign half_star = 1 %}
+    {% else %}
+      {% assign half_star = 0 %}
+    {% endif %}
+    {% assign empty_stars = 5 | minus: full_stars | minus: half_star %}
+
+    <span class="stars">
+      {% for i in (1..full_stars) %}
+        ★
+      {% endfor %}
+
+      {% if half_star == 1 %}
+        ☆   {# optional: use "⯨" or a half-star svg if you want #}
+      {% endif %}
+
+      {% for i in (1..empty_stars) %}
+        ☆
+      {% endfor %}
+    </span>
+
+    {%- comment -%}
+      Show rating number: (4.5)
+    {%- endcomment -%}
+    <span class="rating-number">({{ rating }})</span>
+
+    {%- comment -%}
+      Show review count: 23 reviews
+    {%- endcomment -%}
+    {% if review_count > 0 %}
+      <span class="rating-text">{{ review_count }} reviews</span>
+    {% endif %}
   </div>
 {% endif %}
+
 
     {% if block.settings.show_product_button %}
     <a
