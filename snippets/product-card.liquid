@@ -108,9 +108,7 @@
 
   <div class="product-rating" style="margin-top:6px; display:flex; align-items:center; gap:4px; font-size:14px;">
     
-    {%- comment -%}
-      STAR DISPLAY: ★★★★☆
-    {%- endcomment -%}
+    
     {% assign full_stars = rating | floor %}
     {% assign half_star = rating | modulo: 1 %}
     {% if half_star >= 0.25 and half_star <= 0.75 %}
@@ -134,14 +132,10 @@
       {% endfor %}
     </span>
 
-    {%- comment -%}
-      Show rating number: (4.5)
-    {%- endcomment -%}
+    
     <span class="rating-number">({{ rating }})</span>
 
-    {%- comment -%}
-      Show review count: 23 reviews
-    {%- endcomment -%}
+    
     {% if review_count > 0 %}
       <span class="rating-text">{{ review_count }} reviews</span>
     {% endif %}
