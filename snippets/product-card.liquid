@@ -102,6 +102,14 @@
     "
   >
     {{ children }}
+
+    {% if product.metafields.reviews.rating.value %}
+  <div class="product-rating" style="margin-top:5px;">
+    <span class="rating-number">{{ product.metafields.reviews.rating.value }}</span>
+    <span class="rating-text"> reviews</span>
+  </div>
+{% endif %}
+
     {% if block.settings.show_product_button %}
     <a
   href="{{ product.url }}"
