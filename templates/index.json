@@ -249,6 +249,11 @@
       "block_order": [
         "ai_gen_block_e286c06_q8xYTf"
       ],
+      "custom_css": [
+        "/* Remove border from carousel image cards */.carousel-card,.product-card,.card {border: none !important;}",
+        "/* Make review stars and numbers pink */.product-card__reviews,.review-stars,.review-count,.star-rating,.reviews-rating {color: #ff69b4 !important;}",
+        ".review-stars svg,.star-rating svg {fill: #ff69b4 !important;}"
+      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
