@@ -102,41 +102,7 @@
     "
   >
     {{ children }}
-    {% assign rating = product.metafields.reviews.rating.value | default: 0 | times: 1 %}
-
-{%- comment -%}
- AUTO-DETECT REVIEW COUNT METAFIELD
-{%- endcomment -%}
-
-{% assign review_count = 0 %}
-
-{% if product.metafields.reviews.review_count %}
-  {% assign review_count = product.metafields.reviews.review_count | times: 1 %}
-{% elsif product.metafields.reviews.count %}
-  {% assign review_count = product.metafields.reviews.count.value | times: 1 %}
-{% elsif product.metafields.reviews.number %}
-  {% assign review_count = product.metafields.reviews.number | times: 1 %}
-{% elsif product.metafields.spr and product.metafields.spr.reviews %}
-  {% assign review_count = product.metafields.spr.reviews | times: 1 %}
-{% elsif product.metafields.judgeme and product.metafields.judgeme.badge %}
-  {% assign review_count = product.metafields.judgeme.badge.reviews_count | times: 1 %}
-{% elsif product.metafields.loox and product.metafields.loox.num_reviews %}
-  {% assign review_count = product.metafields.loox.num_reviews | times: 1 %}
-{% endif %}
-
-{% if rating > 0 %}
-  <div class="product-rating" style="margin-top:6px; display:flex; align-items:center; gap:8px;">
     
-    ★★★★☆
-
-    <span class="rating-number">({{ rating }})</span>
-
-    {% if review_count > 0 %}
-      <span class="rating-text">{{ review_count }} reviews</span>
-    {% endif %}
-  </div>
-{% endif %}
-
     {% if block.settings.show_product_button %}
     <a
   href="{{ product.url }}"
