@@ -233,7 +233,7 @@
             "product_title_color": "#000000",
             "product_price_size": 12,
             "product_price_color": "#e883b2",
-            "compare_price_color": "#84756aa1",
+            "compare_price_color": "#008000",
             "show_rating": true,
             "default_rating": 5,
             "show_review_count": true,
