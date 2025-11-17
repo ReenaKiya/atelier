@@ -356,14 +356,17 @@
 </div>
 
 
-                  <div class="ai-product-price-{{ ai_gen_id }}">
-  {% if product.compare_at_price > product.price %}
-    <span class="ai-price-sale-{{ ai_gen_id }}">{{ product.price | money }}</span>
-    <span class="ai-price-compare-{{ ai_gen_id }}">{{ product.compare_at_price | money }}</span>
+                 {% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="ai-product-price-{{ ai_gen_id }}">
+  {% if current_variant.compare_at_price > current_variant.price %}
+    <span class="ai-price-sale-{{ ai_gen_id }}">{{ current_variant.price | money }}</span>
+    <span class="ai-price-compare-{{ ai_gen_id }}">{{ current_variant.compare_at_price | money }}</span>
   {% else %}
-    <span class="ai-price-regular-{{ ai_gen_id }}">{{ product.price | money }}</span>
+    <span class="ai-price-regular-{{ ai_gen_id }}">{{ current_variant.price | money }}</span>
   {% endif %}
 </div>
+
 
                 </div>
               </a>
