@@ -357,11 +357,14 @@
 
 
                   <div class="ai-product-price-{{ ai_gen_id }}">
-                    {{ product.price | money }}
-                    {% if product.compare_at_price > product.price %}
-                      <span class="ai-product-compare-price-{{ ai_gen_id }}">{{ product.compare_at_price | money }}</span>
-                    {% endif %}
-                  </div>
+  {% if product.compare_at_price > product.price %}
+    <span class="ai-price-sale-{{ ai_gen_id }}">{{ product.price | money }}</span>
+    <span class="ai-price-compare-{{ ai_gen_id }}">{{ product.compare_at_price | money }}</span>
+  {% else %}
+    <span class="ai-price-regular-{{ ai_gen_id }}">{{ product.price | money }}</span>
+  {% endif %}
+</div>
+
                 </div>
               </a>
             </div>
