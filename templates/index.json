@@ -260,8 +260,7 @@
         "ai_gen_block_e286c06_q8xYTf"
       ],
       "custom_css": [
-        "/* Product title letter spacing */.product-card__title {letter-spacing: 0.18em;}",
-        "/* Reviews text styling */.rating-text {margin-left: 4px; font-size: 0.9em;}"
+        ".jdgm-widget {text-align: inherit;}"
       ],
       "settings": {
         "content_direction": "column",
