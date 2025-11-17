@@ -232,7 +232,7 @@
             "product_title_size": 12,
             "product_title_color": "#000000",
             "product_price_size": 12,
-            "product_price_color": "#e883b2",
+            "product_price_color": "#cb2271",
             "compare_price_color": "#666666",
             "show_rating": true,
             "default_rating": 5,
@@ -264,7 +264,8 @@
         ".jdgm-preview-badge .jdgm-star {color: #d52083;}",
         ".jdgm-prev-badge__text {font-size: 16px;}",
         ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}",
-        ".ai-product-price-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {color: unset;}"
+        ".ai-product-price-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {color: unset;}",
+        ".ai-price-sale-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {color: #f061af;;}"
       ],
       "settings": {
         "content_direction": "column",
