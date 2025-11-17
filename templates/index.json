@@ -260,7 +260,8 @@
         "ai_gen_block_e286c06_q8xYTf"
       ],
       "custom_css": [
-        ".jdgm-widget {text-align: inherit;}"
+        ".jdgm-widget {text-align: inherit;}",
+        ".jdgm-preview-badge .jdgm-star {color: #e807af;}"
       ],
       "settings": {
         "content_direction": "column",
