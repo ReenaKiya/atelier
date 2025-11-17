@@ -263,7 +263,7 @@
         ".jdgm-widget {text-align: inherit;}",
         ".jdgm-preview-badge .jdgm-star {color: #e807af;}",
         ".jdgm-prev-badge__text {font-size: 16px;}",
-        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family:Poppins, sans-serif}"
+        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing:0.18em}"
       ],
       "settings": {
         "content_direction": "column",
