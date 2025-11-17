@@ -211,7 +211,7 @@
           "type": "ai_gen_block_e286c06",
           "settings": {
             "collection": "baby-cloths",
-            "products_to_show": 12,
+            "products_to_show": 7,
             "heading": "Featured Products",
             "heading_size": 48,
             "heading_alignment": "center",
@@ -263,7 +263,8 @@
         ".jdgm-widget {text-align: inherit;}",
         ".jdgm-preview-badge .jdgm-star {color: #d52083;}",
         ".jdgm-prev-badge__text {font-size: 16px;}",
-        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}"
+        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}",
+        ".ai-price-compare-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {color: red !important;}"
       ],
       "settings": {
         "content_direction": "column",
