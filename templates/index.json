@@ -263,7 +263,8 @@
         ".jdgm-widget {text-align: inherit;}",
         ".jdgm-preview-badge .jdgm-star {color: #d52083;}",
         ".jdgm-prev-badge__text {font-size: 16px;}",
-        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}"
+        ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}",
+        ".ai-product-price-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {color: unset;}"
       ],
       "settings": {
         "content_direction": "column",
