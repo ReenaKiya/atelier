@@ -316,6 +316,33 @@
 }
 
 
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+}
+
+.carousel-card {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media (min-width: 768px) {
+  .carousel-card {
+    width: calc(50% - 0.5rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-card {
+    width: calc(33.333% - 0.67rem);
+  }
+}
+
+
+
 {% endstyle %}
 
 <product-carousel-{{ ai_gen_id }} class="ai-product-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
