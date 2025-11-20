@@ -315,21 +315,35 @@
   margin-left: 6px;
 }
 
-  .ai-product-carousel-wrapper-{{ ai_gen_id }} {
-    overflow-x: hidden;
-    position: relative;
-    width: 100%;
-  }
+/* Outer container - prevents x-scroll */
+.ai-product-carousel-container-{{ ai_gen_id }} {
+  overflow-x: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
 
-  .ai-product-carousel-track-{{ ai_gen_id }} {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-  }
+/* Carousel wrapper - keeps row layout */
+.ai-product-carousel-wrapper-{{ ai_gen_id }} {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
 
-  .ai-product-card-{{ ai_gen_id }} {
-    flex: 0 0 auto;
-  }
+/* Carousel track - flex row */
+.ai-product-carousel-track-{{ ai_gen_id }} {
+  display: flex;
+  gap: 20px;           /* space between cards */
+  flex-wrap: nowrap;    /* prevents wrapping into column */
+  overflow-x: auto;     /* allow horizontal scroll if needed */
+  scroll-behavior: smooth;
+  padding-bottom: 5px;  /* prevents scrollbar overlay on content */
+}
+
+/* Each product card */
+.ai-product-card-{{ ai_gen_id }} {
+  flex: 0 0 auto;       /* keeps cards in row */
+  box-sizing: border-box;
+}
 
 
 
