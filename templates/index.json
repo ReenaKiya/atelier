@@ -492,7 +492,7 @@
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
-                    "text": "<h2>Our signature product</h2>",
+                    "text": "<p>Our <em>skin experts in Ahmedabad</em></p>",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -517,7 +517,7 @@
                 "text_UXDRCm": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Made with care and unconditionally loved by our customers, this signature bestseller exceeds all expectations.</p>",
+                    "text": "<p><em>Zydus Skin and Hair Clinic</em>focuses on the diagnosis and treatment of conditions related to the skin, hair, and nails and helps you maintain the health of you<br/><br/></p>",
                     "width": "fit-content",
                     "max_width": "narrow",
                     "alignment": "left",
@@ -548,7 +548,7 @@
             "button_zkV4Uf": {
               "type": "button",
               "settings": {
-                "label": "Shop now",
+                "label": "Visit Us",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
                 "style_class": "link",
