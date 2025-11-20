@@ -316,6 +316,15 @@
 }
 
 
+  /* Hide next/prev buttons on mobile */
+  @media screen and (max-width: 768px) {
+    .ai-carousel-nav-{{ ai_gen_id }} {
+      display: none !important;
+    }
+  }
+
+
+
 {% endstyle %}
 
 <product-carousel-{{ ai_gen_id }} class="ai-product-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
