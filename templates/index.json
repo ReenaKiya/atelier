@@ -260,7 +260,7 @@
         "ai_gen_block_e286c06_q8xYTf"
       ],
       "custom_css": [
-        ".jdgm-widget {text-align: inherit;}",
+        "/* Hide horizontal scrollbar */overflow-x: hidden;scrollbar-width: none; /* Firefox */-ms-overflow-style: none; /* IE and Edge */.jdgm-widget {text-align: inherit;}",
         ".jdgm-preview-badge .jdgm-star {color: #d52083;}",
         ".jdgm-prev-badge__text {font-size: 16px;}",
         ".ai-product-title-azlqwz2jocvv4s1rbtaigenblocke286c06q8xytf {font-family: Poppins, sans-serif; letter-spacing: 0.18em;}",
