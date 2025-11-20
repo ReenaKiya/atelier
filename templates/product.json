@@ -71,7 +71,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>Baby  boy parts</h3>",
+                "text": "<h3>Baby  body parts</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -317,18 +317,6 @@
                 }
               },
               "block_order": []
-            },
-            "review_qhiLfM": {
-              "type": "review",
-              "name": "t:names.product_review_stars",
-              "settings": {
-                "stars_style": "shaded",
-                "show_number": true,
-                "rating_color": "primary",
-                "type_preset": "paragraph",
-                "alignment": "left"
-              },
-              "blocks": {}
             }
           },
           "block_order": [
@@ -337,8 +325,7 @@
             "divider_HrJgFt",
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
-            "buy_buttons_eYQEYi",
-            "review_qhiLfM"
+            "buy_buttons_eYQEYi"
           ]
         }
       },
