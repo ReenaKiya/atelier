@@ -607,12 +607,21 @@
             "quote": "This caffe is famouse  for it's services. people would love come here and getting enjoy.",
             "author_image": "shopify://shop_images/1.jpg"
           }
+        },
+        "testimonial_TnyJrP": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Anuj Family",
+            "quote": "They all are very Happy beacause they are Healthy and Stronget Family in those Socity",
+            "author_image": "shopify://shop_images/g4.jpg"
+          }
         }
       },
       "block_order": [
         "testimonial_CxhEPb",
         "testimonial_G9TaDq",
-        "testimonial_qnwKmA"
+        "testimonial_qnwKmA",
+        "testimonial_TnyJrP"
       ],
       "name": "Testimonial Section",
       "settings": {
