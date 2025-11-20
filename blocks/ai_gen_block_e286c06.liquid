@@ -316,33 +316,6 @@
 }
 
 
-.carousel-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 1rem;
-}
-
-.carousel-card {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 300px;
-}
-
-@media (min-width: 768px) {
-  .carousel-card {
-    width: calc(50% - 0.5rem);
-  }
-}
-
-@media (min-width: 1024px) {
-  .carousel-card {
-    width: calc(33.333% - 0.67rem);
-  }
-}
-
-
-
 {% endstyle %}
 
 <product-carousel-{{ ai_gen_id }} class="ai-product-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
@@ -452,22 +425,24 @@
       setupNavigation() {
         if (!this.prevButton || !this.nextButton) return;
 
+        // Find card width + gap
+        const firstCard = this.track.querySelector('.card');
+        const gap = parseInt(getComputedStyle(this.track).columnGap || 0)
+                 || parseInt(getComputedStyle(this.track).gap || 0)
+                 || 0;
+
         this.prevButton.addEventListener('click', () => {
-         // Find the click event handlers for next/previous buttons
-// Replace the scroll logic with something like this:
+          if (!firstCard) return;
+          const scrollAmount = firstCard.offsetWidth + gap;
 
-const scrollAmount = carousel.querySelector('.card').offsetWidth + gap;
-carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-
+          this.track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
 
         this.nextButton.addEventListener('click', () => {
-          // Find the click event handlers for next/previous buttons
-// Replace the scroll logic with something like this:
+          if (!firstCard) return;
+          const scrollAmount = firstCard.offsetWidth + gap;
 
-const scrollAmount = carousel.querySelector('.card').offsetWidth + gap;
-carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-
+          this.track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
       }
 
@@ -506,6 +481,7 @@ carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     customElements.define('product-carousel-{{ ai_gen_id }}', ProductCarousel{{ ai_gen_id }});
   })();
 </script>
+
 
 
 <script>
