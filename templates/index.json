@@ -428,7 +428,7 @@
               "type": "text",
               "name": "t:names.caption",
               "settings": {
-                "text": "<p>Bestseller</p>",
+                "text": "<p>Doctor</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
