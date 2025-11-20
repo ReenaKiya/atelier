@@ -591,10 +591,19 @@
             "quote": "this doctor has long expirence in this field so   I would definitely recommend to other people.",
             "author_image": "shopify://shop_images/male-doctor-holding-clipboard.jpg"
           }
+        },
+        "testimonial_G9TaDq": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Smriti Parekh",
+            "quote": "This Doctor is very famous for child.",
+            "author_image": "shopify://shop_images/c1.jpg"
+          }
         }
       },
       "block_order": [
-        "testimonial_CxhEPb"
+        "testimonial_CxhEPb",
+        "testimonial_G9TaDq"
       ],
       "name": "Testimonial Section",
       "settings": {
