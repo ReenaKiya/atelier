@@ -580,6 +580,13 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "testimonial_section_QLLLcY": {
+      "type": "testimonial-section",
+      "name": "Testimonial Section",
+      "settings": {
+        "heading": "What Our Customers Say"
+      }
     }
   },
   "order": [
@@ -588,6 +595,7 @@
     "as_seen_in_Fd8yFr",
     "home_collection_list_custom_bUtjkC",
     "product_list_bmRnah",
-    "media_with_content_reicdp"
+    "media_with_content_reicdp",
+    "testimonial_section_QLLLcY"
   ]
 }
