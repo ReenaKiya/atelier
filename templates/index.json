@@ -549,7 +549,7 @@
               "type": "button",
               "settings": {
                 "label": "Visit Us",
-                "link": "shopify://collections/all",
+                "link": "https://zydushospitals.com/dermatology",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
