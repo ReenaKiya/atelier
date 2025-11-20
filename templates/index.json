@@ -44,6 +44,7 @@
           "settings": {
             "label": "NEW COLLECTION",
             "link": "shopify://collections/baby-cloths",
+            "button_background_color": "#000000",
             "open_in_new_tab": true,
             "style_class": "button",
             "width": "fit-content",
@@ -550,6 +551,7 @@
               "settings": {
                 "label": "Visit Us",
                 "link": "https://zydushospitals.com/dermatology",
+                "button_background_color": "#d9de4e",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
