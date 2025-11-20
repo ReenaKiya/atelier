@@ -636,6 +636,7 @@
           "name": "t:names.video",
           "settings": {
             "source": "uploaded",
+            "video": "shopify://files/videos/WPJZ7343.MP4",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
