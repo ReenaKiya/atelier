@@ -552,7 +552,7 @@
                 "label": "Visit Us",
                 "link": "https://zydushospitals.com/dermatology",
                 "button_background_color": "#d9de4e",
-                "open_in_new_tab": false,
+                "open_in_new_tab": true,
                 "style_class": "link",
                 "width": "fit-content",
                 "custom_width": 100,
