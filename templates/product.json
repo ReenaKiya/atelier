@@ -316,6 +316,18 @@
                 }
               },
               "block_order": []
+            },
+            "review_KtAThA": {
+              "type": "review",
+              "name": "t:names.product_review_stars",
+              "settings": {
+                "stars_style": "shaded",
+                "show_number": true,
+                "rating_color": "primary",
+                "type_preset": "paragraph",
+                "alignment": "left"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -324,7 +336,8 @@
             "divider_HrJgFt",
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
-            "buy_buttons_eYQEYi"
+            "buy_buttons_eYQEYi",
+            "review_KtAThA"
           ]
         }
       },
@@ -632,7 +645,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },
