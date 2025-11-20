@@ -583,6 +583,19 @@
     },
     "testimonial_section_QLLLcY": {
       "type": "testimonial-section",
+      "blocks": {
+        "testimonial_CxhEPb": {
+          "type": "testimonial",
+          "settings": {
+            "author": "John Doe",
+            "quote": "this doctor has long expirence in this field so   I would definitely recommend to other people.",
+            "author_image": "shopify://shop_images/male-doctor-holding-clipboard.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_CxhEPb"
+      ],
       "name": "Testimonial Section",
       "settings": {
         "heading": "What Our Customers Say"
