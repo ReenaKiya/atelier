@@ -425,10 +425,8 @@
       setupNavigation() {
         if (!this.prevButton || !this.nextButton) return;
 
-        // Find one product card
         const firstCard = this.track.querySelector('.ai-product-card-{{ ai_gen_id }}');
 
-        // Find gap from CSS
         const trackStyles = window.getComputedStyle(this.track);
         const gap =
           parseInt(trackStyles.columnGap) ||
@@ -437,14 +435,12 @@
 
         this.prevButton.addEventListener('click', () => {
           if (!firstCard) return;
-
           const scrollAmount = firstCard.offsetWidth + gap;
           this.track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
 
         this.nextButton.addEventListener('click', () => {
           if (!firstCard) return;
-
           const scrollAmount = firstCard.offsetWidth + gap;
           this.track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
@@ -455,6 +451,7 @@
         let startX;
         let scrollLeft;
 
+        /* -------- DESKTOP DRAG -------- */
         this.track.addEventListener('mousedown', (e) => {
           isDown = true;
           this.track.style.cursor = 'grabbing';
@@ -479,12 +476,31 @@
           const walk = (x - startX) * 2;
           this.track.scrollLeft = scrollLeft - walk;
         });
+
+        /* -------- MOBILE TOUCH DRAG -------- */
+        this.track.addEventListener('touchstart', (e) => {
+          isDown = true;
+          startX = e.touches[0].pageX - this.track.offsetLeft;
+          scrollLeft = this.track.scrollLeft;
+        });
+
+        this.track.addEventListener('touchend', () => {
+          isDown = false;
+        });
+
+        this.track.addEventListener('touchmove', (e) => {
+          if (!isDown) return;
+          const x = e.touches[0].pageX - this.track.offsetLeft;
+          const walk = (x - startX) * 2;
+          this.track.scrollLeft = scrollLeft - walk;
+        });
       }
     }
 
     customElements.define('product-carousel-{{ ai_gen_id }}', ProductCarousel{{ ai_gen_id }});
   })();
 </script>
+
 
 
 
