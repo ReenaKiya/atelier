@@ -348,6 +348,47 @@
   }
 
 
+
+  /* Prevent overflow on desktop */
+  @media (min-width: 992px) {
+    .ai-product-carousel-track-{{ ai_gen_id }} {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      overflow: visible !important;   /* No horizontal scroll */
+      scroll-behavior: auto !important;
+      padding-bottom: 0;
+    }
+
+    /* Each card should stay properly aligned */
+    .ai-product-card-{{ ai_gen_id }} {
+      min-width: auto !important;
+      width: auto !important;
+    }
+
+    /* Navigation arrows optional — hide them on desktop if no scroll is needed */
+    .ai-carousel-nav-{{ ai_gen_id }} {
+      display: none !important;
+    }
+  }
+
+  /* Keep carousel behavior on mobile/tablet */
+  @media (max-width: 991px) {
+    .ai-product-carousel-track-{{ ai_gen_id }} {
+      display: flex !important;
+      overflow-x: auto !important;
+      scroll-snap-type: x mandatory;
+      gap: 16px;
+    }
+
+    .ai-product-card-{{ ai_gen_id }} {
+      flex: 0 0 70%; 
+      scroll-snap-align: start;
+    }
+  }
+
+
+
 {% endstyle %}
 
 <product-carousel-{{ ai_gen_id }} class="ai-product-carousel-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
