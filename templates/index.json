@@ -599,11 +599,20 @@
             "quote": "This Doctor is very famous for child.",
             "author_image": "shopify://shop_images/c1.jpg"
           }
+        },
+        "testimonial_qnwKmA": {
+          "type": "testimonial",
+          "settings": {
+            "author": "Rajesh Gupta",
+            "quote": "This caffe is famouse  for it's services. people would love come here and getting enjoy.",
+            "author_image": "shopify://shop_images/1.jpg"
+          }
         }
       },
       "block_order": [
         "testimonial_CxhEPb",
-        "testimonial_G9TaDq"
+        "testimonial_G9TaDq",
+        "testimonial_qnwKmA"
       ],
       "name": "Testimonial Section",
       "settings": {
