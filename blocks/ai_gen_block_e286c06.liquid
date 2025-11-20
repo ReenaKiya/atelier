@@ -315,6 +315,23 @@
   margin-left: 6px;
 }
 
+/* Remove horizontal scrollbar on desktop */
+@media (min-width: 992px) {
+  .ai-product-carousel-track-{{ ai_gen_id }} {
+    overflow-x: scroll;      /* Keep scrolling enabled */
+    overflow-y: hidden;
+    -ms-overflow-style: none;  /* Hide scrollbar on IE & Edge */
+    scrollbar-width: none;     /* Hide scrollbar on Firefox */
+    white-space: nowrap;       /* Keep cards in one row if needed */
+  }
+
+  /* Hide scrollbar for Chrome, Safari, Edge */
+  .ai-product-carousel-track-{{ ai_gen_id }}::-webkit-scrollbar {
+    display: none !important;
+    height: 0 !important;
+  }
+}
+
 
 
 
