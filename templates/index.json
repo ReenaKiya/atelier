@@ -406,7 +406,7 @@
           "static": true,
           "settings": {
             "media_type": "image",
-            "image": "shopify://shop_images/c1.jpg",
+            "image": "shopify://shop_images/male-doctor-holding-clipboard.jpg",
             "link": "",
             "video_loop": true,
             "video_autoplay": false,
