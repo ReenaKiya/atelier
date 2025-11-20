@@ -425,23 +425,13 @@
       setupNavigation() {
         if (!this.prevButton || !this.nextButton) return;
 
-        // Find card width + gap
-        const firstCard = this.track.querySelector('.card');
-        const gap = parseInt(getComputedStyle(this.track).columnGap || 0)
-                 || parseInt(getComputedStyle(this.track).gap || 0)
-                 || 0;
-
         this.prevButton.addEventListener('click', () => {
-          if (!firstCard) return;
-          const scrollAmount = firstCard.offsetWidth + gap;
-
+          const scrollAmount = this.track.offsetWidth * 0.8;
           this.track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
 
         this.nextButton.addEventListener('click', () => {
-          if (!firstCard) return;
-          const scrollAmount = firstCard.offsetWidth + gap;
-
+          const scrollAmount = this.track.offsetWidth * 0.8;
           this.track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
       }
@@ -481,7 +471,6 @@
     customElements.define('product-carousel-{{ ai_gen_id }}', ProductCarousel{{ ai_gen_id }});
   })();
 </script>
-
 
 
 <script>
