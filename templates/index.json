@@ -581,62 +581,15 @@
         "padding-block-end": 0
       }
     },
-    "testimonial_section_QLLLcY": {
-      "type": "testimonial-section",
-      "blocks": {
-        "testimonial_CxhEPb": {
-          "type": "testimonial",
-          "settings": {
-            "author": "John Doe",
-            "quote": "this doctor has long expirence in this field so   I would definitely recommend to other people.",
-            "author_image": "shopify://shop_images/male-doctor-holding-clipboard.jpg"
-          }
-        },
-        "testimonial_G9TaDq": {
-          "type": "testimonial",
-          "settings": {
-            "author": "Smriti Parekh",
-            "quote": "This Doctor is very famous for child.",
-            "author_image": "shopify://shop_images/c1.jpg"
-          }
-        },
-        "testimonial_qnwKmA": {
-          "type": "testimonial",
-          "settings": {
-            "author": "Rajesh Gupta",
-            "quote": "This caffe is famouse  for it's services. people would love come here and getting enjoy.",
-            "author_image": "shopify://shop_images/1.jpg"
-          }
-        },
-        "testimonial_TnyJrP": {
-          "type": "testimonial",
-          "settings": {
-            "author": "Anuj Family",
-            "quote": "They all are very Happy beacause they are Healthy and Stronget Family in those Socity",
-            "author_image": "shopify://shop_images/g4.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_CxhEPb",
-        "testimonial_G9TaDq",
-        "testimonial_qnwKmA",
-        "testimonial_TnyJrP"
-      ],
-      "name": "Testimonial Section",
-      "settings": {
-        "heading": "What Our Customers Say"
-      }
-    },
-    "section_BFM3zJ": {
+    "section_LUnUd9": {
       "type": "section",
       "blocks": {
-        "video_KiHXbQ": {
+        "video_dHrqNL": {
           "type": "video",
           "name": "t:names.video",
           "settings": {
             "source": "uploaded",
-            "video": "shopify://files/videos/WPJZ7343.MP4",
+            "video": "shopify://files/videos/mixkit-bartender-decorating-drink-glasses-15171-hd-ready.mp4",
             "video_autoplay": false,
             "video_loop": true,
             "alt": "",
@@ -654,7 +607,7 @@
           },
           "blocks": {}
         },
-        "group_PpGhtA": {
+        "group_4PXzTF": {
           "type": "group",
           "name": "Caption",
           "settings": {
@@ -693,7 +646,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "text_Picmei": {
+            "text_af3mGi": {
               "type": "text",
               "name": "t:names.text",
               "settings": {
@@ -719,7 +672,7 @@
               },
               "blocks": {}
             },
-            "button_Qk4NFb": {
+            "button_rWNc4N": {
               "type": "button",
               "name": "t:names.button",
               "settings": {
@@ -737,14 +690,14 @@
             }
           },
           "block_order": [
-            "text_Picmei",
-            "button_Qk4NFb"
+            "text_af3mGi",
+            "button_rWNc4N"
           ]
         }
       },
       "block_order": [
-        "video_KiHXbQ",
-        "group_PpGhtA"
+        "video_dHrqNL",
+        "group_4PXzTF"
       ],
       "name": "t:names.video_section",
       "settings": {
@@ -783,7 +736,6 @@
     "home_collection_list_custom_bUtjkC",
     "product_list_bmRnah",
     "media_with_content_reicdp",
-    "testimonial_section_QLLLcY",
-    "section_BFM3zJ"
+    "section_LUnUd9"
   ]
 }
