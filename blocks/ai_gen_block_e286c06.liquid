@@ -315,15 +315,21 @@
   margin-left: 6px;
 }
 
-/* Remove horizontal scrollbar on desktop */
-@media (min-width: 992px) {
-  .ai-product-carousel-track-{{ ai_gen_id }} {
-    overflow-y: hidden;
+  .ai-product-carousel-wrapper-{{ ai_gen_id }} {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
   }
 
-  
-}
+  .ai-product-carousel-track-{{ ai_gen_id }} {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+  }
 
+  .ai-product-card-{{ ai_gen_id }} {
+    flex: 0 0 auto;
+  }
 
 
 
