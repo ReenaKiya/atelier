@@ -677,9 +677,9 @@
               "name": "t:names.button",
               "settings": {
                 "label": "Discover the collection",
-                "link": "shopify://collections/all",
-                "button_background_color": "#000000",
-                "open_in_new_tab": false,
+                "link": "shopify://collections",
+                "button_background_color": "#d9de4e",
+                "open_in_new_tab": true,
                 "style_class": "link",
                 "width": "fit-content",
                 "custom_width": 100,
