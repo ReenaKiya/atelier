@@ -9,31 +9,35 @@
 {%- enddoc -%}
 
 <a
-  {% if link == blank %}
+  {% if block.settings.link == blank %}
     role="link"
     aria-disabled="true"
   {% else %}
-    href="{{ link }}"
+    href="{{ block.settings.link }}"
   {% endif %}
+  
   class="
     size-style
+    button
     {{ block.settings.style_class }}
     {{ block.settings.style_class }}--{{ block.id }}
   "
-  style="{% render 'size-style', settings: block.settings %}"
+  
+  style="
+    {% render 'size-style', settings: block.settings %};
+    background-color: {{ block.settings.button_background_color }};
+  "
+  
   {%- if block.settings.open_in_new_tab -%}
     target="_blank"
     rel="noopener noreferrer"
   {%- endif -%}
+  
   {{ block.shopify_attributes }}
 >
   {{ block.settings.label }}
 </a>
-<a href="{{ block.settings.link }}" 
-   class="button" 
-   style="background-color: {{ block.settings.button_background_color }};">
-  {{ block.settings.label }}
-</a>
+
 
 {% stylesheet %}
   .link {
