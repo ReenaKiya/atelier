@@ -426,13 +426,21 @@
         if (!this.prevButton || !this.nextButton) return;
 
         this.prevButton.addEventListener('click', () => {
-          const scrollAmount = this.track.offsetWidth * 0.8;
-          this.track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+         // Find the click event handlers for next/previous buttons
+// Replace the scroll logic with something like this:
+
+const scrollAmount = carousel.querySelector('.card').offsetWidth + gap;
+carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+
         });
 
         this.nextButton.addEventListener('click', () => {
-          const scrollAmount = this.track.offsetWidth * 0.8;
-          this.track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          // Find the click event handlers for next/previous buttons
+// Replace the scroll logic with something like this:
+
+const scrollAmount = carousel.querySelector('.card').offsetWidth + gap;
+carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+
         });
       }
 
