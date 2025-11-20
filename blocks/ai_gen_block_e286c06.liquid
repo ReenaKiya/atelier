@@ -347,52 +347,7 @@
     }
   }
 
-  /* -------------------------- */
-  /* DESKTOP — No X Scrollbar   */
-  /* -------------------------- */
-  @media (min-width: 992px) {
-    .ai-product-carousel-track-{{ ai_gen_id }} {
-      display: grid !important;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 24px;
-      overflow-x: visible !important;  /* remove horizontal scroll */
-      scrollbar-width: none;           /* Firefox */
-    }
-
-    .ai-product-carousel-track-{{ ai_gen_id }}::-webkit-scrollbar {
-      display: none !important;        /* Chrome/Safari */
-    }
-
-    /* Prevent product cards from forcing scroll */
-    .ai-product-card-{{ ai_gen_id }} {
-      min-width: auto !important;
-      width: 100% !important;
-    }
-
-    /* Hide navigation arrows because no scroll needed */
-    .ai-carousel-nav-{{ ai_gen_id }} {
-      display: none !important;
-    }
-  }
-
-  /* -------------------------- */
-  /* MOBILE + TABLET — Carousel */
-  /* -------------------------- */
-  @media (max-width: 991px) {
-    .ai-product-carousel-track-{{ ai_gen_id }} {
-      display: flex !important;
-      overflow-x: auto !important;
-      gap: 16px;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 10px;
-    }
-
-    .ai-product-card-{{ ai_gen_id }} {
-      flex: 0 0 70%;
-      scroll-snap-align: start;
-    }
-  }
-
+  
 
 
 
