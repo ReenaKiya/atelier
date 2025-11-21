@@ -1405,7 +1405,7 @@
                   "settings": {
                     "label": "Shop now",
                     "link": "shopify://collections/all",
-                    "button_background_color": "#000000",
+                    "button_background_color": "#efec26",
                     "open_in_new_tab": false,
                     "style_class": "button",
                     "width": "fit-content",
