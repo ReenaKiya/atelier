@@ -85,33 +85,25 @@
                     checked
                   {% endif %}
                 >
-           {% if variant_style == 'swatch' %}
+            {% if variant_style == 'swatch' %}
+                  {% liquid
+                    assign featured_media = product_option_value.variant.featured_media
 
-  {% liquid
-    assign featured_media = product_option_value.variant.featured_media
+                    # If the variant has no featured media, and we have a combined listing product, then fall back to
+                    # using the featured media of the child product that is linked to this option value.
+                    if featured_media == blank and product_option_value.product_url
+                      assign featured_media = product_option_value.variant.product.featured_media
+                    endif
+                  %}
 
-    if featured_media == blank and product_option_value.product_url
-      assign featured_media = product_option_value.variant.product.featured_media
-    endif
-  %}
-
-  <span class="variant-option__button-label__image-wrapper">
-    {% if featured_media %}
-      <img
-        src="{{ featured_media | image_url: width: 100 }}"
-        alt="{{ product_option_value | escape }}"
-        class="variant-picker-image"
-        style="width:45px; height:45px; object-fit:cover; border-radius:6px;"
-      >
+                  {% render 'swatch',
+                    swatch: product_option_value.swatch,
+                    variant_image: featured_media,
+                    mode: 'unscaled'
+                  %}
     {% else %}
-      <span class="variant-option__button-label__text">
-        {{ product_option_value | escape }}
-      </span>
-    {% endif %}
-  </span>
-
+                  <span class="variant-option__button-label__text">{{ product_option_value | escape }}</span>
 {% endif %}
-
                 {% render 'strikethrough-variant', product_option: product_option_value %}
               </label>
             {%- endfor -%}
