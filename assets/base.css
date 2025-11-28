@@ -390,7 +390,6 @@
 
 /* Disabled out-of-stock */
 .variant-option__button-label input[aria-disabled="true"] + .variant-option__button-label__image-wrapper {
-  opacity: 0.4;
   cursor: not-allowed;
 }
 
