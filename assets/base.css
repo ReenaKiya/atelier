@@ -24,8 +24,8 @@
 
 .variant-option__button-label{
   border:none !important
-  display:inline
-} 
+  display:inline !important
+ } 
 
 
 
