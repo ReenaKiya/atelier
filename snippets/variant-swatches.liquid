@@ -59,21 +59,10 @@
         checked
       {% endif %}
     >
-
-    <!-- ⭐ Actual color swatch here ⭐ -->
-    <span 
-      class="color-swatch"
-      style="
-        background: {{ product_option_value.swatch.value }};
-
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        display: inline-block;
-        border: 1px solid #ccc;
-      "
-    ></span>
-
+              {% render 'swatch',
+                swatch: product_option_value.swatch,
+                variant_image: featured_media,
+              %}
     {% render 'strikethrough-variant', product_option: product_option_value %}
   </label>
 </li>
