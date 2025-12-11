@@ -72,7 +72,7 @@
               "name": "t:names.popup_link",
               "settings": {
                 "behavior": "default",
-                "heading": "Size chart",
+                "heading": "Size chart{{ closest.product.metafields.reviews.rating | metafield_text }}",
                 "type_preset": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
