@@ -152,7 +152,6 @@
                     "heading": "Description",
                     "open_by_default": false,
                     "icon": "none",
-                    "image_upload": "{{ closest.product.metafields.custom.size_chart.value }}",
                     "width": 20
                   },
                   "blocks": {
@@ -263,12 +262,54 @@
                   "block_order": [
                     "text_qLGEN9"
                   ]
+                },
+                "accordion_row_UwYapr": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "heading": "When will I get my order?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "image_upload": "shopify://shop_images/Grey_Modern_Size_Chart_Instagram_Post.png",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_WyreAF": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "color": "var(--color-foreground)",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_WyreAF"
+                  ]
                 }
               },
               "block_order": [
                 "accordion_row_NdBezV",
                 "accordion_row_iJM37V",
-                "accordion_row_pLFDcD"
+                "accordion_row_pLFDcD",
+                "accordion_row_UwYapr"
               ]
             },
             "buy_buttons_9MVfWi": {
