@@ -517,4 +517,45 @@
     text-align: right;
     justify-content: right;
   }
+
+
+
+  /* new css add  by me  */
+
+
+  /* Container for the image swatch */
+.variant-option__button-label__image {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The image swatch itself */
+.variant-image-swatch {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;       /* Change to 50% for circle */
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.variant-option__button-label:hover .variant-image-swatch {
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+/* Selected (checked) style */
+.variant-option__button-label input:checked + .variant-option__button-label__image .variant-image-swatch {
+  border: 2px solid #000;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Make button label container match image size */
+.variant-option__button-label {
+  padding: 4px !important;
+}
+
 {% endstylesheet %}
