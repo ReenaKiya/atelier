@@ -384,6 +384,14 @@
                 "alignment": "left"
               },
               "blocks": {}
+            },
+            "ai_gen_block_4cd2808_zLyDXj": {
+              "type": "ai_gen_block_4cd2808",
+              "settings": {
+                "heading": "Size Chart",
+                "page": "{{ closest.product.metafields.custom.size_charts.value }}"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -394,7 +402,8 @@
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
-            "review_XpJqY3"
+            "review_XpJqY3",
+            "ai_gen_block_4cd2808_zLyDXj"
           ]
         }
       },
@@ -770,25 +779,6 @@
     },
     "17655238379a0febe2": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_685f6f5_hrapgY": {
-          "type": "ai_gen_block_685f6f5",
-          "settings": {
-            "heading": "Size Chart",
-            "content": "<p>Use this section to provide detailed sizing information. You can add tables, lists, or any HTML content.</p><table style=\"width: 100%; border-collapse: collapse; margin-top: 12px;\">\n<thead><tr>\n<th style=\"padding: 8px 12px; text-align: left; border: 1px solid #e6e6e6; background-color: #f5f5f5; font-weight: 600;\">Size</th>\n<th style=\"padding: 8px 12px; text-align: left; border: 1px solid #e6e6e6; background-color: #f5f5f5; font-weight: 600;\">Chest (in)</th>\n<th style=\"padding: 8px 12px; text-align: left; border: 1px solid #e6e6e6; background-color: #f5f5f5; font-weight: 600;\">Waist (in)</th>\n<th style=\"padding: 8px 12px; text-align: left; border: 1px solid #e6e6e6; background-color: #f5f5f5; font-weight: 600;\">Hip (in)</th>\n</tr></thead>\n<tbody>\n<tr>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">XS</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">32-34</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">24-26</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">34-36</td>\n</tr>\n<tr>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">S</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">34-36</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">26-28</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">36-38</td>\n</tr>\n<tr>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">M</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">36-38</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">28-30</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">38-40</td>\n</tr>\n<tr>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">L</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">38-40</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">30-32</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">40-42</td>\n</tr>\n<tr>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">XL</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">40-42</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">32-34</td>\n<td style=\"padding: 8px 12px; border: 1px solid #e6e6e6;\">42-44</td>\n</tr>\n</tbody>\n</table>",
-            "heading_size": 14,
-            "heading_case": "none",
-            "heading_letter_spacing": "normal",
-            "content_size": 14,
-            "vertical_padding": 16,
-            "icon_stroke_width": 1.5
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_685f6f5_hrapgY"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -819,19 +809,6 @@
     },
     "1765524498d58a01f3": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_4cd2808_LXNPn7": {
-          "type": "ai_gen_block_4cd2808",
-          "settings": {
-            "heading": "Collapsible row",
-            "page": "{{ closest.product.metafields.custom.size_charts.value }}"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_4cd2808_LXNPn7"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
