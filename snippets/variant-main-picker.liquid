@@ -120,11 +120,15 @@
 
   {% assign variant_image = product_option_value.variant.featured_media %}
 
-    {% if variant_image == blank and product_option_value.product_url %}
-      {% assign variant_image = product_option_value.variant.product.featured_media %}
-    {% endif %}
+  {%- comment -%}
+    If no variant image available, fall back to child product featured image
+  {%- endcomment -%}
+  {% if variant_image == blank and product_option_value.product_url %}
+    {% assign variant_image = product_option_value.variant.product.featured_media %}
+  {% endif %}
 
-    <span class="variant-option__button-label__image">
+  <span class="variant-option__button-label__image">
+    {% if variant_image %}
       {{ variant_image
         | image_url: width: 120
         | image_tag:
@@ -133,9 +137,15 @@
           class: "variant-image-swatch",
           alt: product_option_value.name
       }}
-    </span>
+    {% else %}
+      <span class="variant-option__button-label__text">
+        {{ product_option_value | escape }}
+      </span>
+    {% endif %}
+  </span>
 
-  {% endif %}
+{% endif %}
+
 {% endif %}
                 {% comment %} {% render 'strikethrough-variant', product_option: product_option_value %} {% endcomment %}
               </label>
