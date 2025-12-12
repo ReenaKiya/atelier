@@ -843,7 +843,7 @@
         "ai_gen_block_8c87980_pTYcqW": {
           "type": "ai_gen_block_8c87980",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Size Chart",
             "page": "{{ closest.product.metafields.custom.size_charts.value }}",
             "open_by_default": false,
             "heading_size": 16,
