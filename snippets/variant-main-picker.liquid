@@ -128,7 +128,6 @@
   {% endif %}
 
   <span class="variant-option__button-label__image">
-    {% if variant_image %}
       {{ variant_image
         | image_url: width: 120
         | image_tag:
@@ -137,11 +136,7 @@
           class: "variant-image-swatch",
           alt: product_option_value.name
       }}
-    {% else %}
-      <span class="variant-option__button-label__text">
-        {{ product_option_value | escape }}
-      </span>
-    {% endif %}
+    
   </span>
 
 {% endif %}
