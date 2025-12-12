@@ -385,11 +385,14 @@
               },
               "blocks": {}
             },
-            "ai_gen_block_4cd2808_zLyDXj": {
-              "type": "ai_gen_block_4cd2808",
+            "ai_gen_block_8c87980_yWedxh": {
+              "type": "ai_gen_block_8c87980",
               "settings": {
                 "heading": "Size Chart",
-                "page": "{{ closest.product.metafields.custom.size_charts.value }}"
+                "page": "{{ closest.product.metafields.custom.size_charts.value }}",
+                "open_by_default": false,
+                "heading_size": 16,
+                "padding_vertical": 16
               },
               "blocks": {}
             }
@@ -403,7 +406,7 @@
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
             "review_XpJqY3",
-            "ai_gen_block_4cd2808_zLyDXj"
+            "ai_gen_block_8c87980_yWedxh"
           ]
         }
       },
@@ -839,22 +842,6 @@
     },
     "1765524993cacfef3b": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_8c87980_pTYcqW": {
-          "type": "ai_gen_block_8c87980",
-          "settings": {
-            "heading": "Size Chart",
-            "page": "{{ closest.product.metafields.custom.size_charts.value }}",
-            "open_by_default": false,
-            "heading_size": 16,
-            "padding_vertical": 16
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_8c87980_pTYcqW"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
