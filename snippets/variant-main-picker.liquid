@@ -117,32 +117,39 @@
       mode: 'unscaled'
   %}
 {% else %}
+{% liquid
+  assign variant_image = product_option_value.variant.featured_media
 
-  {% assign variant_image = product_option_value.variant.featured_media %}
+  if variant_image == blank and product_option_value.product_url
+    assign variant_image = product_option_value.variant.product.featured_media
+  endif
+%}
 
-  {%- comment -%}
-    If no variant image available, fall back to child product featured image
-  {%- endcomment -%}
-  {% if variant_image == blank and product_option_value.product_url %}
-    {% assign variant_image = product_option_value.variant.product.featured_media %}
+{% if variant_style == 'swatch' %}
+  {% render 'swatch',
+    swatch: product_option_value.swatch,
+    variant_image: variant_image,
+    mode: 'unscaled'
+  %}
+{% endif %}
+
+<span class="variant-option__button-label__image">
+  {% if variant_image %}
+    {{ variant_image
+      | image_url: width: 120
+      | image_tag:
+        width: 60,
+        height: 60,
+        class: "variant-image-swatch",
+        alt: product_option_value.name
+    }}
+  {% else %}
+    <span class="variant-option__button-label__text">
+      {{ product_option_value | escape }}
+    </span>
   {% endif %}
+</span>
 
-  <span class="variant-option__button-label__image">
-    {% if variant_image %}
-      {{ variant_image
-        | image_url: width: 120
-        | image_tag:
-          width: 60,
-          height: 60,
-          class: "variant-image-swatch",
-          alt: product_option_value.name
-      }}
-    {% else %}
-      <span class="variant-option__button-label__text">
-        {{ product_option_value | escape }}
-      </span>
-    {% endif %}
-  </span>
 
 {% endif %}
 
