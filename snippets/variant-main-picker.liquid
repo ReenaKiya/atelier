@@ -85,38 +85,6 @@
     checked
   {% endif %}
 >
-{% if variant_style == 'swatch' %}
-{% liquid
-  assign featured_media = product_option_value.variant.featured_media
-
-# If the variant has no featured media, and we have a combined listing product, then fall back to
-                    # using the featured media of the child product that is linked to this option value.
-  if featured_media == blank and product_option_value.product_url
-    assign featured_media = product_option_value.variant.product.featured_media
-  endif
-%}
-
-{% render 'swatch',
-                    swatch: product_option_value.swatch,
-                    variant_image: featured_media,
-                    mode: 'unscaled'
-                  %}
-    {% else %}
-                 {% if variant_style == 'swatch' %}
-  {% liquid
-    assign featured_media = product_option_value.variant.featured_media
-
-    if featured_media == blank and product_option_value.product_url
-      assign featured_media = product_option_value.variant.product.featured_media
-    endif
-  %}
-
-  {% render 'swatch',
-      swatch: product_option_value.swatch,
-      variant_image: featured_media,
-      mode: 'unscaled'
-  %}
-{% else %}
 {% liquid
   assign variant_image = product_option_value.variant.featured_media
 
@@ -133,7 +101,7 @@
   %}
 {% endif %}
 
-<span class="variant-option__button-label__image">
+<span class="variant-option__button-label__image" data-has-image="{{ variant_image | default: false }}">
   {% if variant_image %}
     {{ variant_image
       | image_url: width: 120
@@ -143,17 +111,9 @@
         class: "variant-image-swatch",
         alt: product_option_value.name
     }}
-  {% else %}
-    <span class="variant-option__button-label__text">
-      {{ product_option_value | escape }}
-    </span>
   {% endif %}
 </span>
 
-
-{% endif %}
-
-{% endif %}
                 {% comment %} {% render 'strikethrough-variant', product_option: product_option_value %} {% endcomment %}
               </label>
             {%- endfor -%}
