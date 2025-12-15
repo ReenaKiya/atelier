@@ -59,25 +59,7 @@
     {% # theme-check-enable ParserBlockingScript %}
 
 
-    <script>
-document.addEventListener('change', function (e) {
-  const input = e.target.closest('.variant-option input[type="radio"]');
-  if (!input) return;
-
-  const label = input.closest('.variant-option__button-label');
-  const imageWrap = label?.querySelector('.variant-option__button-label__image');
-
-  if (!imageWrap) return;
-
-  // If image exists, NEVER allow text replacement
-  const img = imageWrap.querySelector('img');
-  if (img) {
-    imageWrap.innerHTML = '';
-    imageWrap.appendChild(img);
-  }
-});
-</script>
-
+    
 
     {% render 'search-modal' %}
 
