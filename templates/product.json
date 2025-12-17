@@ -404,7 +404,7 @@
                 "alignment": "left",
                 "spacing": 30,
                 "spacing_mobile": 20,
-                "section_padding": 40,
+                "section_padding": 15,
                 "icon_text_gap": 15,
                 "icon_size": 40,
                 "icon_size_mobile": 30,
