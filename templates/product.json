@@ -402,7 +402,7 @@
                 "columns_desktop": 4,
                 "columns_mobile": "2",
                 "alignment": "left",
-                "spacing": 30,
+                "spacing": 20,
                 "spacing_mobile": 20,
                 "section_padding": 0,
                 "icon_text_gap": 15,
