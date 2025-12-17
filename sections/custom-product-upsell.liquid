@@ -1,0 +1,44 @@
+{% if product %}
+  <div class="custom-upsell">
+    <h2 class="upsell-heading">You may also like</h2>
+
+    <div
+      class="upsell-grid"
+      data-url="{{ routes.product_recommendations_url }}?product_id={{ product.id }}&limit=4"
+    >
+      Loading recommendations...
+    </div>
+  </div>
+{% endif %}
+
+<script>
+  fetch(document.querySelector('.upsell-grid').dataset.url)
+    .then(res => res.text())
+    .then(html => {
+      const div = document.createElement('div');
+      div.innerHTML = html;
+
+      const products = div.querySelectorAll('.grid__item');
+      const container = document.querySelector('.upsell-grid');
+      container.innerHTML = '';
+
+      products.forEach(product => {
+        container.appendChild(product);
+      });
+    });
+</script>
+
+<style>
+.custom-upsell {
+  margin-top: 50px;
+}
+.upsell-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.upsell-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+</style>
