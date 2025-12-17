@@ -974,6 +974,24 @@
     },
     "17659686154e89d66d": {
       "type": "_blocks",
+      "blocks": {
+        "payment_icons_pmydfC": {
+          "type": "payment-icons",
+          "name": "t:names.payment_icons",
+          "settings": {
+            "horizontal_alignment": "flex-start",
+            "gap": 10,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "payment_icons_pmydfC"
+      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
