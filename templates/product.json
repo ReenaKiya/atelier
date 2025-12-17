@@ -385,17 +385,6 @@
               },
               "blocks": {}
             },
-            "ai_gen_block_8c87980_yWedxh": {
-              "type": "ai_gen_block_8c87980",
-              "settings": {
-                "heading": "Size Chart",
-                "page": "{{ closest.product.metafields.custom.size_charts.value }}",
-                "open_by_default": false,
-                "heading_size": 16,
-                "padding_vertical": 16
-              },
-              "blocks": {}
-            },
             "ai_gen_block_041f114_nqTR3j": {
               "type": "ai_gen_block_041f114",
               "settings": {
@@ -458,7 +447,6 @@
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
             "review_XpJqY3",
-            "ai_gen_block_8c87980_yWedxh",
             "ai_gen_block_041f114_nqTR3j",
             "ai_gen_block_61a192f_UnbiCg"
           ]
