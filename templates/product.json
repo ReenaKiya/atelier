@@ -435,6 +435,35 @@
                 "feature_4_description": "Always here to help"
               },
               "blocks": {}
+            },
+            "ai_gen_block_51b889a_QYrdVC": {
+              "type": "ai_gen_block_51b889a",
+              "settings": {
+                "layout_direction": "column",
+                "section_padding": 40,
+                "item_spacing": 40,
+                "icon_text_gap": 10,
+                "icon_size": 40,
+                "icon_stroke_width": 1.5,
+                "icon_color": "#000000",
+                "text_size": 12,
+                "text_color": "#000000",
+                "text_weight": "400",
+                "text_transform": "uppercase",
+                "letter_spacing": 0.5,
+                "mobile_spacing": 25,
+                "mobile_icon_size": 30,
+                "mobile_text_size": 11,
+                "feature_1_enabled": true,
+                "feature_1_text": "Free shipping",
+                "feature_2_enabled": true,
+                "feature_2_text": "Special offers",
+                "feature_3_enabled": true,
+                "feature_3_text": "Easy returns",
+                "feature_4_enabled": true,
+                "feature_4_text": "VIP newsletter"
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -447,7 +476,8 @@
             "buy_buttons_9MVfWi",
             "review_XpJqY3",
             "ai_gen_block_8c87980_yWedxh",
-            "ai_gen_block_61a192f_UnbiCg"
+            "ai_gen_block_61a192f_UnbiCg",
+            "ai_gen_block_51b889a_QYrdVC"
           ]
         }
       },
@@ -943,40 +973,6 @@
     },
     "1765966339907ac83e": {
       "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_51b889a_9gTg9d": {
-          "type": "ai_gen_block_51b889a",
-          "settings": {
-            "layout_direction": "column",
-            "section_padding": 40,
-            "item_spacing": 40,
-            "icon_text_gap": 10,
-            "icon_size": 40,
-            "icon_stroke_width": 1.5,
-            "icon_color": "#000000",
-            "text_size": 12,
-            "text_color": "#000000",
-            "text_weight": "400",
-            "text_transform": "uppercase",
-            "letter_spacing": 0.5,
-            "mobile_spacing": 25,
-            "mobile_icon_size": 30,
-            "mobile_text_size": 11,
-            "feature_1_enabled": true,
-            "feature_1_text": "Free shipping",
-            "feature_2_enabled": true,
-            "feature_2_text": "Special offers",
-            "feature_3_enabled": true,
-            "feature_3_text": "Easy returns",
-            "feature_4_enabled": true,
-            "feature_4_text": "VIP newsletter"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_51b889a_9gTg9d"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
