@@ -401,7 +401,7 @@
               "settings": {
                 "columns_desktop": 4,
                 "columns_mobile": "2",
-                "alignment": "center",
+                "alignment": "left",
                 "spacing": 30,
                 "spacing_mobile": 20,
                 "section_padding": 40,
