@@ -373,6 +373,14 @@
               },
               "block_order": []
             },
+            "essential_upsell_app_block_UPgEQX": {
+              "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
+              "settings": {}
+            },
+            "essential_upsell_frequently_bought_together_app_block_DJGzAD": {
+              "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+              "settings": {}
+            },
             "review_XpJqY3": {
               "type": "review",
               "name": "t:names.product_review_stars",
@@ -446,6 +454,8 @@
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
+            "essential_upsell_app_block_UPgEQX",
+            "essential_upsell_frequently_bought_together_app_block_DJGzAD",
             "review_XpJqY3",
             "ai_gen_block_041f114_nqTR3j",
             "ai_gen_block_61a192f_UnbiCg"
@@ -1019,6 +1029,45 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "176603826003e86eb7": {
+      "type": "_blocks",
+      "blocks": {
+        "essential_upsell_product_addon_app_block_Hhqhgn": {
+          "type": "shopify://apps/essential-upsell/blocks/product-addon-app-block/50627fd9-24fd-4250-8614-accc12826d80",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "essential_upsell_product_addon_app_block_Hhqhgn"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -1031,6 +1080,7 @@
     "1765524993cacfef3b",
     "1765966024f6f599eb",
     "1765966339907ac83e",
-    "17659686154e89d66d"
+    "17659686154e89d66d",
+    "176603826003e86eb7"
   ]
 }
