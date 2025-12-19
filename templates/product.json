@@ -67,14 +67,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "custom_liquid_Q4ct8w": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<style>\n.icon-list-custom {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  justify-content: center;\n  margin: 0;\n  gap: 8px;\n  padding: 0;\n  margin-top: -1rem;\n}\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {% assign enabled_payment_types = 'visa,master,apple_pay,shopify_pay,klarna,paypal' | split: ',' %}\n  \n  {% for type in enabled_payment_types %}\n    <li>\n      {{ type | payment_type_svg_tag: class: 'icon-svg' }}\n    </li>\n  {% endfor %}\n</ul>"
-              },
-              "blocks": {}
-            },
             "text_idAt7H": {
               "type": "text",
               "name": "t:names.heading",
@@ -381,6 +373,14 @@
               },
               "block_order": []
             },
+            "custom_liquid_Q4ct8w": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<style>\n.icon-list-custom {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  justify-content: center;\n  margin: 0;\n  gap: 8px;\n  padding: 0;\n  margin-top: 20px;\n}\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {% assign enabled_payment_types = 'visa,master,apple_pay,shopify_pay,klarna,paypal' | split: ',' %}\n  \n  {% for type in enabled_payment_types %}\n    <li>\n      {{ type | payment_type_svg_tag: class: 'icon-svg' }}\n    </li>\n  {% endfor %}\n</ul>"
+              },
+              "blocks": {}
+            },
             "essential_upsell_app_block_JGLMax": {
               "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
               "settings": {}
@@ -427,7 +427,6 @@
             }
           },
           "block_order": [
-            "custom_liquid_Q4ct8w",
             "text_idAt7H",
             "price_PHGQkM",
             "product_inventory_cf9Nct",
@@ -435,6 +434,7 @@
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
+            "custom_liquid_Q4ct8w",
             "essential_upsell_app_block_JGLMax",
             "ai_gen_block_61a192f_UnbiCg"
           ]
