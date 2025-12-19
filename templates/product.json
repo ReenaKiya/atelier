@@ -377,22 +377,6 @@
               "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
               "settings": {}
             },
-            "essential_upsell_frequently_bought_together_app_block_DJGzAD": {
-              "type": "shopify://apps/essential-upsell/blocks/frequently-bought-together-app-block/50627fd9-24fd-4250-8614-accc12826d80",
-              "settings": {}
-            },
-            "review_XpJqY3": {
-              "type": "review",
-              "name": "t:names.product_review_stars",
-              "settings": {
-                "stars_style": "shaded",
-                "show_number": true,
-                "rating_color": "foreground",
-                "type_preset": "paragraph",
-                "alignment": "left"
-              },
-              "blocks": {}
-            },
             "ai_gen_block_041f114_nqTR3j": {
               "type": "ai_gen_block_041f114",
               "settings": {
@@ -455,8 +439,6 @@
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
             "essential_upsell_app_block_UPgEQX",
-            "essential_upsell_frequently_bought_together_app_block_DJGzAD",
-            "review_XpJqY3",
             "ai_gen_block_041f114_nqTR3j",
             "ai_gen_block_61a192f_UnbiCg"
           ]
