@@ -424,6 +424,50 @@
                 "feature_4_description": "Always here to help"
               },
               "blocks": {}
+            },
+            "ai_gen_block_a13ae2a_Rr9ETL": {
+              "type": "ai_gen_block_a13ae2a",
+              "settings": {
+                "heading": "Complete the look",
+                "heading_alignment": "left",
+                "button_text": "Add to cart",
+                "product_1": "flower",
+                "product_2": "body-parts",
+                "product_3": "automatic-espress",
+                "product_4": "",
+                "product_5": "",
+                "product_6": "",
+                "product_7": "",
+                "product_8": "",
+                "products_per_row_desktop": 4,
+                "products_per_row_mobile": "2",
+                "grid_gap": 16,
+                "section_padding": 40,
+                "heading_spacing": 24,
+                "card_background": "#ffffff",
+                "card_border_color": "#e6e6e6",
+                "card_border_width": 1,
+                "card_border_radius": 0,
+                "card_padding": 16,
+                "heading_size": 24,
+                "heading_color": "#000000",
+                "product_title_size": 14,
+                "product_title_color": "#000000",
+                "product_title_hover_color": "#666666",
+                "price_size": 14,
+                "price_color": "#000000",
+                "icon_size": 16,
+                "button_background": "#000000",
+                "button_text_color": "#ffffff",
+                "button_border_color": "#000000",
+                "button_hover_background": "#383838",
+                "button_hover_text_color": "#ffffff",
+                "button_hover_border_color": "#383838",
+                "button_border_width": 0,
+                "button_border_radius": 0,
+                "button_text_size": 12
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -436,7 +480,8 @@
             "buy_buttons_9MVfWi",
             "custom_liquid_Q4ct8w",
             "essential_upsell_app_block_JGLMax",
-            "ai_gen_block_61a192f_UnbiCg"
+            "ai_gen_block_61a192f_UnbiCg",
+            "ai_gen_block_a13ae2a_Rr9ETL"
           ]
         }
       },
