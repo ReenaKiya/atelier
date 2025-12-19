@@ -377,7 +377,7 @@
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
               "settings": {
-                "custom_liquid": "<style>\n.icon-list-custom {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  justify-content: center;\n  margin: 0;\n  gap: 8px;\n  padding: 0;\n  margin-top: 20px;\ncursor: pointer;\n}\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {% assign enabled_payment_types = 'visa,master,apple_pay,shopify_pay,klarna,paypal' | split: ',' %}\n  \n  {% for type in enabled_payment_types %}\n    <li>\n      {{ type | payment_type_svg_tag: class: 'icon-svg' }}\n    </li>\n  {% endfor %}\n</ul>"
+                "custom_liquid": "<style>\n.icon-list-custom {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  justify-content: flex-start;\n  margin: 0;\n  gap: 8px;\n  padding: 0;\n  margin-top: 20px;\ncursor: pointer;\n}\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {% assign enabled_payment_types = 'visa,master,apple_pay,shopify_pay,klarna,paypal' | split: ',' %}\n  \n  {% for type in enabled_payment_types %}\n    <li>\n      {{ type | payment_type_svg_tag: class: 'icon-svg' }}\n    </li>\n  {% endfor %}\n</ul>"
               },
               "blocks": {}
             },
