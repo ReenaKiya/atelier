@@ -373,6 +373,10 @@
               },
               "block_order": []
             },
+            "essential_upsell_app_block_JGLMax": {
+              "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
+              "settings": {}
+            },
             "ai_gen_block_61a192f_UnbiCg": {
               "type": "ai_gen_block_61a192f",
               "settings": {
@@ -422,6 +426,7 @@
             "variant_picker_R3rGDr",
             "accordion_NKWPiW",
             "buy_buttons_9MVfWi",
+            "essential_upsell_app_block_JGLMax",
             "ai_gen_block_61a192f_UnbiCg"
           ]
         }
@@ -431,7 +436,7 @@
         "desktop_media_position": "left",
         "equal_columns": true,
         "limit_details_width": true,
-        "gap": 16,
+        "gap": 0,
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
