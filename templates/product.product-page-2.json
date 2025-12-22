@@ -1031,6 +1031,82 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "blocks_z8VWaz": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_61a192f_AE7THb": {
+          "type": "ai_gen_block_61a192f",
+          "settings": {
+            "columns_desktop": 4,
+            "columns_mobile": "2",
+            "alignment": "center",
+            "spacing": 30,
+            "spacing_mobile": 20,
+            "section_padding": 40,
+            "icon_text_gap": 15,
+            "icon_size": 40,
+            "icon_size_mobile": 30,
+            "icon_stroke_width": 1.5,
+            "icon_color": "#000000",
+            "heading_size": 14,
+            "heading_size_mobile": 12,
+            "heading_weight": "600",
+            "heading_color": "#000000",
+            "description_size": 12,
+            "description_size_mobile": 11,
+            "description_color": "#666666",
+            "feature_1_enabled": true,
+            "feature_1_icon": "shipping",
+            "feature_1_heading": "Free shipping",
+            "feature_1_description": "On orders over $50",
+            "feature_2_enabled": true,
+            "feature_2_icon": "gift",
+            "feature_2_heading": "Special offers",
+            "feature_2_description": "Exclusive deals for members",
+            "feature_3_enabled": true,
+            "feature_3_icon": "return",
+            "feature_3_heading": "Easy returns",
+            "feature_3_description": "30-day return policy",
+            "feature_4_enabled": true,
+            "feature_4_icon": "support",
+            "feature_4_heading": "24/7 support",
+            "feature_4_description": "Always here to help"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_61a192f_AE7THb"
+      ],
+      "name": "Icon features",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
@@ -1043,6 +1119,7 @@
     "1765966024f6f599eb",
     "1765966339907ac83e",
     "17659686154e89d66d",
-    "176603826003e86eb7"
+    "176603826003e86eb7",
+    "blocks_z8VWaz"
   ]
 }
