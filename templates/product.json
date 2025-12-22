@@ -780,10 +780,43 @@
             "show_shop_reviews": false,
             "empty_state": "empty_widget"
           }
+        },
+        "contact_form_hGf3jW": {
+          "type": "contact-form",
+          "name": "t:names.contact_form",
+          "settings": {
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_eN6ciA"
+        "judge_me_reviews_review_widget_eN6ciA",
+        "contact_form_hGf3jW"
       ],
       "settings": {
         "content_direction": "column",
