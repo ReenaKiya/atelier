@@ -780,43 +780,10 @@
             "show_shop_reviews": false,
             "empty_state": "empty_widget"
           }
-        },
-        "contact_form_hGf3jW": {
-          "type": "contact-form",
-          "name": "t:names.contact_form",
-          "settings": {
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100,
-            "inherit_color_scheme": true,
-            "color_scheme": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
-              "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_eN6ciA",
-        "contact_form_hGf3jW"
+        "judge_me_reviews_review_widget_eN6ciA"
       ],
       "settings": {
         "content_direction": "column",
@@ -844,35 +811,6 @@
         "gradient_direction": "to top",
         "padding-block-start": 0,
         "padding-block-end": 0
-      }
-    },
-    "testimonial_section_bGaUMy": {
-      "type": "testimonial-section",
-      "blocks": {
-        "testimonial_iEF7CC": {
-          "type": "testimonial",
-          "settings": {
-            "author": "John Doe",
-            "quote": "This product is amazing! I would definitely recommend it to anyone.",
-            "author_image": "shopify://shop_images/1.jpg"
-          }
-        },
-        "testimonial_tKaC4j": {
-          "type": "testimonial",
-          "settings": {
-            "author": "John Doe",
-            "quote": "This product is amazing! I would definitely recommend it to anyone.",
-            "author_image": "shopify://shop_images/ser_5.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_iEF7CC",
-        "testimonial_tKaC4j"
-      ],
-      "name": "Testimonial Section",
-      "settings": {
-        "heading": "What Our Customers Say"
       }
     },
     "17655238379a0febe2": {
@@ -1117,7 +1055,6 @@
     "main",
     "product_recommendations_qnzPkn",
     "17545503701caa3bf2",
-    "testimonial_section_bGaUMy",
     "17655238379a0febe2",
     "1765524498d58a01f3",
     "1765524993cacfef3b",
