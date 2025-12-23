@@ -317,7 +317,7 @@
                 "drawer_background": "#ffffff",
                 "drawer_background_image": "shopify://shop_images/5766638053525_3759b884-7c5d-4afb-a0dd-48b714a8a894.jpg",
                 "drawer_bg_opacity": 100,
-                "drawer_content_background": "rgba(255, 255, 255, 0.95)",
+                "drawer_content_background": "rgba(0,0,0,0)",
                 "drawer_text_color": "#000000",
                 "drawer_accent_color": "#000000",
                 "drawer_title_size": 24,
