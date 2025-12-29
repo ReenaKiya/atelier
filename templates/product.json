@@ -71,7 +71,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h3>Baby Body Parts</h3>",
+                "text": "<p>{{ closest.product.title }}</p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
