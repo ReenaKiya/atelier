@@ -118,31 +118,36 @@
   %}
 {% else %}
 
-  {% assign variant_image = product_option_value.variant.featured_media %}
+  {% liquid
+  assign variant_image = blank
 
-  {%- comment -%}
-    If no variant image available, fall back to child product featured image
-  {%- endcomment -%}
-  {% if variant_image == blank and product_option_value.product_url %}
-    {% assign variant_image = product_option_value.variant.product.featured_media %}
+  for v in product.variants
+    if v.option1 == product_option_value or v.option2 == product_option_value or v.option3 == product_option_value
+      if v.featured_media
+        assign variant_image = v.featured_media
+        break
+      endif
+    endif
+  endfor
+
+  if variant_image == blank and product_option_value.product_url
+    assign variant_image = product_option_value.variant.product.featured_media
+  endif
+%}
+
+<span class="variant-option__button-label__image">
+  {% if variant_image %}
+    {{ variant_image
+      | image_url: width: 120
+      | image_tag:
+        width: 60,
+        height: 60,
+        class: "variant-image-swatch",
+        alt: product_option_value.name
+    }}
   {% endif %}
+</span>
 
-  <span class="variant-option__button-label__image">
-    {% if variant_image %}
-      {{ variant_image
-        | image_url: width: 120
-        | image_tag:
-          width: 60,
-          height: 60,
-          class: "variant-image-swatch",
-          alt: product_option_value.name
-      }}
-    {% else %}
-      <span class="variant-option__button-label__text">
-        {{ product_option_value | escape }}
-      </span>
-    {% endif %}
-  </span>
 
 {% endif %}
 
