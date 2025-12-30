@@ -67,14 +67,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "custom_liquid_VVyJGc": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<div class=\"gta-block__root GSC-SMALL-uUdYHGWmvEem\"></div>"
-              },
-              "blocks": {}
-            },
             "text_idAt7H": {
               "type": "text",
               "name": "t:names.heading",
@@ -369,7 +361,6 @@
             }
           },
           "block_order": [
-            "custom_liquid_VVyJGc",
             "text_idAt7H",
             "price_PHGQkM",
             "product_inventory_cf9Nct",
