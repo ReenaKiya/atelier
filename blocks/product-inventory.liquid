@@ -58,7 +58,10 @@
     >
       {{ 'icon-inventory.svg' | inline_asset_content }}
     </span>
-    <span
+
+
+
+    {% comment %} <span
       class="product-inventory__text"
       id="Inventory-{{ section.id }}"
       role="status"
@@ -69,7 +72,21 @@
       {%- else -%}
         {{- translation_key | t -}}
       {%- endif -%}
-    </span>
+    </span> {% endcomment %}
+
+<span
+  class="product-inventory__text"
+  id="Inventory-{{ section.id }}"
+  role="status"
+  aria-label="{{ 'accessibility.inventory_status' | t }}"
+  data-inventory-qty="{{ inventory_quantity }}"
+>
+  {{ inventory_quantity }} left
+</span>
+
+
+
+
   </span>
 </product-inventory>
 
