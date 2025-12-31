@@ -66,5 +66,52 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
+
+
+
+    {% comment %} jawascript added by me for product stock show  {% endcomment %}
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('form[action*="/cart/add"]');
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const inventoryEl = document.querySelector('.product-inventory__text');
+    const qtyInput = form.querySelector('input[name="quantity"]');
+
+    if (!inventoryEl || !qtyInput) return;
+
+    const currentInventory = parseInt(inventoryEl.dataset.inventoryQty, 10);
+    const selectedQty = parseInt(qtyInput.value, 10);
+
+    if (isNaN(currentInventory) || isNaN(selectedQty)) return;
+
+    const newInventory = Math.max(currentInventory - selectedQty, 0);
+
+    /* --- ADD TO CART REQUEST --- */
+    const formData = new FormData(form);
+
+    const response = await fetch('/cart/add.js', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (!response.ok) return;
+
+    /* --- UPDATE INVENTORY UI --- */
+    inventoryEl.dataset.inventoryQty = newInventory;
+    inventoryEl.textContent = `${newInventory} left`;
+  });
+});
+</script>
+
+
+
   </body>
 </html>
