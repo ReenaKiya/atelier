@@ -40,7 +40,7 @@
 Get it between <strong><span id="fromDate"></span> - <span id="toDate"></span></strong></p>
 {{ '//cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js' | script_tag }}
 <script>
-var fromDate = Date.today().addDays(6);
+var fromDate = Date.today().addDays(5);
 if (fromDate.is().saturday() || fromDate.is().sunday()) {
 fromDate = fromDate.next().monday();
 }
