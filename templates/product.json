@@ -221,7 +221,7 @@
               "type": "shopify://apps/libautech-shoppable-ugc/blocks/block/019ade11-769e-703d-9b80-f6ca3920e42f",
               "settings": {
                 "lbt_media_collection": "",
-                "style_type": "normal",
+                "style_type": "story",
                 "slide_size": "medium",
                 "footer_position": "bottom",
                 "arrows": true,
