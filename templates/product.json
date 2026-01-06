@@ -12,6 +12,19 @@
     "main": {
       "type": "product-information",
       "blocks": {
+        "libautech_shoppable_ugc_block_neQFpL": {
+          "type": "shopify://apps/libautech-shoppable-ugc/blocks/block/019ade11-769e-703d-9b80-f6ca3920e42f",
+          "settings": {
+            "lbt_media_collection": "",
+            "style_type": "story",
+            "slide_size": "medium",
+            "footer_position": "bottom",
+            "arrows": true,
+            "show_unmute": false,
+            "center_video": false,
+            "play_on_hover": true
+          }
+        },
         "media-gallery": {
           "type": "_product-media-gallery",
           "static": true,
@@ -217,14 +230,6 @@
               },
               "block_order": []
             },
-            "custom_liquid_Q4ct8w": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<style>\n.icon-list-custom {\n  display: flex;\n  flex-wrap: wrap;\n  list-style: none;\n  justify-content: flex-start;\n  margin: 0;\n  gap: 8px;\n  padding: 0;\n  margin-top: 20px;\ncursor: pointer;\n}\n</style>\n\n<ul class=\"icon-list-custom\" role=\"list\">\n  {% assign enabled_payment_types = 'visa,master,apple_pay,shopify_pay,klarna,paypal' | split: ',' %}\n  \n  {% for type in enabled_payment_types %}\n    <li>\n      {{ type | payment_type_svg_tag: class: 'icon-svg' }}\n    </li>\n  {% endfor %}\n</ul>"
-              },
-              "blocks": {}
-            },
             "essential_upsell_app_block_JGLMax": {
               "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
               "settings": {}
@@ -367,7 +372,6 @@
             "variant_picker_R3rGDr",
             "ai_gen_block_61a192f_UnbiCg",
             "buy_buttons_9MVfWi",
-            "custom_liquid_Q4ct8w",
             "essential_upsell_app_block_JGLMax",
             "ai_gen_block_a13ae2a_Rr9ETL",
             "ai_gen_block_aa810be_NeYxwn",
@@ -375,11 +379,14 @@
           ]
         }
       },
+      "block_order": [
+        "libautech_shoppable_ugc_block_neQFpL"
+      ],
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
         "equal_columns": true,
-        "limit_details_width": true,
+        "limit_details_width": false,
         "gap": 0,
         "color_scheme": "scheme-2",
         "padding-block-start": 0,
