@@ -12,19 +12,6 @@
     "main": {
       "type": "product-information",
       "blocks": {
-        "libautech_shoppable_ugc_block_neQFpL": {
-          "type": "shopify://apps/libautech-shoppable-ugc/blocks/block/019ade11-769e-703d-9b80-f6ca3920e42f",
-          "settings": {
-            "lbt_media_collection": "",
-            "style_type": "story",
-            "slide_size": "medium",
-            "footer_position": "bottom",
-            "arrows": true,
-            "show_unmute": false,
-            "center_video": false,
-            "play_on_hover": true
-          }
-        },
         "media-gallery": {
           "type": "_product-media-gallery",
           "static": true,
@@ -230,6 +217,19 @@
               },
               "block_order": []
             },
+            "libautech_shoppable_ugc_block_A4NLCx": {
+              "type": "shopify://apps/libautech-shoppable-ugc/blocks/block/019ade11-769e-703d-9b80-f6ca3920e42f",
+              "settings": {
+                "lbt_media_collection": "",
+                "style_type": "story",
+                "slide_size": "medium",
+                "footer_position": "bottom",
+                "arrows": true,
+                "show_unmute": false,
+                "center_video": false,
+                "play_on_hover": true
+              }
+            },
             "essential_upsell_app_block_JGLMax": {
               "type": "shopify://apps/essential-upsell/blocks/app-block/50627fd9-24fd-4250-8614-accc12826d80",
               "settings": {}
@@ -372,6 +372,7 @@
             "variant_picker_R3rGDr",
             "ai_gen_block_61a192f_UnbiCg",
             "buy_buttons_9MVfWi",
+            "libautech_shoppable_ugc_block_A4NLCx",
             "essential_upsell_app_block_JGLMax",
             "ai_gen_block_a13ae2a_Rr9ETL",
             "ai_gen_block_aa810be_NeYxwn",
@@ -379,9 +380,6 @@
           ]
         }
       },
-      "block_order": [
-        "libautech_shoppable_ugc_block_neQFpL"
-      ],
       "settings": {
         "content_width": "content-center-aligned",
         "desktop_media_position": "left",
