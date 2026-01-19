@@ -1,6 +1,380 @@
+{% doc %}
+  @prompt
+    Create a two-column section with collection names listed on the left side and an image display area on the right side. When hovering over a collection name on the left (like "Clothing" or "Baby Cloths"), the corresponding collection's featured image should appear on the right side. The section should include a collection picker setting for each collection item, smooth fade transitions between images on hover, and a clean, modern layout. The left side should show collection titles in a vertical list, and the right side should display the hovered collection's image with smooth transitions.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-hover-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+  }
+
+  .ai-collection-hover__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: {{ block.settings.gap }}px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: {{ block.settings.padding }}px;
+  }
+
+  .ai-collection-hover__list-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-collection-hover__item-{{ ai_gen_id }} {
+    padding: {{ block.settings.item_padding }}px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid {{ block.settings.divider_color }};
+  }
+
+  .ai-collection-hover__item-{{ ai_gen_id }}:last-child {
+    border-bottom: none;
+  }
+
+  .ai-collection-hover__item-{{ ai_gen_id }}:hover {
+    padding-left: {{ block.settings.hover_indent }}px;
+  }
+
+  .ai-collection-hover__title-{{ ai_gen_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    color: {{ block.settings.title_color }};
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+
+  .ai-collection-hover__item-{{ ai_gen_id }}:hover .ai-collection-hover__title-{{ ai_gen_id }} {
+    color: {{ block.settings.title_hover_color }};
+  }
+
+  .ai-collection-hover__image-area-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.image_height }}px;
+    overflow: hidden;
+    background-color: {{ block.settings.image_bg_color }};
+  }
+
+  .ai-collection-hover__image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity {{ block.settings.transition_speed }}s ease;
+  }
+
+  .ai-collection-hover__image-{{ ai_gen_id }}.active {
+    opacity: 1;
+  }
+
+  .ai-collection-hover__image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-collection-hover__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-collection-hover__placeholder-{{ ai_gen_id }} svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-hover__container-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: {{ block.settings.gap | times: 0.5 }}px;
+    }
+
+    .ai-collection-hover__image-area-{{ ai_gen_id }} {
+      height: {{ block.settings.image_height | times: 0.6 }}px;
+    }
+
+    .ai-collection-hover__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<collection-hover-{{ ai_gen_id }}
+  class="ai-collection-hover-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-hover__container-{{ ai_gen_id }}">
+    <div class="ai-collection-hover__list-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign collection_key = 'collection_' | append: i
+          assign collection = block.settings[collection_key]
+        %}
+
+        {% if collection != blank %}
+          <div
+            class="ai-collection-hover__item-{{ ai_gen_id }}"
+            data-collection-index="{{ i }}"
+          >
+            <h3 class="ai-collection-hover__title-{{ ai_gen_id }}">
+              {{ collection.title }}
+            </h3>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="ai-collection-hover__image-area-{{ ai_gen_id }}">
+      {% for i in (1..6) %}
+        {% liquid
+          assign collection_key = 'collection_' | append: i
+          assign collection = block.settings[collection_key]
+        %}
+
+        {% if collection != blank %}
+          <div
+            class="ai-collection-hover__image-{{ ai_gen_id }} {% if forloop.first %}active{% endif %}"
+            data-image-index="{{ i }}"
+          >
+            {% if collection.featured_image %}
+              <img
+                src="{{ collection.featured_image | image_url: width: 1000 }}"
+                alt="{{ collection.featured_image.alt | escape }}"
+                loading="lazy"
+                width="{{ collection.featured_image.width }}"
+                height="{{ collection.featured_image.height }}"
+              >
+            {% else %}
+              <div class="ai-collection-hover__placeholder-{{ ai_gen_id }}">
+                {{ 'collection-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</collection-hover-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionHover{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.items = this.querySelectorAll('.ai-collection-hover__item-{{ ai_gen_id }}');
+        this.images = this.querySelectorAll('.ai-collection-hover__image-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        this.items.forEach((item) => {
+          item.addEventListener('mouseenter', () => {
+            const index = item.getAttribute('data-collection-index');
+            this.showImage(index);
+          });
+        });
+      }
+
+      showImage(index) {
+        this.images.forEach((image) => {
+          const imageIndex = image.getAttribute('data-image-index');
+          if (imageIndex === index) {
+            image.classList.add('active');
+          } else {
+            image.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('collection-hover-{{ ai_gen_id }}', CollectionHover{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Collection hover gallery",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Collections"
+    },
+    {
+      "type": "collection",
+      "id": "collection_1",
+      "label": "Collection 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection_2",
+      "label": "Collection 2"
+    },
+    {
+      "type": "collection",
+      "id": "collection_3",
+      "label": "Collection 3"
+    },
+    {
+      "type": "collection",
+      "id": "collection_4",
+      "label": "Collection 4"
+    },
+    {
+      "type": "collection",
+      "id": "collection_5",
+      "label": "Collection 5"
+    },
+    {
+      "type": "collection",
+      "id": "collection_6",
+      "label": "Collection 6"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Gap between columns",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Collection list"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "title_hover_color",
+      "label": "Title hover color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "item_padding",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Item padding",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "hover_indent",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Hover indent",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "header",
+      "content": "Image area"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 300,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Image height",
+      "default": 500
+    },
+    {
+      "type": "color",
+      "id": "image_bg_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "range",
+      "id": "transition_speed",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "label": "Transition speed",
+      "unit": "s",
+      "default": 0.5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection hover gallery"
+    }
+  ]
+}
 {% endschema %}
