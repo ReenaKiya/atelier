@@ -214,4 +214,24 @@ function findSubmenu(element) {
 }
 
 
+// new js by added me
+
+
+<script>
+document.addEventListener('mouseover', function (e) {
+  const link = e.target.closest('.js-mega-link');
+  if (!link) return;
+
+  const index = link.dataset.megaIndex;
+
+  document
+    .querySelectorAll('.mega-menu-image-set')
+    .forEach(set => {
+      set.classList.toggle(
+        'active',
+        set.dataset.megaImage === index
+      );
+    });
+});
+</script>
 
