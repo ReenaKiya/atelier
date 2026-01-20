@@ -1,6 +1,689 @@
+{% doc %}
+  @prompt
+    Create a mega menu navigation feature for the header that displays product collection images on hover. When hovering over collection links in the "Shop Parts" dropdown menu (including Clothing Collection, Baby Cloths Collection, and Home Page Collection), show corresponding collection images on the right side of the header menu. The images should change dynamically based on which collection link is being hovered. Include settings to customize which collections are linked and their associated images, and ensure the layout is responsive and visually aligned with premium fashion aesthetics.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-mega-menu-{{ ai_gen_id }} {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-mega-menu-container-{{ ai_gen_id }} {
+    position: relative;
+    display: inline-block;
+  }
+
+  .ai-mega-menu-trigger-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    padding: {{ block.settings.menu_padding }}px;
+    font-size: {{ block.settings.menu_font_size }}px;
+    font-family: {{ block.settings.menu_font.family }}, {{ block.settings.menu_font.fallback_families }};
+    font-weight: {{ block.settings.menu_font.weight }};
+    color: {{ block.settings.menu_text_color }};
+    cursor: pointer;
+    text-transform: {{ block.settings.menu_text_transform }};
+    letter-spacing: {{ block.settings.menu_letter_spacing }}px;
+    transition: color 0.3s ease;
+  }
+
+  .ai-mega-menu-trigger-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.menu_text_hover_color }};
+  }
+
+  .ai-mega-menu-dropdown-{{ ai_gen_id }} {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: {{ block.settings.dropdown_background_color }};
+    border: {{ block.settings.dropdown_border_width }}px solid {{ block.settings.dropdown_border_color }};
+    min-width: {{ block.settings.dropdown_min_width }}px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .ai-mega-menu-dropdown-{{ ai_gen_id }}.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .ai-mega-menu-links-{{ ai_gen_id }} {
+    flex: 1;
+    padding: {{ block.settings.dropdown_padding }}px;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.link_spacing }}px;
+  }
+
+  .ai-mega-menu-link-{{ ai_gen_id }} {
+    display: block;
+    padding: {{ block.settings.link_padding }}px;
+    font-size: {{ block.settings.link_font_size }}px;
+    font-family: {{ block.settings.link_font.family }}, {{ block.settings.link_font.fallback_families }};
+    font-weight: {{ block.settings.link_font.weight }};
+    color: {{ block.settings.link_text_color }};
+    text-decoration: none;
+    text-transform: {{ block.settings.link_text_transform }};
+    letter-spacing: {{ block.settings.link_letter_spacing }}px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: {{ block.settings.link_border_radius }}px;
+  }
+
+  .ai-mega-menu-link-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.link_text_hover_color }};
+    background-color: {{ block.settings.link_hover_background }};
+  }
+
+  .ai-mega-menu-image-container-{{ ai_gen_id }} {
+    width: {{ block.settings.image_width }}px;
+    height: {{ block.settings.image_height }}px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: {{ block.settings.image_background_color }};
+  }
+
+  .ai-mega-menu-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .ai-mega-menu-image-{{ ai_gen_id }}.active {
+    opacity: 1;
+  }
+
+  .ai-mega-menu-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+  }
+
+  .ai-mega-menu-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 989px) {
+    .ai-mega-menu-dropdown-{{ ai_gen_id }} {
+      flex-direction: column;
+      min-width: 100%;
+    }
+
+    .ai-mega-menu-image-container-{{ ai_gen_id }} {
+      width: 100%;
+      height: 200px;
+      order: -1;
+    }
+
+    .ai-mega-menu-links-{{ ai_gen_id }} {
+      padding: {{ block.settings.dropdown_padding | divided_by: 1.5 }}px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-mega-menu-trigger-{{ ai_gen_id }} {
+      font-size: {{ block.settings.menu_font_size | times: 0.9 }}px;
+      padding: {{ block.settings.menu_padding | times: 0.8 }}px;
+    }
+
+    .ai-mega-menu-link-{{ ai_gen_id }} {
+      font-size: {{ block.settings.link_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<mega-menu-{{ ai_gen_id }} class="ai-mega-menu-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-mega-menu-container-{{ ai_gen_id }}">
+    <button
+      class="ai-mega-menu-trigger-{{ ai_gen_id }}"
+      aria-expanded="false"
+      aria-haspopup="true"
+    >
+      {{ block.settings.menu_title }}
+    </button>
+
+    <div class="ai-mega-menu-dropdown-{{ ai_gen_id }}">
+      <div class="ai-mega-menu-links-{{ ai_gen_id }}">
+        {% for i in (1..6) %}
+          {% liquid
+            assign collection_key = 'collection_' | append: i
+            assign link_text_key = 'link_text_' | append: i
+            assign collection = block.settings[collection_key]
+            assign link_text = block.settings[link_text_key]
+          %}
+
+          {% if collection != blank and link_text != blank %}
+            <a
+              href="{{ collection.url }}"
+              class="ai-mega-menu-link-{{ ai_gen_id }}"
+              data-collection-index="{{ i }}"
+            >
+              {{ link_text }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="ai-mega-menu-image-container-{{ ai_gen_id }}">
+        {% for i in (1..6) %}
+          {% liquid
+            assign collection_key = 'collection_' | append: i
+            assign image_key = 'image_' | append: i
+            assign collection = block.settings[collection_key]
+            assign image = block.settings[image_key]
+          %}
+
+          {% if collection != blank %}
+            {% if image %}
+              <img
+                src="{{ image | image_url: width: 800 }}"
+                alt="{{ image.alt | escape }}"
+                class="ai-mega-menu-image-{{ ai_gen_id }}"
+                data-collection-index="{{ i }}"
+                loading="lazy"
+                width="{{ block.settings.image_width }}"
+                height="{{ block.settings.image_height }}"
+              >
+            {% elsif collection.featured_image %}
+              <img
+                src="{{ collection.featured_image | image_url: width: 800 }}"
+                alt="{{ collection.title | escape }}"
+                class="ai-mega-menu-image-{{ ai_gen_id }}"
+                data-collection-index="{{ i }}"
+                loading="lazy"
+                width="{{ block.settings.image_width }}"
+                height="{{ block.settings.image_height }}"
+              >
+            {% else %}
+              <div class="ai-mega-menu-image-placeholder-{{ ai_gen_id }}" data-collection-index="{{ i }}">
+                {{ 'collection-apparel-1' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</mega-menu-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class MegaMenu{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.trigger = this.querySelector('.ai-mega-menu-trigger-{{ ai_gen_id }}');
+        this.dropdown = this.querySelector('.ai-mega-menu-dropdown-{{ ai_gen_id }}');
+        this.links = this.querySelectorAll('.ai-mega-menu-link-{{ ai_gen_id }}');
+        this.images = this.querySelectorAll('.ai-mega-menu-image-{{ ai_gen_id }}, .ai-mega-menu-image-placeholder-{{ ai_gen_id }}');
+        this.isOpen = false;
+        this.closeTimeout = null;
+      }
+
+      connectedCallback() {
+        this.setupEventListeners();
+        if (this.links.length > 0) {
+          this.showImage(this.links[0].dataset.collectionIndex);
+        }
+      }
+
+      setupEventListeners() {
+        this.trigger.addEventListener('click', () => this.toggleDropdown());
+        this.trigger.addEventListener('mouseenter', () => this.openDropdown());
+        this.addEventListener('mouseleave', () => this.scheduleClose());
+        this.addEventListener('mouseenter', () => this.cancelClose());
+
+        this.links.forEach((link) => {
+          link.addEventListener('mouseenter', () => {
+            this.showImage(link.dataset.collectionIndex);
+          });
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!this.contains(event.target)) {
+            this.closeDropdown();
+          }
+        });
+      }
+
+      toggleDropdown() {
+        if (this.isOpen) {
+          this.closeDropdown();
+        } else {
+          this.openDropdown();
+        }
+      }
+
+      openDropdown() {
+        this.cancelClose();
+        this.isOpen = true;
+        this.dropdown.classList.add('active');
+        this.trigger.setAttribute('aria-expanded', 'true');
+      }
+
+      closeDropdown() {
+        this.isOpen = false;
+        this.dropdown.classList.remove('active');
+        this.trigger.setAttribute('aria-expanded', 'false');
+      }
+
+      scheduleClose() {
+        this.closeTimeout = setTimeout(() => {
+          this.closeDropdown();
+        }, 300);
+      }
+
+      cancelClose() {
+        if (this.closeTimeout) {
+          clearTimeout(this.closeTimeout);
+          this.closeTimeout = null;
+        }
+      }
+
+      showImage(index) {
+        this.images.forEach((img) => {
+          if (img.dataset.collectionIndex === index) {
+            img.classList.add('active');
+          } else {
+            img.classList.remove('active');
+          }
+        });
+      }
+    }
+
+    customElements.define('mega-menu-{{ ai_gen_id }}', MegaMenu{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Mega menu navigation",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Menu trigger"
+    },
+    {
+      "type": "text",
+      "id": "menu_title",
+      "label": "Menu title",
+      "default": "Shop Parts"
+    },
+    {
+      "type": "font_picker",
+      "id": "menu_font",
+      "label": "Font",
+      "default": "red_hat_text_n4"
+    },
+    {
+      "type": "range",
+      "id": "menu_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "menu_padding",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "menu_text_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "uppercase"
+    },
+    {
+      "type": "range",
+      "id": "menu_letter_spacing",
+      "min": 0,
+      "max": 3,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Letter spacing",
+      "default": 0.5
+    },
+    {
+      "type": "color",
+      "id": "menu_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "menu_text_hover_color",
+      "label": "Hover text color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Dropdown style"
+    },
+    {
+      "type": "color",
+      "id": "dropdown_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "dropdown_border_width",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 1
+    },
+    {
+      "type": "color",
+      "id": "dropdown_border_color",
+      "label": "Border color",
+      "default": "#e6e6e6"
+    },
+    {
+      "type": "range",
+      "id": "dropdown_min_width",
+      "min": 400,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Minimum width",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "dropdown_padding",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "label": "Padding",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Collection links"
+    },
+    {
+      "type": "font_picker",
+      "id": "link_font",
+      "label": "Font",
+      "default": "red_hat_text_n4"
+    },
+    {
+      "type": "range",
+      "id": "link_font_size",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "link_padding",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "link_spacing",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Spacing between links",
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "link_text_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "range",
+      "id": "link_letter_spacing",
+      "min": 0,
+      "max": 2,
+      "step": 0.5,
+      "unit": "px",
+      "label": "Letter spacing",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "link_border_radius",
+      "min": 0,
+      "max": 12,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "link_text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_text_hover_color",
+      "label": "Hover text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_background",
+      "label": "Hover background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "header",
+      "content": "Collection images"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 200,
+      "max": 500,
+      "step": 25,
+      "unit": "px",
+      "label": "Width",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 200,
+      "max": 600,
+      "step": 25,
+      "unit": "px",
+      "label": "Height",
+      "default": 400
+    },
+    {
+      "type": "color",
+      "id": "image_background_color",
+      "label": "Background color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "header",
+      "content": "Collection 1"
+    },
+    {
+      "type": "text",
+      "id": "link_text_1",
+      "label": "Link text",
+      "default": "Clothing Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection_1",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Custom image"
+    },
+    {
+      "type": "header",
+      "content": "Collection 2"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "Link text",
+      "default": "Baby Cloths Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection_2",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Custom image"
+    },
+    {
+      "type": "header",
+      "content": "Collection 3"
+    },
+    {
+      "type": "text",
+      "id": "link_text_3",
+      "label": "Link text",
+      "default": "Home Page Collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection_3",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Custom image"
+    },
+    {
+      "type": "header",
+      "content": "Collection 4"
+    },
+    {
+      "type": "text",
+      "id": "link_text_4",
+      "label": "Link text"
+    },
+    {
+      "type": "collection",
+      "id": "collection_4",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "Custom image"
+    },
+    {
+      "type": "header",
+      "content": "Collection 5"
+    },
+    {
+      "type": "text",
+      "id": "link_text_5",
+      "label": "Link text"
+    },
+    {
+      "type": "collection",
+      "id": "collection_5",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_5",
+      "label": "Custom image"
+    },
+    {
+      "type": "header",
+      "content": "Collection 6"
+    },
+    {
+      "type": "text",
+      "id": "link_text_6",
+      "label": "Link text"
+    },
+    {
+      "type": "collection",
+      "id": "collection_6",
+      "label": "Collection"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_6",
+      "label": "Custom image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Mega menu navigation"
+    }
+  ]
+}
 {% endschema %}
