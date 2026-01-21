@@ -214,7 +214,6 @@ function findSubmenu(element) {
 }
 
 
-// new js by added me
 
 
 
