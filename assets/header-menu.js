@@ -218,20 +218,36 @@ function findSubmenu(element) {
 
 
 <script>
-document.addEventListener('mouseover', function (e) {
-  const link = e.target.closest('.js-mega-link');
-  if (!link) return;
-
-  const index = link.dataset.megaIndex;
-
-  document
-    .querySelectorAll('.mega-menu-image-set')
-    .forEach(set => {
+(function () {
+  function activateMegaImage(index) {
+    document.querySelectorAll('.mega-menu-image-set').forEach(set => {
       set.classList.toggle(
         'active',
         set.dataset.megaImage === index
       );
     });
-});
+  }
+
+  // Hover (mouse / touchpad)
+  document.addEventListener(
+    'pointerenter',
+    function (e) {
+      const link = e.target.closest('.js-mega-link');
+      if (!link) return;
+
+      activateMegaImage(link.dataset.megaIndex);
+    },
+    true
+  );
+
+  // Keyboard navigation (tab)
+  document.addEventListener('focusin', function (e) {
+    const link = e.target.closest('.js-mega-link');
+    if (!link) return;
+
+    activateMegaImage(link.dataset.megaIndex);
+  });
+})();
 </script>
+
 
