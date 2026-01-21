@@ -217,38 +217,7 @@ function findSubmenu(element) {
 // new js by added me
 
 
-<script>
-(function () {
-  function activateMegaImage(index) {
-    document.querySelectorAll('.mega-menu-image-set').forEach(set => {
-      set.classList.toggle(
-        'active',
-        set.dataset.megaImage === index
-      );
-    });
-  }
 
-  // Hover
-  document.addEventListener(
-    'pointerenter',
-    function (e) {
-      const link = e.target.closest('a.js-mega-link');
-      if (!link) return;
-
-      activateMegaImage(link.dataset.megaIndex);
-    },
-    true
-  );
-
-  // Keyboard / click focus
-  document.addEventListener('focusin', function (e) {
-    const link = e.target.closest('a.js-mega-link');
-    if (!link) return;
-
-    activateMegaImage(link.dataset.megaIndex);
-  });
-})();
-</script>
 
 
 
