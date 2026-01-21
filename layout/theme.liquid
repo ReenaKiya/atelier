@@ -115,23 +115,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+  const menu = document.querySelector('.mega-menu-images');
+  if (!menu) return;
+
+  const images = menu.querySelectorAll('.mega-menu-image-set');
   const triggers = document.querySelectorAll('[data-mega-trigger]');
-  const images = document.querySelectorAll('.mega-menu-image-set');
 
   triggers.forEach(trigger => {
     trigger.addEventListener('mouseenter', () => {
       const index = trigger.dataset.megaTrigger;
 
       images.forEach(img => {
-        img.classList.toggle(
-          'active',
-          img.dataset.megaImage === index
-        );
+        img.classList.remove('active');
+        if (img.dataset.megaImage === index) {
+          img.classList.add('active');
+        }
       });
     });
   });
 });
 </script>
+
   </body>
 </html>
