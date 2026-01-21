@@ -228,11 +228,11 @@ function findSubmenu(element) {
     });
   }
 
-  // Hover (mouse / touchpad)
+  // Hover
   document.addEventListener(
     'pointerenter',
     function (e) {
-      const link = e.target.closest('.js-mega-link');
+      const link = e.target.closest('a.js-mega-link');
       if (!link) return;
 
       activateMegaImage(link.dataset.megaIndex);
@@ -240,14 +240,15 @@ function findSubmenu(element) {
     true
   );
 
-  // Keyboard navigation (tab)
+  // Keyboard / click focus
   document.addEventListener('focusin', function (e) {
-    const link = e.target.closest('.js-mega-link');
+    const link = e.target.closest('a.js-mega-link');
     if (!link) return;
 
     activateMegaImage(link.dataset.megaIndex);
   });
 })();
 </script>
+
 
 
