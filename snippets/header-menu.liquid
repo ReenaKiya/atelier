@@ -24,14 +24,16 @@
 
 {% capture children %}
   {% for link in block.settings.menu.links %}
-    <li
-      role="presentation"
-      class="menu-list__list-item"
-      on:focus="/activate"
-      on:blur="/deactivate"
-      on:pointerenter="/activate"
-      on:pointerleave="/deactivate"
-    >
+   <li
+  role="presentation"
+  class="menu-list__list-item"
+  data-mega-trigger="{{ forloop.index }}"
+  on:pointerenter="/activate"
+>
+
+
+
+      
       <a
         href="{{ link.url }}"
         class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
