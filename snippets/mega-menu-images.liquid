@@ -4,20 +4,24 @@
       class="mega-menu-image-set {% if forloop.first %}active{% endif %}"
       data-mega-image="{{ i }}"
     >
-      {% assign img1 = block.settings['link_' | append: i | append: '_image_1'] %}
-      {% assign img2 = block.settings['link_' | append: i | append: '_image_2'] %}
+      {% assign img1_key = 'link_' | append: i | append: '_image_1' %}
+      {% assign img2_key = 'link_' | append: i | append: '_image_2' %}
+
+      {% assign img1 = block.settings[img1_key] %}
+      {% assign img2 = block.settings[img2_key] %}
 
       <div class="mega-menu-image">
-        {% if img1 %}
-          <img src="{{ img1 | image_url: width: 600 }}">
+        {% if img1 != blank %}
+          <img src="{{ img1 | image_url: width: 600 }}" alt="">
         {% endif %}
       </div>
 
       <div class="mega-menu-image">
-        {% if img2 %}
-          <img src="{{ img2 | image_url: width: 600 }}">
+        {% if img2 != blank %}
+          <img src="{{ img2 | image_url: width: 600 }}" alt="">
         {% endif %}
       </div>
     </div>
   {% endfor %}
 </div>
+
