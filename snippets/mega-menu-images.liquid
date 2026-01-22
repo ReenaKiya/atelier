@@ -21,3 +21,28 @@
     </div>
   {% endfor %}
 </div>
+
+
+
+
+<div class="mega-menu-images">
+  {% for link in block.settings.menu.links %}
+    {% assign i = forloop.index %}
+
+    <div
+      class="mega-menu-image-set{% if forloop.first %} active{% endif %}"
+      data-mega-image="{{ i }}"
+    >
+      {% assign img1 = block.settings['link_' | append: i | append: '_image_1'] %}
+      {% assign img2 = block.settings['link_' | append: i | append: '_image_2'] %}
+
+      {% if img1 != blank %}
+        <img src="{{ img1 | image_url: width: 600 }}">
+      {% endif %}
+      {% if img2 != blank %}
+        <img src="{{ img2 | image_url: width: 600 }}">
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+
