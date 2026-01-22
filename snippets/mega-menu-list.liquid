@@ -108,14 +108,11 @@
         >
           {% for childLink in link.links %}
             {% assign break_after_modulo = forloop.index | modulo: links_before_wrap %}
-           
-
-<li
-    data-mega-trigger="{{ forloop.parentloop.index }}"
-    {% if break_after_modulo == 0 and should_break_columns %}
-      style="break-after: column;"
-    {% endif %}
-  >
+            <li
+              {% if break_after_modulo == 0 and should_break_columns %}
+                style="break-after: column;"
+              {% endif %}
+            >
               <a
                 href="{{ childLink.url }}"
                 class="mega-menu__link"
