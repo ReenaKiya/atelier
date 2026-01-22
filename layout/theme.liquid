@@ -115,27 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const menu = document.querySelector('.mega-menu-images');
-  if (!menu) return;
+document.querySelectorAll('[data-mega-trigger]').forEach(item => {
+  item.addEventListener('mouseenter', function () {
+    const index = this.dataset.megaTrigger;
 
-  const images = menu.querySelectorAll('.mega-menu-image-set');
-  const triggers = document.querySelectorAll('[data-mega-trigger]');
-
-  triggers.forEach(trigger => {
-    trigger.addEventListener('mouseenter', () => {
-      const index = trigger.dataset.megaTrigger;
-
-      images.forEach(img => {
-        img.classList.remove('active');
-        if (img.dataset.megaImage === index) {
-          img.classList.add('active');
-        }
-      });
+    document.querySelectorAll('.mega-menu-image-set').forEach(set => {
+      set.classList.remove('active');
     });
+
+    const activeSet = document.querySelector(
+      `.mega-menu-image-set[data-mega-image="${index}"]`
+    );
+
+    if (activeSet) {
+      activeSet.classList.add('active');
+    }
   });
 });
 </script>
+
 
   </body>
 </html>
