@@ -4528,27 +4528,25 @@ text-component {
 
 
 
-.mega-menu-images {
-  width: 40%;
-  position: relative;
+.mega-menu-content {
+  display: flex;
+  gap: 40px;
 }
 
-.mega-menu-image-set {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+.mega-menu__children {
+  width: 300px;
 }
 
-.mega-menu-image-set.active {
-  opacity: 1;
-  z-index: 2;
+.mega-menu-hover-image {
+  width: 300px;
+  display: none;
 }
 
-.mega-menu-image img {
+.mega-menu-hover-image.active {
+  display: block;
+}
+
+.mega-menu-hover-image img {
   width: 100%;
   height: auto;
   object-fit: cover;
