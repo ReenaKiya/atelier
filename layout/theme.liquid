@@ -114,25 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-<script>
-document.querySelectorAll('[data-mega-trigger]').forEach(item => {
-  item.addEventListener('mouseenter', function () {
-    const index = this.dataset.megaTrigger;
 
-    document.querySelectorAll('.mega-menu-image-set').forEach(set => {
-      set.classList.remove('active');
-    });
-
-    const activeSet = document.querySelector(
-      `.mega-menu-image-set[data-mega-image="${index}"]`
-    );
-
-    if (activeSet) {
-      activeSet.classList.add('active');
-    }
-  });
-});
-</script>
 
 
   </body>
