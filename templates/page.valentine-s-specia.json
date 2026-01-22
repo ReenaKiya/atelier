@@ -26,9 +26,9 @@
         "text_Lh8Wde": {
           "type": "text",
           "settings": {
-            "text": "<h1>New arrivals</h1>",
+            "text": "<h6>Valentine’s Piercing Jewellery Gifts</h6>",
             "width": "fit-content",
-            "max_width": "narrow",
+            "max_width": "none",
             "alignment": "left",
             "type_preset": "h1",
             "font": "var(--font-body--family)",
