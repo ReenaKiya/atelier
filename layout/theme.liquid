@@ -114,6 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+<script>
+document.querySelectorAll('.mega-menu__child').forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    const img = item.dataset.image;
+    const target = document.getElementById('megaHoverImg');
+
+    if (img && target) {
+      target.src = img;
+      target.parentElement.classList.add('active');
+    }
+  });
+
+  item.addEventListener('mouseleave', () => {
+    document.querySelector('.mega-menu-hover-image')?.classList.remove('active');
+  });
+});
+</script>
 
 
 
