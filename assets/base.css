@@ -4528,17 +4528,18 @@ text-component {
 
 
 
-.mega-menu-content {
+.mega-menu-body {
   display: flex;
+  align-items: flex-start;
   gap: 40px;
 }
 
 .mega-menu__children {
-  width: 300px;
+  width: 320px;
 }
 
 .mega-menu-hover-image {
-  width: 300px;
+  width: 320px;
   display: none;
 }
 
