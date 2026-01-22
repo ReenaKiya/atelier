@@ -106,7 +106,7 @@
             style="column-count: {{ column_span }};"
           {% endif %}
         >
-          {% for childLink in link.links %}
+          {% comment %} {% for childLink in link.links %}
             {% assign break_after_modulo = forloop.index | modulo: links_before_wrap %}
             <li
               {% if break_after_modulo == 0 and should_break_columns %}
@@ -120,7 +120,30 @@
                 <span class="mega-menu__link-title">{{- childLink.title -}}</span>
               </a>
             </li>
-          {% endfor %}
+          {% endfor %} {% endcomment %}
+
+
+{% for childLink in link.links %}
+  {% assign break_after_modulo = forloop.index | modulo: links_before_wrap %}
+
+  <li
+    class="mega-menu__child"
+    data-image="{{ childLink.object.featured_image | image_url: width: 600 }}"
+    {% if break_after_modulo == 0 and should_break_columns %}
+      style="break-after: column;"
+    {% endif %}
+  >
+    <a href="{{ childLink.url }}" class="mega-menu__link">
+      <span class="mega-menu__link-title">{{ childLink.title }}</span>
+    </a>
+  </li>
+{% endfor %}
+
+
+
+
+
+
         </ul>
       {% endif %}
     </div>
