@@ -4540,7 +4540,13 @@ text-component {
 
 .mega-menu-hover-image {
   width: 320px;
-  display: none;
+    display: block;
+    position: absolute;
+    top: 106px;
+    right: 28px;
+}
+.mega-menu__child{
+  position:relative
 }
 
 .mega-menu-hover-image.active {
