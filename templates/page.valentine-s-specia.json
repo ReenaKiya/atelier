@@ -26,11 +26,11 @@
         "text_Lh8Wde": {
           "type": "text",
           "settings": {
-            "text": "<h6>Valentine’s Piercing Jewellery Gifts</h6>",
+            "text": "<h3>Valentine’s Piercing Jewellery Gifts</h3>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
-            "type_preset": "h1",
+            "type_preset": "h4",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
