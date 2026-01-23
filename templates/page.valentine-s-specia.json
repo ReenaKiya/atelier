@@ -17,7 +17,7 @@
           "settings": {
             "text": "<h2>Valentine’s Piercing Jewellery Gifts</h2>",
             "width": "100%",
-            "max_width": "narrow",
+            "max_width": "normal",
             "alignment": "left",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
