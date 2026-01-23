@@ -84,6 +84,7 @@
         "text_taYL4w",
         "button_YLATh3"
       ],
+      "custom_css": [],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
@@ -104,7 +105,7 @@
         "section_width": "page-width",
         "section_height": "large",
         "section_height_custom": 50,
-        "color_scheme": "scheme-5",
+        "color_scheme": "scheme-6",
         "toggle_overlay": true,
         "overlay_color": "#00000026",
         "overlay_style": "gradient",
