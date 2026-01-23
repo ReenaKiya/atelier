@@ -85,7 +85,7 @@
         "button_YLATh3"
       ],
       "custom_css": [
-        ".text-block--AaTlUM3ZQb1I4anRmW__text_DrKJiW {font-family: Arial, sans-serif !important;}"
+        ".spacing-style {font-family: Arial, sans-serif !important;}"
       ],
       "name": "t:names.hero",
       "settings": {
