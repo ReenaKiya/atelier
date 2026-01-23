@@ -84,7 +84,9 @@
         "text_taYL4w",
         "button_YLATh3"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".h1{font-family: Arial, sans-serif !important;}"
+      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
