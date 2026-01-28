@@ -1856,7 +1856,7 @@
             "background_image": "shopify://shop_images/col_3.jpg",
             "background_color": "#f5f5f5",
             "overlay_color": "#efefef",
-            "overlay_opacity": 10,
+            "overlay_opacity": 35,
             "section_padding_top": 60,
             "section_padding_bottom": 60,
             "title": "Find Your Style",
