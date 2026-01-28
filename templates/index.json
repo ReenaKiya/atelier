@@ -1948,8 +1948,8 @@
           "settings": {
             "background_image": "shopify://shop_images/col_3.jpg",
             "background_color": "#f5f5f5",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30,
+            "overlay_color": "#efefef",
+            "overlay_opacity": 10,
             "section_padding_top": 60,
             "section_padding_bottom": 60,
             "title": "Find your Style",
