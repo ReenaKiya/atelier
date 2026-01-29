@@ -4563,7 +4563,7 @@ text-component {
 /* carousel for background image */
 
 /* Carousel navigation buttons */
-.carousel-navigation {
+/* .carousel-navigation {
   position: relative;
 }
 
@@ -4606,5 +4606,5 @@ text-component {
 .carousel-nav-btn:disabled {
   opacity: 0.3;
   cursor: not-allowed;
-}
+} */
 
