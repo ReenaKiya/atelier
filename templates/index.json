@@ -1850,37 +1850,6 @@
     "1769590987e9ebc2e9": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_61a7919_gmVmLz": {
-          "type": "ai_gen_block_61a7919",
-          "settings": {
-            "background_image": "shopify://shop_images/col_3.jpg",
-            "background_color": "#f5f5f5",
-            "overlay_color": "#efefef",
-            "overlay_opacity": 35,
-            "section_padding_top": 60,
-            "section_padding_bottom": 60,
-            "title": "Find Your Style",
-            "title_color": "#000000",
-            "title_size": 48,
-            "collection_1": "baby-cloths",
-            "collection_2": "clothing",
-            "collection_3": "frontpage",
-            "collection_4": "",
-            "collection_5": "",
-            "tab_color": "#666666",
-            "tab_active_color": "#000000",
-            "tab_size": 14,
-            "products_to_show": 8,
-            "products_per_row": 3,
-            "card_background": "#ffffff",
-            "card_border_radius": 8,
-            "product_title_color": "#000000",
-            "product_title_size": 14,
-            "product_price_color": "#000000",
-            "product_price_size": 14
-          },
-          "blocks": {}
-        },
         "ai_gen_block_cad5334_AkagKQ": {
           "type": "ai_gen_block_cad5334",
           "settings": {
@@ -1912,7 +1881,7 @@
             "tab_5_collection": "",
             "tab_5_carousel_title": "Style",
             "products_limit": 12,
-            "cards_per_row": 4,
+            "cards_per_row": 3,
             "cards_per_row_tablet": 3,
             "card_gap": 20,
             "carousel_title_size": 20,
@@ -1949,7 +1918,6 @@
         }
       },
       "block_order": [
-        "ai_gen_block_61a7919_gmVmLz",
         "ai_gen_block_cad5334_AkagKQ"
       ],
       "settings": {
