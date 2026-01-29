@@ -1850,7 +1850,7 @@
     "1769590987e9ebc2e9": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_61a7919_AAHBD6": {
+        "ai_gen_block_61a7919_gmVmLz": {
           "type": "ai_gen_block_61a7919",
           "settings": {
             "background_image": "shopify://shop_images/col_3.jpg",
@@ -1883,7 +1883,7 @@
         }
       },
       "block_order": [
-        "ai_gen_block_61a7919_AAHBD6"
+        "ai_gen_block_61a7919_gmVmLz"
       ],
       "settings": {
         "content_direction": "row",
