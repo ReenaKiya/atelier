@@ -2045,7 +2045,7 @@
       ],
       "name": "Trust icons",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "section_width": "page-width",
         "icon_color": "#b6465a",
         "text_size": 16,
