@@ -1,6 +1,6 @@
 {% doc %}
   @prompt
-    i want to create a section like section has background image and collection carousel with previous and next button and this collection carousel card images will display from the collection and this background image and carousel card image will change through the navigation tab and i want to display this collection carousel navigation above this section of right side and left side will be a title and paragraph title like Find Your Style and pragraph like Discover the pieces that define your look and one thing make one title above the carousel like style this please remember one thing like when user select tab from the navigation of the collection carousel  then background image and carousel card image must chenged so please create like this type of section 
+    i want to create a section like section has background image and collection carousel with previous and next button and this collection carousel card images will display from the collection and this background image and carousel card image will change through the navigation tab and i want to display this collection carousel navigation above this section of right side and left side will be a title and paragraph title like Find Your Style and pragraph like Discover the pieces that define your look and one thing make one title above the carousel like style this please remember one thing like when user select tab from the navigation of the collection carousel  then background image and carousel card image must chenged so please create like this type of section
 {% enddoc %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
@@ -115,6 +115,7 @@
     background-color: {{ block.settings.tab_background }};
     color: {{ block.settings.tab_text_color }};
     border: 1px solid {{ block.settings.tab_border_color }};
+    border-radius: {{ block.settings.tab_border_radius }}px;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: {{ block.settings.tab_font_size }}px;
@@ -200,8 +201,24 @@
 
   .ai-style-carousel__card-{{ ai_gen_id }} {
     flex: 0 0 calc((100% - ({{ block.settings.cards_per_row | minus: 1 }} * {{ block.settings.card_gap }}px)) / {{ block.settings.cards_per_row }});
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     transition: opacity 0.5s ease;
+  }
+
+  .ai-style-carousel__card-{{ ai_gen_id }} .ai-style-carousel__card-link-{{ ai_gen_id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ai-style-carousel__card-{{ ai_gen_id }} .ai-style-carousel__card-info-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-style-carousel__card-{{ ai_gen_id }} .ai-style-carousel__add-to-cart-{{ ai_gen_id }} {
+    margin-top: auto;
   }
 
   .ai-style-carousel__card-{{ ai_gen_id }}.active {
@@ -259,14 +276,41 @@
   .ai-style-carousel__card-title-{{ ai_gen_id }} {
     font-size: {{ block.settings.card_title_size }}px;
     color: {{ block.settings.text_color }};
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     font-weight: 500;
+  }
+
+  .ai-style-carousel__card-type-{{ ai_gen_id }} {
+    font-size: {{ block.settings.card_type_size }}px;
+    color: {{ block.settings.card_type_color }};
+    margin: 0 0 8px;
   }
 
   .ai-style-carousel__card-price-{{ ai_gen_id }} {
     font-size: {{ block.settings.card_price_size }}px;
     color: {{ block.settings.text_color }};
-    margin: 0;
+    margin: 0 0 12px;
+  }
+
+  .ai-style-carousel__add-to-cart-{{ ai_gen_id }} .button {
+    width: 100%;
+    background-color: {{ block.settings.add_to_cart_background }};
+    color: {{ block.settings.add_to_cart_text_color }};
+    border: none;
+    padding: 12px 16px;
+    font-size: {{ block.settings.add_to_cart_font_size }}px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .ai-style-carousel__add-to-cart-{{ ai_gen_id }} .button:hover:not(:disabled) {
+    background-color: {{ block.settings.add_to_cart_hover_background }};
+    color: {{ block.settings.add_to_cart_hover_text_color }};
+  }
+
+  .ai-style-carousel__add-to-cart-{{ ai_gen_id }} .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 
   .ai-style-carousel__empty-state-{{ ai_gen_id }} {
@@ -456,9 +500,30 @@
                         </div>
                         <div class="ai-style-carousel__card-info-{{ ai_gen_id }}">
                           <h4 class="ai-style-carousel__card-title-{{ ai_gen_id }}">{{ product.title }}</h4>
+                          {% if product.type != blank %}
+                            <div class="ai-style-carousel__card-type-{{ ai_gen_id }}">{{ product.type }}</div>
+                          {% endif %}
                           <div class="ai-style-carousel__card-price-{{ ai_gen_id }}">{{ product.price | money }}</div>
                         </div>
                       </a>
+                      {% if block.settings.show_add_to_cart %}
+                        <div class="ai-style-carousel__add-to-cart-{{ ai_gen_id }}">
+                          {% assign product_form_id = 'StyleCarousel-Add-' | append: product.id | append: '-' | append: block.id %}
+                          {% assign can_add = product.selected_or_first_available_variant.available %}
+                          <product-form-component data-section-id="{{ section.id }}" data-product-id="{{ product.id }}" on:submit="/handleSubmit">
+                            {% form 'product', product, id: product_form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' %}
+                              <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                              <input type="hidden" name="quantity" value="1">
+                              {% render 'add-to-cart-button',
+                                add_to_cart_text: 'actions.add_to_cart' | t,
+                                class: 'button',
+                                can_add_to_cart: can_add,
+                                product: product
+                              %}
+                            {% endform %}
+                          </product-form-component>
+                        </div>
+                      {% endif %}
                     </div>
                   {% endfor %}
                 </div>
@@ -698,7 +763,7 @@
       "type": "text",
       "id": "tab_1_label",
       "label": "Label",
-      "default": "Casual"
+      "default": "Luxe"
     },
     {
       "type": "image_picker",
@@ -714,7 +779,7 @@
       "type": "text",
       "id": "tab_1_carousel_title",
       "label": "Carousel title",
-      "default": "Style"
+      "default": "Styles"
     },
     {
       "type": "header",
@@ -730,7 +795,7 @@
       "type": "text",
       "id": "tab_2_label",
       "label": "Label",
-      "default": "Formal"
+      "default": "Amour"
     },
     {
       "type": "image_picker",
@@ -746,7 +811,7 @@
       "type": "text",
       "id": "tab_2_carousel_title",
       "label": "Carousel title",
-      "default": "Style"
+      "default": "Styles"
     },
     {
       "type": "header",
@@ -762,7 +827,7 @@
       "type": "text",
       "id": "tab_3_label",
       "label": "Label",
-      "default": "Sport"
+      "default": "Mystic"
     },
     {
       "type": "image_picker",
@@ -778,7 +843,7 @@
       "type": "text",
       "id": "tab_3_carousel_title",
       "label": "Carousel title",
-      "default": "Style"
+      "default": "Styles"
     },
     {
       "type": "header",
@@ -788,13 +853,13 @@
       "type": "checkbox",
       "id": "tab_4_enabled",
       "label": "Enable tab 4",
-      "default": false
+      "default": true
     },
     {
       "type": "text",
       "id": "tab_4_label",
       "label": "Label",
-      "default": "Evening"
+      "default": "Celestial"
     },
     {
       "type": "image_picker",
@@ -810,7 +875,7 @@
       "type": "text",
       "id": "tab_4_carousel_title",
       "label": "Carousel title",
-      "default": "Style"
+      "default": "Styles"
     },
     {
       "type": "header",
@@ -960,6 +1025,66 @@
       "default": 14
     },
     {
+      "type": "checkbox",
+      "id": "show_add_to_cart",
+      "label": "Show Add to Cart button",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "card_type_size",
+      "min": 11,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Product type size",
+      "default": 13
+    },
+    {
+      "type": "color",
+      "id": "card_type_color",
+      "label": "Product type color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Add to Cart button"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_background",
+      "label": "Background",
+      "default": "#424242"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "add_to_cart_font_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Font size",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_hover_background",
+      "label": "Hover background",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "add_to_cart_hover_text_color",
+      "label": "Hover text color",
+      "default": "#ffffff"
+    },
+    {
       "type": "header",
       "content": "Tab style"
     },
@@ -972,6 +1097,16 @@
       "unit": "px",
       "label": "Font size",
       "default": 12
+    },
+    {
+      "type": "range",
+      "id": "tab_border_radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Tab border radius",
+      "default": 8
     },
     {
       "type": "color",
@@ -1013,7 +1148,7 @@
       "type": "color",
       "id": "tab_active_background",
       "label": "Active background",
-      "default": "#000000"
+      "default": "#b71c1c"
     },
     {
       "type": "color",
@@ -1149,4 +1284,3 @@
   ]
 }
 {% endschema %}
-```
