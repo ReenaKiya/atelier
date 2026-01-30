@@ -1890,7 +1890,16 @@
             "card_text_alignment": "left",
             "card_title_size": 16,
             "card_price_size": 14,
+            "show_add_to_cart": true,
+            "card_type_size": 13,
+            "card_type_color": "#666666",
+            "add_to_cart_background": "#424242",
+            "add_to_cart_text_color": "#ffffff",
+            "add_to_cart_font_size": 14,
+            "add_to_cart_hover_background": "#333333",
+            "add_to_cart_hover_text_color": "#ffffff",
             "tab_font_size": 12,
+            "tab_border_radius": 8,
             "tab_background": "#ffffff",
             "tab_text_color": "#000000",
             "tab_border_color": "#000000",
@@ -1977,6 +1986,79 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "trust_icons_c4CR3q": {
+      "type": "trust-icons",
+      "blocks": {
+        "badge_epgX3D": {
+          "type": "badge",
+          "settings": {
+            "icon": "truck",
+            "icon_size": 44,
+            "text": "Free shipping",
+            "link": ""
+          }
+        },
+        "badge_7VjGwj": {
+          "type": "badge",
+          "settings": {
+            "icon": "bottle",
+            "icon_size": 44,
+            "text": "Piercing Aftercare",
+            "link": ""
+          }
+        },
+        "badge_DKUrcw": {
+          "type": "badge",
+          "settings": {
+            "icon": "return",
+            "icon_size": 44,
+            "text": "30-days returns",
+            "link": ""
+          }
+        },
+        "badge_4WxMeL": {
+          "type": "badge",
+          "settings": {
+            "icon": "star",
+            "icon_size": 44,
+            "text": "4.8/5 Reviews",
+            "link": ""
+          }
+        },
+        "badge_4LdThk": {
+          "type": "badge",
+          "settings": {
+            "icon": "check_box",
+            "icon_size": 44,
+            "text": "Premium Quality",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "badge_epgX3D",
+        "badge_7VjGwj",
+        "badge_DKUrcw",
+        "badge_4WxMeL",
+        "badge_4LdThk"
+      ],
+      "name": "Trust icons",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "icon_color": "#b6465a",
+        "text_size": 16,
+        "icon_margin_bottom": 10,
+        "gap": 48,
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "border_color": "#00000014",
+        "padding-block-start": 24,
+        "padding-block-end": 24,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
     }
   },
   "order": [
@@ -1996,6 +2078,7 @@
     "176882065982618b37",
     "176882148904717cfb",
     "1769590987e9ebc2e9",
-    "1769667797293038ac"
+    "1769667797293038ac",
+    "trust_icons_c4CR3q"
   ]
 }
