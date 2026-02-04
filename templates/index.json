@@ -2109,7 +2109,25 @@
       "name": "Customer Reviews",
       "settings": {
         "heading": "Let customers speak for us",
-        "total_reviews": 1405
+        "total_reviews": 1405,
+        "autoplay": true,
+        "autoplay_speed": 3000
+      }
+    },
+    "bulk_sales_C7nUn8": {
+      "type": "bulk-sales",
+      "name": "Bulk Sales",
+      "settings": {
+        "image_position": "left",
+        "heading": "Bulk Sales",
+        "text": "<p>We sell all of our ingredients in bulk, from our Buchu to our Rooibos tea, so you can create your own products with it.</p>",
+        "button_label": "More Info",
+        "button_link": "",
+        "background_color": "#F6F2EA",
+        "button_background": "#D9C6B3",
+        "button_text_color": "#2B2B2B",
+        "padding_top": 60,
+        "padding_bottom": 60
       }
     }
   },
@@ -2132,6 +2150,7 @@
     "1769590987e9ebc2e9",
     "1769667797293038ac",
     "trust_icons_c4CR3q",
-    "customer_reviews_gekYVG"
+    "customer_reviews_gekYVG",
+    "bulk_sales_C7nUn8"
   ]
 }
