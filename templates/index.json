@@ -2059,6 +2059,58 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
+    },
+    "customer_reviews_gekYVG": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_icAiUp": {
+          "type": "review",
+          "settings": {
+            "headline": "Perfect for walking / feeding on the go",
+            "body_text": "Perfect for walking / feeding on the go. I wear with a sling...",
+            "author_name": "Kay",
+            "author_image": "shopify://shop_images/c1.jpg"
+          }
+        },
+        "review_EdWtJP": {
+          "type": "review",
+          "settings": {
+            "headline": "Perfect for walking / feeding on the go",
+            "body_text": "Perfect for walking / feeding on the go. I wear with a sling...",
+            "author_name": "Kay",
+            "author_image": "shopify://shop_images/1768798451_0.jpg"
+          }
+        },
+        "review_xVzMBF": {
+          "type": "review",
+          "settings": {
+            "headline": "So cute - love the colour and flattering too",
+            "body_text": "I wanted something for the gym that was 'fit pregnancy'...",
+            "author_name": "Kiya",
+            "author_image": "shopify://shop_images/angela-bailey-jlo7Bf4tUoY-unsplash_458ec4b0-76fe-40f7-aeb3-a8bba8b983ec.jpg"
+          }
+        },
+        "review_m88MyP": {
+          "type": "review",
+          "settings": {
+            "headline": "Beyond supportive",
+            "body_text": "This is my second pregnancy and the weight of the baby was so much heavier this tim...",
+            "author_name": "kaur",
+            "author_image": "shopify://shop_images/antonio-araujo-ViYFhC5McZQ-unsplash.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "review_icAiUp",
+        "review_EdWtJP",
+        "review_xVzMBF",
+        "review_m88MyP"
+      ],
+      "name": "Customer Reviews",
+      "settings": {
+        "heading": "Let customers speak for us",
+        "total_reviews": 1405
+      }
     }
   },
   "order": [
@@ -2079,6 +2131,7 @@
     "176882148904717cfb",
     "1769590987e9ebc2e9",
     "1769667797293038ac",
-    "trust_icons_c4CR3q"
+    "trust_icons_c4CR3q",
+    "customer_reviews_gekYVG"
   ]
 }
