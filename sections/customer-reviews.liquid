@@ -22,7 +22,9 @@
     </div>
   </div>
 
-  <div class="customer-reviews-carousel-wrapper">
+  <div class="customer-reviews-carousel-wrapper"
+       data-autoplay="{{ section.settings.autoplay }}"
+       data-autoplay-speed="{{ section.settings.autoplay_speed }}">
     <div class="customer-reviews-carousel" id="reviews-carousel-{{ section.id }}">
       {% for block in section.blocks %}
         <div class="review-card">
@@ -285,6 +287,7 @@
 
 <script>
 let carouselPositions = {};
+let autoplayIntervals = {};
 
 function moveCarousel(sectionId, direction) {
   const carousel = document.getElementById('reviews-carousel-' + sectionId);
@@ -320,14 +323,84 @@ function updateCarouselButtons(sectionId) {
   }
 }
 
-// Initialize button states on load
+function startAutoplay(sectionId, speed) {
+  const carousel = document.getElementById('reviews-carousel-' + sectionId);
+  if (!carousel) return;
+
+  // Clear existing interval if any
+  if (autoplayIntervals[sectionId]) {
+    clearInterval(autoplayIntervals[sectionId]);
+  }
+
+  autoplayIntervals[sectionId] = setInterval(() => {
+    const cards = carousel.querySelectorAll('.review-card');
+    if (cards.length === 0) return;
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 20;
+    const scrollAmount = cardWidth + gap;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+
+    // Check if we've reached the end
+    if (carousel.scrollLeft >= maxScroll - 10) {
+      // Reset to start for infinite loop
+      carousel.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Move to next card
+      carousel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    updateCarouselButtons(sectionId);
+  }, speed);
+}
+
+function stopAutoplay(sectionId) {
+  if (autoplayIntervals[sectionId]) {
+    clearInterval(autoplayIntervals[sectionId]);
+    autoplayIntervals[sectionId] = null;
+  }
+}
+
+// Initialize button states and autoplay on load
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.customer-reviews-carousel').forEach(carousel => {
     const sectionId = carousel.id.replace('reviews-carousel-', '');
+    const wrapper = carousel.closest('.customer-reviews-carousel-wrapper');
+    const autoplayEnabled = wrapper.dataset.autoplay === 'true';
+    const autoplaySpeed = parseInt(wrapper.dataset.autoplaySpeed) || 3000;
+
     updateCarouselButtons(sectionId);
 
     // Update on scroll
     carousel.addEventListener('scroll', () => updateCarouselButtons(sectionId));
+
+    // Start autoplay if enabled
+    if (autoplayEnabled) {
+      startAutoplay(sectionId, autoplaySpeed);
+
+      // Pause on hover
+      wrapper.addEventListener('mouseenter', () => stopAutoplay(sectionId));
+      wrapper.addEventListener('mouseleave', () => startAutoplay(sectionId, autoplaySpeed));
+
+      // Pause on touch/interaction
+      let userInteracting = false;
+      wrapper.addEventListener('touchstart', () => {
+        userInteracting = true;
+        stopAutoplay(sectionId);
+      });
+      wrapper.addEventListener('touchend', () => {
+        setTimeout(() => {
+          userInteracting = false;
+          if (autoplayEnabled) startAutoplay(sectionId, autoplaySpeed);
+        }, 1000);
+      });
+    }
   });
 });
 </script>
@@ -347,6 +420,22 @@ document.addEventListener('DOMContentLoaded', function() {
       "id": "total_reviews",
       "label": "Total Reviews Count",
       "default": 1405
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Auto Slide",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Auto Slide Speed (milliseconds)",
+      "min": 2000,
+      "max": 8000,
+      "step": 500,
+      "default": 3000,
+      "unit": "ms"
     }
   ],
   "blocks": [
