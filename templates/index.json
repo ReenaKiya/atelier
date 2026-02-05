@@ -2125,11 +2125,24 @@
         "text": "<p>We sell all of our ingredients in bulk, from our Buchu to our Rooibos tea, so you can create your own products with it.</p>",
         "button_label": "More Info",
         "button_link": "shopify://collections/baby-cloths",
-        "background_color": "#F6F2EA",
-        "button_background": "#D9C6B3",
-        "button_text_color": "#2B2B2B",
+        "background_color": "#f6f2ea",
+        "button_background": "#d9c6b3",
+        "button_text_color": "#2b2b2b",
         "padding_top": 60,
         "padding_bottom": 60
+      }
+    },
+    "countdown_banner_b6rcjC": {
+      "type": "countdown-banner",
+      "name": "Countdown Banner",
+      "settings": {
+        "heading": "30% off - Limited Time",
+        "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
+        "end_date": "2026-02-14 23:59",
+        "background_color": "#6B6B6B",
+        "text_color": "#FFFFFF",
+        "timer_background": "#FFFFFF",
+        "timer_text_color": "#000000"
       }
     }
   },
@@ -2153,6 +2166,7 @@
     "1769667797293038ac",
     "trust_icons_c4CR3q",
     "customer_reviews_gekYVG",
-    "bulk_sales_C7nUn8"
+    "bulk_sales_C7nUn8",
+    "countdown_banner_b6rcjC"
   ]
 }
