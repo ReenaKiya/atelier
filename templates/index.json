@@ -2136,6 +2136,7 @@
       "type": "countdown-banner",
       "name": "Countdown Banner",
       "settings": {
+        "background_image": "shopify://shop_images/1768798324_0.jpg",
         "heading": "30% off - Limited Time",
         "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
         "end_date": "2026-02-14 23:59",
