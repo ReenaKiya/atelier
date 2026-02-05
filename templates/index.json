@@ -2140,10 +2140,27 @@
         "heading": "30% off - Limited Time",
         "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
         "end_date": "2026-02-14 23:59",
+        "background_color": "#6b6b6b",
+        "text_color": "#ffffff",
+        "timer_background": "#ffffff",
+        "timer_text_color": "#000000"
+      }
+    },
+    "countdown_collection_NPtjwA": {
+      "type": "countdown-collection",
+      "name": "Countdown Collection",
+      "settings": {
+        "heading": "30% off - Limited Time",
+        "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
+        "end_date": "2026-02-14 23:59",
+        "collection": "clothing",
+        "products_to_show": 4,
+        "show_view_all": true,
         "background_color": "#6B6B6B",
         "text_color": "#FFFFFF",
         "timer_background": "#FFFFFF",
-        "timer_text_color": "#000000"
+        "timer_text_color": "#000000",
+        "card_background": "#FFFFFF"
       }
     }
   },
@@ -2168,6 +2185,7 @@
     "trust_icons_c4CR3q",
     "customer_reviews_gekYVG",
     "bulk_sales_C7nUn8",
-    "countdown_banner_b6rcjC"
+    "countdown_banner_b6rcjC",
+    "countdown_collection_NPtjwA"
   ]
 }
