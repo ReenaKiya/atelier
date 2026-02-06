@@ -2150,17 +2150,18 @@
       "type": "countdown-collection",
       "name": "Countdown Collection",
       "settings": {
+        "background_image": "shopify://shop_images/Home_Page_Banner.webp",
         "heading": "30% off - Limited Time",
         "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
         "end_date": "2026-02-14 23:59",
         "collection": "clothing",
         "products_to_show": 4,
         "show_view_all": true,
-        "background_color": "#6B6B6B",
-        "text_color": "#FFFFFF",
-        "timer_background": "#FFFFFF",
+        "background_color": "#6b6b6b",
+        "text_color": "#ffffff",
+        "timer_background": "#ffffff",
         "timer_text_color": "#000000",
-        "card_background": "#FFFFFF"
+        "card_background": "#ffffff"
       }
     }
   },
