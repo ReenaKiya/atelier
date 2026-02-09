@@ -75,6 +75,10 @@
                     {{ 'product-1' | placeholder_svg_tag }}
                   </div>
                 {%- endif -%}
+
+                <span class="countdown-collection__badge countdown-collection__badge--top">Best Seller</span>
+                <span class="countdown-collection__badge countdown-collection__badge--bottom">Valentine's</span>
+
               </div>
               <div class="countdown-collection__card-info">
                 <h3 class="countdown-collection__card-title">{{ product.title }}</h3>
@@ -85,6 +89,10 @@
                   {%- else -%}
                     <span>{{ product.price | money }}</span>
                   {%- endif -%}
+                </div>
+                <div class="countdown-collection__card-actions">
+                  <button type="button" class="countdown-collection__action-btn countdown-collection__action-btn--quick" onclick="event.preventDefault(); event.stopPropagation();" data-product-url="{{ product.url }}">Quick Shop</button>
+                  <a href="{{ product.url }}" class="countdown-collection__action-btn countdown-collection__action-btn--options" onclick="event.stopPropagation();">Choose Options</a>
                 </div>
               </div>
             </a>
@@ -288,6 +296,92 @@
 
   .countdown-collection__card:hover .countdown-collection__card-media {
     background-image: var(--card-bg-image-hover, var(--card-bg-image));
+  }
+
+  /* Badges */
+  .countdown-collection__badge {
+    position: absolute;
+    z-index: 2;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .countdown-collection__badge--top {
+    top: 10px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+  }
+
+  .countdown-collection__badge--bottom {
+    bottom: 50px;
+    right: 10px;
+    background: #000;
+    color: #fff;
+  }
+
+  .countdown-collection__card:hover .countdown-collection__badge {
+    opacity: 1;
+  }
+
+  /* Action Buttons */
+  .countdown-collection__card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+
+  .countdown-collection__card:hover .countdown-collection__card-actions {
+    opacity: 1;
+    max-height: 120px;
+  }
+
+  .countdown-collection__action-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+
+  .countdown-collection__action-btn--quick {
+    background: #fff;
+    color: #c41e3a;
+    border: 2px solid #c41e3a;
+  }
+
+  .countdown-collection__action-btn--quick:hover {
+    background: #c41e3a;
+    color: #fff;
+  }
+
+  .countdown-collection__action-btn--options {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+  }
+
+  .countdown-collection__action-btn--options:hover {
+    background: #333;
+    border-color: #333;
   }
 
   .countdown-collection__placeholder {
