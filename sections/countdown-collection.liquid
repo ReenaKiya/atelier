@@ -63,27 +63,14 @@
         {%- for product in collection.products limit: products_to_show -%}
           <div class="countdown-collection__card">
             <a href="{{ product.url }}" class="countdown-collection__card-link">
-              <div class="countdown-collection__card-media">
-                {%- if product.featured_image != blank -%}
-                  <img
-                    src="{{ product.featured_image | image_url: width: 600 }}"
-                    alt="{{ product.featured_image.alt | escape }}"
-                    class="countdown-collection__card-img countdown-collection__card-img--primary"
-                    loading="lazy"
-                    width="600"
-                    height="{{ 600 | divided_by: product.featured_image.aspect_ratio | round }}"
-                  >
-                  {%- if product.images[1] != blank -%}
-                    <img
-                      src="{{ product.images[1] | image_url: width: 600 }}"
-                      alt="{{ product.images[1].alt | escape }}"
-                      class="countdown-collection__card-img countdown-collection__card-img--secondary"
-                      loading="lazy"
-                      width="600"
-                      height="{{ 600 | divided_by: product.images[1].aspect_ratio | round }}"
-                    >
-                  {%- endif -%}
-                {%- else -%}
+              <div
+                class="countdown-collection__card-media"
+                style="
+                  --card-bg-image: url('{{ product.featured_image | image_url: width: 600 }}');
+                  {% if product.images[1] != blank %}--card-bg-image-hover: url('{{ product.images[1] | image_url: width: 600 }}');{% endif %}
+                "
+              >
+                {%- if product.featured_image == blank -%}
                   <div class="countdown-collection__placeholder">
                     {{ 'product-1' | placeholder_svg_tag }}
                   </div>
@@ -292,32 +279,15 @@
     position: relative;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-    background: #f5f5f5;
+    background-image: var(--card-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-color: #f5f5f5;
+    transition: background-image 0.3s ease;
   }
 
-  .countdown-collection__card-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.3s ease;
-  }
-
-  .countdown-collection__card-img--primary {
-    opacity: 1;
-  }
-
-  .countdown-collection__card-img--secondary {
-    opacity: 0;
-  }
-
-  .countdown-collection__card:hover .countdown-collection__card-img--primary {
-    opacity: 0;
-  }
-
-  .countdown-collection__card:hover .countdown-collection__card-img--secondary {
-    opacity: 1;
+  .countdown-collection__card:hover .countdown-collection__card-media {
+    background-image: var(--card-bg-image-hover, var(--card-bg-image));
   }
 
   .countdown-collection__placeholder {
