@@ -82,23 +82,29 @@
       endif
     %}
     <div>
-      <a
-        href="{{ link.url }}"
-        class="mega-menu__link {% if link.links != blank %}mega-menu__link--parent{% endif %}"
-      >
-        {% if menu_content_type == 'collection_images' %}
-          {{
-            link.object.featured_image
-            | image_url: width: 1024
-            | image_tag: loading: 'lazy', class: 'mega-menu__link-image', sizes: 'auto'
-          }}
-        {% endif %}
-        <span
-          class="mega-menu__link-title"
+      {% if link.url != blank %}
+        <a
+          href="{{ link.url }}"
+          class="mega-menu__link {% if link.links != blank %}mega-menu__link--parent{% endif %}"
         >
-          {{- link.title -}}
+          {% if menu_content_type == 'collection_images' %}
+            {{
+              link.object.featured_image
+              | image_url: width: 1024
+              | image_tag: loading: 'lazy', class: 'mega-menu__link-image', sizes: 'auto'
+            }}
+          {% endif %}
+          <span
+            class="mega-menu__link-title"
+          >
+            {{- link.title -}}
+          </span>
+        </a>
+      {% else %}
+        <span class="mega-menu__link {% if link.links != blank %}mega-menu__link--parent{% endif %}">
+          <span class="mega-menu__link-title">{{- link.title -}}</span>
         </span>
-      </a>
+      {% endif %}
       {% if link.links != blank %}
         <ul
           class="list-unstyled"
@@ -117,9 +123,15 @@
       style="break-after: column;"
     {% endif %}
   >
-    <a href="{{ childLink.url }}" class="mega-menu__link">
-      <span class="mega-menu__link-title">{{ childLink.title }}</span>
-    </a>
+    {% if childLink.url != blank %}
+      <a href="{{ childLink.url }}" class="mega-menu__link">
+        <span class="mega-menu__link-title">{{ childLink.title }}</span>
+      </a>
+    {% else %}
+      <span class="mega-menu__link">
+        <span class="mega-menu__link-title">{{ childLink.title }}</span>
+      </span>
+    {% endif %}
   </li>
 {% endfor %}
         </ul>
