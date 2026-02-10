@@ -2163,6 +2163,70 @@
         "timer_text_color": "#000000",
         "card_background": "#ffffff"
       }
+    },
+    "icon_marquee_xcMpmP": {
+      "type": "icon-marquee",
+      "blocks": {
+        "icon_cqQz6T": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 1",
+            "link": ""
+          }
+        },
+        "icon_DAf4GV": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 2",
+            "link": ""
+          }
+        },
+        "icon_J4apM7": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 3",
+            "link": ""
+          }
+        },
+        "icon_mbFmgV": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 4",
+            "link": ""
+          }
+        },
+        "icon_nx4df7": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 5",
+            "link": ""
+          }
+        },
+        "icon_nQiTQ6": {
+          "type": "icon",
+          "settings": {
+            "label": "Piercing 6",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_cqQz6T",
+        "icon_DAf4GV",
+        "icon_J4apM7",
+        "icon_mbFmgV",
+        "icon_nx4df7",
+        "icon_nQiTQ6"
+      ],
+      "name": "Icon Marquee",
+      "settings": {
+        "speed": 20,
+        "icon_size": 90,
+        "background_color": "#F5F5F5",
+        "border_color": "#c41e3a",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -2187,6 +2251,7 @@
     "customer_reviews_gekYVG",
     "bulk_sales_C7nUn8",
     "countdown_banner_b6rcjC",
-    "countdown_collection_NPtjwA"
+    "countdown_collection_NPtjwA",
+    "icon_marquee_xcMpmP"
   ]
 }
