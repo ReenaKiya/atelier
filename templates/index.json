@@ -2184,6 +2184,7 @@
         "icon_J4apM7": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/Grey_Modern_Size_Chart_Instagram_Post.png",
             "label": "Piercing 3",
             "link": ""
           }
@@ -2191,6 +2192,7 @@
         "icon_mbFmgV": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/cristofer-maximilian-AqLIkOzWDAk-unsplash.jpg",
             "label": "Piercing 4",
             "link": ""
           }
@@ -2198,6 +2200,7 @@
         "icon_nx4df7": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/AdobeExpressPhotos_ae9a811febf6427ba3882954aaefb844_CopyEdited_67b4c673-a90f-4168-a84b-e7d3ea8845dc.png",
             "label": "Piercing 5",
             "link": ""
           }
@@ -2205,6 +2208,7 @@
         "icon_nQiTQ6": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/monsterpeircing.avif",
             "label": "Piercing 6",
             "link": ""
           }
