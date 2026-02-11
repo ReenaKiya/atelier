@@ -2274,13 +2274,9 @@
       "type": "valentine-hero",
       "name": "Valentine Hero",
       "settings": {
+        "bg_image": "shopify://shop_images/Home_Page_Banner.webp",
         "heading": "Piercing and EarringValentine's Day Gifts",
-        "subtext": "Gift Titanium & Gold Piercing Jewellery at 30% Off This Valentine’s Day",
-        "button_text": "Buy now",
-        "button_link": "shopify://collections/clothing",
-        "image_1": "shopify://shop_images/esmee-holdijk-AOXw5x_bvVE-unsplash.jpg",
-        "image_2": "shopify://shop_images/angela-bailey-jlo7Bf4tUoY-unsplash.jpg",
-        "image_3": "shopify://shop_images/mediamodifier-7cERndkOyDw-unsplash.jpg"
+        "subtext": "Gift Titanium & Gold Piercing Jewellery at 30% Off This Valentine’s Day"
       }
     }
   },
