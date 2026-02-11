@@ -16,7 +16,7 @@
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
-            "image_1": "shopify://shop_images/b11.jpg",
+            "image_1": "shopify://shop_images/Home_Page_Banner.webp",
             "content_direction": "column",
             "vertical_on_mobile": true,
             "horizontal_alignment": "flex-start",
