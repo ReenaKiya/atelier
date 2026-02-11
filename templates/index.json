@@ -2167,20 +2167,6 @@
     "icon_marquee_xcMpmP": {
       "type": "icon-marquee",
       "blocks": {
-        "icon_cqQz6T": {
-          "type": "icon",
-          "settings": {
-            "label": "Piercing 1",
-            "link": ""
-          }
-        },
-        "icon_DAf4GV": {
-          "type": "icon",
-          "settings": {
-            "label": "Piercing 2",
-            "link": ""
-          }
-        },
         "icon_J4apM7": {
           "type": "icon",
           "settings": {
@@ -2215,8 +2201,6 @@
         }
       },
       "block_order": [
-        "icon_cqQz6T",
-        "icon_DAf4GV",
         "icon_J4apM7",
         "icon_mbFmgV",
         "icon_nx4df7",
