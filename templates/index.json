@@ -2167,6 +2167,14 @@
     "icon_marquee_xcMpmP": {
       "type": "icon-marquee",
       "blocks": {
+        "icon_E4BbVM": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/stretched_1.webp",
+            "label": "",
+            "link": ""
+          }
+        },
         "icon_JFzmF9": {
           "type": "icon",
           "settings": {
@@ -2241,6 +2249,7 @@
         }
       },
       "block_order": [
+        "icon_E4BbVM",
         "icon_JFzmF9",
         "icon_wY8ABa",
         "icon_xGU83c",
