@@ -2187,7 +2187,7 @@
           "type": "icon",
           "settings": {
             "image": "shopify://shop_images/surface.webp",
-            "label": "",
+            "label": "Surface",
             "link": ""
           }
         },
