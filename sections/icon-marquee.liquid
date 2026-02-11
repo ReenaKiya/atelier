@@ -30,9 +30,6 @@
                 <span class="icon-marquee__placeholder"></span>
               {%- endif -%}
             </div>
-            {%- if block.settings.label != blank -%}
-              <span class="icon-marquee__label">{{ block.settings.label }}</span>
-            {%- endif -%}
           {%- if block.settings.link != blank -%}
             </a>
           {%- endif -%}
@@ -51,9 +48,6 @@
                 <span class="icon-marquee__placeholder"></span>
               {%- endif -%}
             </div>
-            {%- if block.settings.label != blank -%}
-              <span class="icon-marquee__label">{{ block.settings.label }}</span>
-            {%- endif -%}
           {%- if block.settings.link != blank -%}
             </a>
           {%- endif -%}
@@ -109,7 +103,7 @@
     width: var(--im-icon-size);
     height: var(--im-icon-size);
     border-radius: 50%;
-    border: 2px solid var(--im-border-color);
+    border: 1px solid var(--im-border-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,14 +127,6 @@
     height: 40%;
     background: #ddd;
     border-radius: 50%;
-  }
-
-  .icon-marquee__label {
-    font-size: 12px;
-    font-weight: 500;
-    color: #333;
-    text-align: center;
-    white-space: nowrap;
   }
 
   @keyframes icon-marquee-scroll {
