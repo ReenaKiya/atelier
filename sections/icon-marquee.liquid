@@ -29,6 +29,11 @@
               {%- else -%}
                 <span class="icon-marquee__placeholder"></span>
               {%- endif -%}
+              {%- if block.settings.label != blank -%}
+                <div class="icon-marquee__overlay">
+                  <span class="icon-marquee__overlay-text">{{ block.settings.label }}</span>
+                </div>
+              {%- endif -%}
             </div>
           {%- if block.settings.link != blank -%}
             </a>
@@ -46,6 +51,11 @@
                 {{ block.settings.image | image_url: width: 200 | image_tag: class: 'icon-marquee__img', loading: 'lazy', alt: block.settings.label }}
               {%- else -%}
                 <span class="icon-marquee__placeholder"></span>
+              {%- endif -%}
+              {%- if block.settings.label != blank -%}
+                <div class="icon-marquee__overlay">
+                  <span class="icon-marquee__overlay-text">{{ block.settings.label }}</span>
+                </div>
               {%- endif -%}
             </div>
           {%- if block.settings.link != blank -%}
@@ -100,6 +110,7 @@
   }
 
   .icon-marquee__circle {
+    position: relative;
     width: var(--im-icon-size);
     height: var(--im-icon-size);
     border-radius: 50%;
@@ -114,6 +125,36 @@
 
   .icon-marquee__item:hover .icon-marquee__circle {
     transform: scale(1.05);
+  }
+
+  .icon-marquee__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 0 50% 50%;
+    background: linear-gradient(0deg, #000000 0%, transparent 100%);
+    padding: 20px 5px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .icon-marquee__item:hover .icon-marquee__overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .icon-marquee__overlay-text {
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .icon-marquee__img {
@@ -240,12 +281,14 @@
       "name": "Icon Marquee",
       "category": "Custom",
       "blocks": [
-        { "type": "icon", "settings": { "label": "Piercing 1" } },
-        { "type": "icon", "settings": { "label": "Piercing 2" } },
-        { "type": "icon", "settings": { "label": "Piercing 3" } },
-        { "type": "icon", "settings": { "label": "Piercing 4" } },
-        { "type": "icon", "settings": { "label": "Piercing 5" } },
-        { "type": "icon", "settings": { "label": "Piercing 6" } }
+        { "type": "icon", "settings": { "label": "Belly" } },
+        { "type": "icon", "settings": { "label": "Eye" } },
+        { "type": "icon", "settings": { "label": "Ear" } },
+        { "type": "icon", "settings": { "label": "Tongue" } },
+        { "type": "icon", "settings": { "label": "Nose" } },
+        { "type": "icon", "settings": { "label": "Surface" } },
+        { "type": "icon", "settings": { "label": "Stretch" } },
+        { "type": "icon", "settings": { "label": "Lips" } }
       ]
     }
   ]

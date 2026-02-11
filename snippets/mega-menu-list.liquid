@@ -118,7 +118,7 @@
 
   <li
     class="mega-menu__child"
-    data-image="{{ childLink.object.featured_image | image_url: width: 600 }}"
+    {% if childLink.object.featured_image != blank %}data-image="{{ childLink.object.featured_image | image_url: width: 600 }}"{% endif %}
     {% if break_after_modulo == 0 and should_break_columns %}
       style="break-after: column;"
     {% endif %}
