@@ -2167,6 +2167,21 @@
     "icon_marquee_xcMpmP": {
       "type": "icon-marquee",
       "blocks": {
+        "icon_JFzmF9": {
+          "type": "icon",
+          "settings": {
+            "label": "",
+            "link": ""
+          }
+        },
+        "icon_wY8ABa": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/surface.webp",
+            "label": "",
+            "link": ""
+          }
+        },
         "icon_xGU83c": {
           "type": "icon",
           "settings": {
@@ -2225,6 +2240,8 @@
         }
       },
       "block_order": [
+        "icon_JFzmF9",
+        "icon_wY8ABa",
         "icon_xGU83c",
         "icon_JEaLT3",
         "icon_QKJ7JE",
