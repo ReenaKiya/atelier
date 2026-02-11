@@ -2179,7 +2179,7 @@
           "type": "icon",
           "settings": {
             "image": "shopify://shop_images/stretched.webp",
-            "label": "",
+            "label": "Stretched",
             "link": ""
           }
         },
