@@ -2170,6 +2170,7 @@
         "icon_xGU83c": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/EAR.webp",
             "label": "",
             "link": ""
           }
