@@ -2167,6 +2167,14 @@
     "icon_marquee_xcMpmP": {
       "type": "icon-marquee",
       "blocks": {
+        "icon_QKJ7JE": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/lip.webp",
+            "label": "",
+            "link": ""
+          }
+        },
         "icon_J4apM7": {
           "type": "icon",
           "settings": {
@@ -2201,6 +2209,7 @@
         }
       },
       "block_order": [
+        "icon_QKJ7JE",
         "icon_J4apM7",
         "icon_mbFmgV",
         "icon_nx4df7",
