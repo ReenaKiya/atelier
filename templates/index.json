@@ -2170,6 +2170,7 @@
         "icon_JFzmF9": {
           "type": "icon",
           "settings": {
+            "image": "shopify://shop_images/stretched.webp",
             "label": "",
             "link": ""
           }
