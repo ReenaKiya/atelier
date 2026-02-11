@@ -11,20 +11,6 @@
   "type": "header",
   "name": "Header",
   "sections": {
-    "custom_header_frtTfa": {
-      "type": "custom-header",
-      "name": "Custom Header",
-      "settings": {
-        "logo": "shopify://shop_images/monsterpeircing.avif",
-        "search_placeholder": "Search the shiny things...",
-        "show_account": true,
-        "show_wishlist": true,
-        "wishlist_url": "",
-        "background_color": "#FFFFFF",
-        "text_color": "#000000",
-        "border_color": "#EEEEEE"
-      }
-    },
     "header_section": {
       "type": "header",
       "blocks": {
@@ -46,11 +32,11 @@
           "type": "_header-menu",
           "static": true,
           "settings": {
-            "menu": "megamenu",
+            "menu": "main-menu",
             "menu_style": "collection_images",
             "featured_products_aspect_ratio": "adapt",
             "featured_collections_aspect_ratio": "16 / 9",
-            "image_border_radius": 0,
+            "image_border_radius": 7,
             "product_title_case": "uppercase",
             "collection_title_case": "default",
             "color_scheme": "",
@@ -100,6 +86,20 @@
         "product_color_scheme": "inverse",
         "enable_transparent_header_collection": true,
         "collection_color_scheme": "inverse"
+      }
+    },
+    "custom_header_frtTfa": {
+      "type": "custom-header",
+      "name": "Custom Header",
+      "settings": {
+        "logo": "shopify://shop_images/monsterpeircing.avif",
+        "search_placeholder": "Search the shiny things...",
+        "show_account": true,
+        "show_wishlist": true,
+        "wishlist_url": "",
+        "background_color": "#ffffff",
+        "text_color": "#000000",
+        "border_color": "#eeeeee"
       }
     }
   },
