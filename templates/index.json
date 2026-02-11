@@ -2167,6 +2167,21 @@
     "icon_marquee_xcMpmP": {
       "type": "icon-marquee",
       "blocks": {
+        "icon_xGU83c": {
+          "type": "icon",
+          "settings": {
+            "label": "",
+            "link": ""
+          }
+        },
+        "icon_JEaLT3": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/eyebrow.webp",
+            "label": "",
+            "link": ""
+          }
+        },
         "icon_QKJ7JE": {
           "type": "icon",
           "settings": {
@@ -2209,6 +2224,8 @@
         }
       },
       "block_order": [
+        "icon_xGU83c",
+        "icon_JEaLT3",
         "icon_QKJ7JE",
         "icon_J4apM7",
         "icon_mbFmgV",
