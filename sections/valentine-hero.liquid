@@ -6,11 +6,27 @@
 >
   <div class="valentine-hero__overlay">
     <div class="valentine-hero__content">
-      <h1 class="typing-text" data-text="{{ section.settings.heading }}"></h1>
-      <p>{{ section.settings.subtext }}</p>
+
+      <!-- Typing Heading -->
+      <h1 class="typing-text">
+        <span class="typed-output"></span>
+        <span class="cursor">|</span>
+      </h1>
+
+      <!-- Paragraph -->
+      <p class="hero-subtext">
+        {{ section.settings.subtext }}
+      </p>
+
+      <!-- Buy Now Button -->
+      <a href="/collections/all" class="hero-btn">
+        Buy Now
+      </a>
+
     </div>
   </div>
 </section>
+
 
 
 
@@ -49,10 +65,80 @@
 
 
 
-
-
-
 <style>
+  .valentine-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  display: flex;
+  align-items: center;
+}
+
+.valentine-hero__overlay {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.valentine-hero__content {
+  max-width: 500px;
+}
+
+/* Typing Heading */
+.typing-text {
+  font-family: 'Allura', cursive;
+  font-size: 60px;
+  color: #ffffff;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  overflow-wrap: break-word;
+}
+
+/* Blinking Cursor */
+.cursor {
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Paragraph White */
+.hero-subtext {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+</style>
+
+
+
+{% comment %} <style>
 .valentine-hero {
  position: relative;
     background-size: contain;
@@ -145,31 +231,37 @@
 }
 
 }
-
-
-
-
 </style>
-
+ {% endcomment %}
 
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const heading = document.querySelector(".typing-text");
-  const text = heading.getAttribute("data-text");
+
+  const text = "{{ section.settings.heading }}";
+  const output = document.querySelector(".typed-output");
+
   let index = 0;
 
   function typeEffect() {
     if (index < text.length) {
-      heading.innerHTML += text.charAt(index);
+      output.innerHTML += text.charAt(index);
       index++;
       setTimeout(typeEffect, 80);
+    } else {
+      setTimeout(() => {
+        output.innerHTML = "";
+        index = 0;
+        typeEffect();
+      }, 1500);
     }
   }
 
-  heading.innerHTML = "";
   typeEffect();
+
 });
 </script>
+
+
 
 
