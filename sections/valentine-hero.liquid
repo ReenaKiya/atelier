@@ -6,13 +6,12 @@
 >
   <div class="valentine-hero__overlay">
     <div class="valentine-hero__content">
-      <h1 class="typing-text">
-        {{ section.settings.heading }}
-      </h1>
+      <h1 class="typing-text" data-text="{{ section.settings.heading }}"></h1>
       <p>{{ section.settings.subtext }}</p>
     </div>
   </div>
 </section>
+
 
 
 
@@ -55,12 +54,12 @@
 
 <style>
 .valentine-hero {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-  display: flex;
-  align-items: center;
+ position: relative;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
 }
 
 .valentine-hero__overlay {
@@ -71,6 +70,8 @@
   justify-content: flex-start; /* Move content to LEFT */
   padding-left: 60px;
 }
+
+
 
 .valentine-hero__content {
   max-width: 500px;
@@ -83,6 +84,20 @@
   overflow-wrap: break-word;
   line-height: 1.3;
   white-space: normal; /* Allows multiple lines */
+}
+
+.valentine-hero__content {
+  max-width: 500px; /* Controls line break */
+}
+
+.typing-text {
+  font-family: 'Allura', cursive;
+  font-size: 60px;
+  color: #ffffff; /* White color */
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  white-space: normal;
+  margin: 0;
 }
 
 
@@ -140,39 +155,21 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const words = [
-    "Piercing and Earring",
-    "Valentine’s Day Gifts"
-  ];
-
-  const el = document.querySelector(".typing-text");
-  let wordIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
+  const heading = document.querySelector(".typing-text");
+  const text = heading.getAttribute("data-text");
+  let index = 0;
 
   function typeEffect() {
-    const currentWord = words[wordIndex];
-    const currentText = currentWord.substring(0, charIndex);
-    el.textContent = currentText;
-
-    if (!isDeleting && charIndex < currentWord.length) {
-      charIndex++;
-      setTimeout(typeEffect, 100);
-    }
-    else if (isDeleting && charIndex > 0) {
-      charIndex--;
-      setTimeout(typeEffect, 50);
-    }
-    else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) {
-        wordIndex = (wordIndex + 1) % words.length;
-      }
-      setTimeout(typeEffect, 1000);
+    if (index < text.length) {
+      heading.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 80);
     }
   }
 
+  heading.innerHTML = "";
   typeEffect();
 });
 </script>
+
 
