@@ -2242,8 +2242,8 @@
           "type": "hotspot",
           "settings": {
             "product": "automatic-espress",
-            "pos_x": 50,
-            "pos_y": 50,
+            "pos_x": 33,
+            "pos_y": 53,
             "card_position": "left"
           }
         },
