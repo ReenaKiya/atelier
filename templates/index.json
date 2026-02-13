@@ -2216,6 +2216,15 @@
         "video_url": "//www.monsterpiercing.com/cdn/shop/videos/c/vp/50197a5203304f8a9e9c33cdcf60a41e/50197a5203304f8a9e9c33cdcf60a41e.SD-480p-0.9Mbps-69548998.mp4?v=0",
         "poster_url": "//www.monsterpiercing.com/cdn/shop/files/preview_images/50197a5203304f8a9e9c33cdcf60a41e.thumbnail.0000000000_1800x.jpg?v=1769946903"
       }
+    },
+    "valentine_gifts_hotspot_TYm3J8": {
+      "type": "valentine-gifts-hotspot",
+      "name": "Valentine Gifts Hotspot",
+      "settings": {
+        "heading": "Valentine's Day Gifts for HER",
+        "promo_text": "Valentine's Special",
+        "cta_text": "Hover to see the products"
+      }
     }
   },
   "order": [
@@ -2242,6 +2251,7 @@
     "countdown_collection_NPtjwA",
     "icon_marquee_xcMpmP",
     "valentine_hero_C3thD9",
-    "valentine_offers_timeline_F9R4t4"
+    "valentine_offers_timeline_F9R4t4",
+    "valentine_gifts_hotspot_TYm3J8"
   ]
 }
