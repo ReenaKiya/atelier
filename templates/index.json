@@ -2280,63 +2280,6 @@
         "button_text": "Buy now",
         "button_link": ""
       }
-    },
-    "valentine_offers_timeline_QeeWLH": {
-      "type": "valentine-offers-timeline",
-      "blocks": {
-        "milestone_M6U8wE": {
-          "type": "milestone",
-          "settings": {
-            "icon_type": "shipping",
-            "label": "Free Shipping",
-            "price": "£20"
-          }
-        },
-        "milestone_HqGVfJ": {
-          "type": "milestone",
-          "settings": {
-            "icon_type": "10off",
-            "label": "10% Discounts",
-            "price": "£25"
-          }
-        },
-        "milestone_EwMUkX": {
-          "type": "milestone",
-          "settings": {
-            "icon_type": "20off",
-            "label": "20% Discounts",
-            "price": "£50"
-          }
-        },
-        "milestone_A4rkX7": {
-          "type": "milestone",
-          "settings": {
-            "icon_type": "30off",
-            "label": "30% Discounts",
-            "price": "£75"
-          }
-        },
-        "milestone_tEdTty": {
-          "type": "milestone",
-          "settings": {
-            "icon_type": "gift",
-            "label": "Free Gifts",
-            "price": "£100"
-          }
-        }
-      },
-      "block_order": [
-        "milestone_M6U8wE",
-        "milestone_HqGVfJ",
-        "milestone_EwMUkX",
-        "milestone_A4rkX7",
-        "milestone_tEdTty"
-      ],
-      "name": "Valentine Offers Timeline",
-      "settings": {
-        "heading": "Valentine's Day Special Offers",
-        "start_text": "Let's Race"
-      }
     }
   },
   "order": [
@@ -2363,7 +2306,6 @@
     "countdown_banner_b6rcjC",
     "countdown_collection_NPtjwA",
     "icon_marquee_xcMpmP",
-    "valentine_hero_C3thD9",
-    "valentine_offers_timeline_QeeWLH"
+    "valentine_hero_C3thD9"
   ]
 }
