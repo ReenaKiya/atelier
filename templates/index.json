@@ -2251,8 +2251,8 @@
           "type": "hotspot",
           "settings": {
             "product": "blue-shorts",
-            "pos_x": 54,
-            "pos_y": 43,
+            "pos_x": 53,
+            "pos_y": 45,
             "card_position": "left"
           }
         }
