@@ -2267,8 +2267,8 @@
       "settings": {
         "desktop_image": "shopify://shop_images/Valentine_s_Day_Gifts_for_HER_1.webp",
         "mobile_image": "shopify://shop_images/Valentine_s_Day_Gifts_for_HER_1.webp",
-        "heading": "Valentine's Day Gifts for HER",
-        "promo_text": "Valentine's Special",
+        "heading": "",
+        "promo_text": "",
         "cta_text": "Hover to see the products"
       }
     }
