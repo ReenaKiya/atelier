@@ -1,164 +1,54 @@
-<section class="offers-timeline">
-  <!-- Background Hearts -->
-  <div class="offers-timeline__bg-hearts">
-    <span class="offers-timeline__bg-heart" style="top:8%;left:3%;font-size:50px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:25%;left:12%;font-size:30px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:5%;right:8%;font-size:60px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:35%;right:3%;font-size:35px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:12%;right:22%;font-size:40px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:65%;left:6%;font-size:25px;">&#10084;</span>
-    <span class="offers-timeline__bg-heart" style="top:55%;right:12%;font-size:50px;">&#10084;</span>
-  </div>
-
-  <div class="offers-timeline__container">
-    <div class="offers-timeline__video-wrap">
-      {% if section.settings.shopify_video != blank %}
-        <div class="offers-timeline__video-box">
-          {{ section.settings.shopify_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'offers-timeline__video' }}
-        </div>
-      {% elsif section.settings.video_url != blank %}
-        <div class="offers-timeline__video-box">
-          <video
-            playsinline="playsinline"
-            autoplay="autoplay"
-            loop="loop"
-            muted="muted"
-            class="offers-timeline__video"
-            preload="metadata"
-            {% if section.settings.poster_url != blank %}poster="{{ section.settings.poster_url }}"{% endif %}
-          >
-            <source src="{{ section.settings.video_url }}" type="video/mp4">
-          </video>
-        </div>
-      {% else %}
-        <div class="offers-timeline__video-box offers-timeline__video-placeholder">
-          <p>Add a video in Theme Customizer</p>
-        </div>
-      {% endif %}
-    </div>
-
-    {% if section.settings.heading != blank %}
-      <h2 class="offers-timeline__heading">{{ section.settings.heading }}</h2>
-    {% endif %}
-  </div>
-</section>
+{% if section.settings.shopify_video != blank %}
+  {{ section.settings.shopify_video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'offers-timeline-video' }}
+{% elsif section.settings.video_url != blank %}
+  <video
+    playsinline="playsinline"
+    autoplay="autoplay"
+    loop="loop"
+    muted="muted"
+    class="offers-timeline-video"
+    preload="metadata"
+    {% if section.settings.poster_url != blank %}poster="{{ section.settings.poster_url }}"{% endif %}
+  >
+    <source src="{{ section.settings.video_url }}" type="video/mp4">
+  </video>
+{% endif %}
 
 {% schema %}
 {
-  "name": "Valentine Offers Timeline",
+  "name": "Valentine Offers Video",
   "settings": [
     {
       "type": "video",
       "id": "shopify_video",
-      "label": "Shopify Hosted Video",
-      "info": "Upload a video directly to Shopify (recommended)"
+      "label": "Shopify Hosted Video"
     },
     {
       "type": "text",
       "id": "video_url",
       "label": "External Video URL (MP4)",
-      "info": "If no Shopify video is selected, paste an external MP4 URL here",
       "default": "//www.monsterpiercing.com/cdn/shop/videos/c/vp/50197a5203304f8a9e9c33cdcf60a41e/50197a5203304f8a9e9c33cdcf60a41e.SD-480p-0.9Mbps-69548998.mp4?v=0"
     },
     {
       "type": "text",
       "id": "poster_url",
       "label": "Poster Image URL",
-      "info": "Fallback image shown before video loads",
       "default": "//www.monsterpiercing.com/cdn/shop/files/preview_images/50197a5203304f8a9e9c33cdcf60a41e.thumbnail.0000000000_1800x.jpg?v=1769946903"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "Heading",
-      "default": "Valentine's Day Special Offers"
     }
   ],
   "presets": [
     {
-      "name": "Valentine Offers Timeline"
+      "name": "Valentine Offers Video"
     }
   ]
 }
 {% endschema %}
 
 <style>
-.offers-timeline {
-  position: relative;
-  background: #f9f0f2;
-  padding: 30px 20px 40px;
-  overflow: hidden;
-}
-
-/* Background Hearts */
-.offers-timeline__bg-heart {
-  position: absolute;
-  color: #f5d0d8;
-  opacity: 0.35;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.offers-timeline__container {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Video */
-.offers-timeline__video-wrap {
-  width: 100%;
-}
-
-.offers-timeline__video-box {
-  width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-.offers-timeline__video {
+.offers-timeline-video {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
-}
-
-.offers-timeline__video-placeholder {
-  background: #f0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 200px;
-  color: #999;
-  font-size: 16px;
-}
-
-/* Bottom Heading */
-.offers-timeline__heading {
-  text-align: center;
-  font-family: 'Allura', cursive;
-  font-size: 36px;
-  color: #333;
-  margin-top: 25px;
-  font-weight: 400;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .offers-timeline {
-    padding: 20px 15px 30px;
-  }
-
-  .offers-timeline__heading {
-    font-size: 28px;
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .offers-timeline__heading {
-    font-size: 24px;
-  }
 }
 </style>
