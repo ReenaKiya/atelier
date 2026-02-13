@@ -1490,24 +1490,6 @@
     },
     "1767697724bfa114a0": {
       "type": "_blocks",
-      "blocks": {
-        "libautech_shoppable_ugc_block_mMdNhW": {
-          "type": "shopify://apps/libautech-shoppable-ugc/blocks/block/019ade11-769e-703d-9b80-f6ca3920e42f",
-          "settings": {
-            "lbt_media_collection": "",
-            "style_type": "story",
-            "slide_size": "medium",
-            "footer_position": "bottom",
-            "arrows": true,
-            "show_unmute": false,
-            "center_video": false,
-            "play_on_hover": true
-          }
-        }
-      },
-      "block_order": [
-        "libautech_shoppable_ugc_block_mMdNhW"
-      ],
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -2286,8 +2268,7 @@
       "name": "Valentine Offers Timeline",
       "settings": {
         "video_url": "//www.monsterpiercing.com/cdn/shop/videos/c/vp/50197a5203304f8a9e9c33cdcf60a41e/50197a5203304f8a9e9c33cdcf60a41e.SD-480p-0.9Mbps-69548998.mp4?v=0",
-        "poster_url": "//www.monsterpiercing.com/cdn/shop/files/preview_images/50197a5203304f8a9e9c33cdcf60a41e.thumbnail.0000000000_1800x.jpg?v=1769946903",
-        "heading": "Valentine's Day Special Offers"
+        "poster_url": "//www.monsterpiercing.com/cdn/shop/files/preview_images/50197a5203304f8a9e9c33cdcf60a41e.thumbnail.0000000000_1800x.jpg?v=1769946903"
       }
     }
   },
