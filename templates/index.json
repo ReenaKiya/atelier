@@ -2223,7 +2223,7 @@
         "hotspot_NNHGgt": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "c-patti",
             "pos_x": 66,
             "pos_y": 61,
             "card_position": "left"
