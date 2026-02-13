@@ -2232,7 +2232,7 @@
         "hotspot_Aq3H9G": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "automatic-espress",
             "pos_x": 32,
             "pos_y": 44,
             "card_position": "left"
