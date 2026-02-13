@@ -2241,7 +2241,7 @@
         "hotspot_AiDmU4": {
           "type": "hotspot",
           "settings": {
-            "product": "",
+            "product": "automatic-espress",
             "pos_x": 50,
             "pos_y": 50,
             "card_position": "left"
