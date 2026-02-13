@@ -2220,6 +2220,15 @@
     "valentine_gifts_hotspot_TYm3J8": {
       "type": "valentine-gifts-hotspot",
       "blocks": {
+        "hotspot_QTrhFw": {
+          "type": "hotspot",
+          "settings": {
+            "product": "coffee-drawer-typ",
+            "pos_x": 67,
+            "pos_y": 46,
+            "card_position": "left"
+          }
+        },
         "hotspot_WxUHka": {
           "type": "hotspot",
           "settings": {
@@ -2267,6 +2276,7 @@
         }
       },
       "block_order": [
+        "hotspot_QTrhFw",
         "hotspot_WxUHka",
         "hotspot_HjQBhW",
         "hotspot_Aq3H9G",
