@@ -2220,6 +2220,15 @@
     "valentine_gifts_hotspot_TYm3J8": {
       "type": "valentine-gifts-hotspot",
       "blocks": {
+        "hotspot_NNHGgt": {
+          "type": "hotspot",
+          "settings": {
+            "product": "",
+            "pos_x": 66,
+            "pos_y": 61,
+            "card_position": "left"
+          }
+        },
         "hotspot_XqAN39": {
           "type": "hotspot",
           "settings": {
@@ -2285,6 +2294,7 @@
         }
       },
       "block_order": [
+        "hotspot_NNHGgt",
         "hotspot_XqAN39",
         "hotspot_QTrhFw",
         "hotspot_WxUHka",
