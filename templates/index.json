@@ -2229,7 +2229,6 @@
           "settings": {
             "tab_label": "Baby Cloths",
             "collection": "baby-cloths",
-            "model_image": "shopify://shop_images/Valentine_s_Day_Gifts_for_HER_1.webp",
             "style_title": "Styles",
             "bg_color": "#fce4ec"
           }
@@ -2239,7 +2238,6 @@
           "settings": {
             "tab_label": "Clothing",
             "collection": "clothing",
-            "model_image": "shopify://shop_images/1768798324_0.jpg",
             "style_title": "Styles",
             "bg_color": "#fce4ec"
           }
@@ -2249,7 +2247,6 @@
           "settings": {
             "tab_label": "Home page",
             "collection": "frontpage",
-            "model_image": "shopify://shop_images/angela-bailey-jlo7Bf4tUoY-unsplash.jpg",
             "style_title": "Styles",
             "bg_color": "#f3e5f5"
           }
@@ -2259,7 +2256,7 @@
           "settings": {
             "tab_label": "Jewellery",
             "collection": "jewellery",
-            "model_image": "shopify://shop_images/Luxe.webp",
+            "bg_image": "shopify://shop_images/col_1.jpg",
             "style_title": "Styles",
             "bg_color": "#e8eaf6"
           }
