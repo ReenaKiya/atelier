@@ -318,97 +318,6 @@
       "name": "As Seen In",
       "settings": {}
     },
-    "home_collection_list_custom_bUtjkC": {
-      "type": "home-collection-list-custom",
-      "blocks": {
-        "image_block_MDWair": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/img-3a.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_PFDE8E": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/img-1.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_9pPXaK": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/w3.png",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_8m7QQL": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/img-2.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_NATQbC": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/5766638053525.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_cLcR3n": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/6dc9c232-8642-4fbf-a86d-9dfa18cb89a1.webp",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_CfczwT": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/1617070027170.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        },
-        "image_block_E3HpFx": {
-          "type": "image_block",
-          "settings": {
-            "image": "shopify://shop_images/1617070027170.jpg",
-            "title": "ESSENTIAL OILS BATH BOMBS",
-            "button_text": "SHOP NOW",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_block_MDWair",
-        "image_block_PFDE8E",
-        "image_block_9pPXaK",
-        "image_block_8m7QQL",
-        "image_block_NATQbC",
-        "image_block_cLcR3n",
-        "image_block_CfczwT",
-        "image_block_E3HpFx"
-      ],
-      "name": "As Seen In Section",
-      "settings": {
-        "heading": "As seen in"
-      }
-    },
     "product_list_bmRnah": {
       "type": "product-list",
       "blocks": {
@@ -2311,12 +2220,67 @@
         "promo_text": "{{ metaobjects.authors.kiyapatel.name.value }}",
         "cta_text": "Hover to see the products"
       }
+    },
+    "find_your_style_dgFrbG": {
+      "type": "find-your-style",
+      "blocks": {
+        "style_tab_PiTj97": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Baby Cloths",
+            "collection": "baby-cloths",
+            "model_image": "shopify://shop_images/Valentine_s_Day_Gifts_for_HER_1.webp",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_VJhk4C": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Clothing",
+            "collection": "clothing",
+            "model_image": "shopify://shop_images/1768798324_0.jpg",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_4XfiYJ": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Home page",
+            "collection": "frontpage",
+            "model_image": "shopify://shop_images/angela-bailey-jlo7Bf4tUoY-unsplash.jpg",
+            "style_title": "Styles",
+            "bg_color": "#f3e5f5"
+          }
+        },
+        "style_tab_CxzWGA": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Celestial",
+            "collection": "jewellery",
+            "model_image": "shopify://shop_images/Luxe.webp",
+            "style_title": "Styles",
+            "bg_color": "#e8eaf6"
+          }
+        }
+      },
+      "block_order": [
+        "style_tab_PiTj97",
+        "style_tab_VJhk4C",
+        "style_tab_4XfiYJ",
+        "style_tab_CxzWGA"
+      ],
+      "name": "Find Your Style",
+      "settings": {
+        "heading": "Find Your Style",
+        "subtext": "Discover the pieces that define your look"
+      }
     }
   },
   "order": [
     "slideshow_nHLbDw",
     "as_seen_in_Fd8yFr",
-    "home_collection_list_custom_bUtjkC",
     "product_list_bmRnah",
     "media_with_content_reicdp",
     "section_LUnUd9",
@@ -2338,6 +2302,7 @@
     "icon_marquee_xcMpmP",
     "valentine_hero_C3thD9",
     "valentine_offers_timeline_F9R4t4",
-    "valentine_gifts_hotspot_TYm3J8"
+    "valentine_gifts_hotspot_TYm3J8",
+    "find_your_style_dgFrbG"
   ]
 }
