@@ -22,51 +22,70 @@
   <div class="fys__panels">
     {% for block in section.blocks %}
       <div class="fys__panel {% if forloop.first %}fys__panel--active{% endif %}" data-panel-index="{{ forloop.index0 }}">
-        <div class="fys__panel-inner" style="background: {{ block.settings.bg_color | default: '#fce4ec' }};">
+        <div
+          class="fys__panel-inner"
+          {% if block.settings.bg_image != blank %}
+            style="background-image: url({{ block.settings.bg_image | image_url: width: 1800 }});"
+          {% else %}
+            style="background-color: {{ block.settings.bg_color | default: '#fce4ec' }};"
+          {% endif %}
+        >
 
-          <!-- Model Image (Left) -->
-          <div class="fys__model">
-            {% if block.settings.model_image != blank %}
-              <img
-                src="{{ block.settings.model_image | image_url: width: 600 }}"
-                alt="{{ block.settings.tab_label }}"
-                class="fys__model-img"
-                loading="lazy"
-              >
-            {% endif %}
-          </div>
-
-          <!-- Right Content -->
-          <div class="fys__products-area">
+          <div class="fys__right-content">
             {% if block.settings.style_title != blank %}
               <h3 class="fys__style-title">{{ block.settings.style_title }}</h3>
             {% endif %}
 
-            <div class="fys__products-grid">
-              {% assign collection = block.settings.collection %}
-              {% if collection != blank %}
-                {% for product in collection.products limit: 4 %}
-                  <a href="{{ product.url }}" class="fys__product-card">
-                    {% if product.featured_image != blank %}
-                      <img
-                        src="{{ product.featured_image | image_url: width: 300 }}"
-                        alt="{{ product.title | escape }}"
-                        class="fys__product-img"
-                        loading="lazy"
-                      >
-                    {% endif %}
-                    <span class="fys__product-title">{{ product.title }}</span>
-                    <span class="fys__product-price">{{ product.price | money }}</span>
-                  </a>
-                {% endfor %}
-              {% else %}
-                {% for i in (1..4) %}
-                  <div class="fys__product-card fys__product-card--placeholder">
-                    <div class="fys__product-img-placeholder"></div>
-                    <span class="fys__product-title">Product {{ i }}</span>
-                  </div>
-                {% endfor %}
-              {% endif %}
+            <!-- Carousel -->
+            <div class="fys__carousel-wrap">
+              <button class="fys__arrow fys__arrow--prev" data-panel="{{ forloop.index0 }}">&#10094;</button>
+
+              <div class="fys__carousel" data-carousel="{{ forloop.index0 }}">
+                <div class="fys__carousel-track">
+                  {% assign collection = block.settings.collection %}
+                  {% if collection != blank %}
+                    {% for product in collection.products limit: 12 %}
+                      <div class="fys__product-card">
+                        <a href="{{ product.url }}" class="fys__product-link">
+                          {% if product.featured_image != blank %}
+                            <img
+                              src="{{ product.featured_image | image_url: width: 300 }}"
+                              alt="{{ product.title | escape }}"
+                              class="fys__product-img"
+                              loading="lazy"
+                            >
+                          {% endif %}
+                        </a>
+                        <div class="fys__product-info">
+                          <span class="fys__product-title">{{ product.title }}</span>
+                          <span class="fys__product-vendor">Monster Piercing</span>
+                          <span class="fys__product-price">{{ product.price | money }}</span>
+                          <button
+                            class="fys__product-atc"
+                            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                          >
+                            Add to Cart
+                          </button>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  {% else %}
+                    {% for i in (1..6) %}
+                      <div class="fys__product-card fys__product-card--placeholder">
+                        <div class="fys__product-img-placeholder"></div>
+                        <div class="fys__product-info">
+                          <span class="fys__product-title">Product {{ i }}</span>
+                          <span class="fys__product-vendor">Monster Piercing</span>
+                          <span class="fys__product-price">£0.00</span>
+                          <button class="fys__product-atc">Add to Cart</button>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+
+              <button class="fys__arrow fys__arrow--next" data-panel="{{ forloop.index0 }}">&#10095;</button>
             </div>
           </div>
 
@@ -111,8 +130,8 @@
         },
         {
           "type": "image_picker",
-          "id": "model_image",
-          "label": "Model Image"
+          "id": "bg_image",
+          "label": "Background Image"
         },
         {
           "type": "text",
@@ -123,7 +142,7 @@
         {
           "type": "color",
           "id": "bg_color",
-          "label": "Background Color",
+          "label": "Background Color (fallback)",
           "default": "#fce4ec"
         }
       ]
@@ -226,105 +245,159 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Panel Inner - Full BG Image */
 .fys__panel-inner {
-  display: flex;
-  align-items: stretch;
+  position: relative;
+  background-size: cover;
+  background-position: left center;
   border-radius: 16px;
   overflow: hidden;
-  min-height: 400px;
-  position: relative;
-}
-
-/* Model Image */
-.fys__model {
-  width: 35%;
-  flex-shrink: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.fys__model-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Products Area */
-.fys__products-area {
-  flex: 1;
-  padding: 30px 40px;
+  min-height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
+  padding: 30px 30px 30px 0;
 }
 
+/* Right Content Area */
+.fys__right-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style Title */
 .fys__style-title {
   font-family: 'Allura', cursive;
   font-size: 36px;
-  color: #999;
+  color: rgba(0, 0, 0, 0.25);
   font-weight: 400;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
 }
 
-/* Products Grid */
-.fys__products-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+/* Carousel Wrap */
+.fys__carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.fys__product-card {
+/* Arrows */
+.fys__arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
   background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  text-decoration: none;
   color: #333;
-  text-align: center;
-  padding: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 18px;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
 }
 
-.fys__product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+.fys__arrow:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Carousel */
+.fys__carousel {
+  overflow: hidden;
+  flex: 1;
+}
+
+.fys__carousel-track {
+  display: flex;
+  gap: 15px;
+  transition: transform 0.4s ease;
+}
+
+/* Product Card */
+.fys__product-card {
+  min-width: calc(25% - 12px);
+  max-width: calc(25% - 12px);
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.fys__product-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .fys__product-img {
   width: 100%;
-  height: 140px;
+  height: 160px;
   object-fit: contain;
   display: block;
-  margin-bottom: 10px;
 }
 
 .fys__product-img-placeholder {
   width: 100%;
-  height: 140px;
+  height: 160px;
   background: #f0f0f0;
   border-radius: 6px;
-  margin-bottom: 10px;
+}
+
+/* Product Info */
+.fys__product-info {
+  padding: 0 12px 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .fys__product-title {
-  display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   color: #333;
   line-height: 1.3;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+.fys__product-vendor {
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
 .fys__product-price {
-  display: block;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
-  color: #8b0000;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.fys__product-atc {
+  width: 100%;
+  padding: 9px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fys__product-atc:hover {
+  background: #000;
 }
 
 /* Responsive */
@@ -335,21 +408,19 @@
   }
 
   .fys__panel-inner {
-    flex-direction: column;
-    min-height: auto;
+    min-height: 380px;
+    padding: 25px 20px;
+    align-items: center;
+    background-position: top center;
   }
 
-  .fys__model {
+  .fys__right-content {
     width: 100%;
-    height: 250px;
   }
 
-  .fys__products-area {
-    padding: 20px;
-  }
-
-  .fys__products-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .fys__product-card {
+    min-width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
   }
 }
 
@@ -363,13 +434,24 @@
     font-size: 12px;
   }
 
-  .fys__products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+  .fys__panel-inner {
+    min-height: 340px;
+    padding: 20px 15px;
+  }
+
+  .fys__product-card {
+    min-width: calc(50% - 8px);
+    max-width: calc(50% - 8px);
   }
 
   .fys__product-img {
-    height: 100px;
+    height: 110px;
+  }
+
+  .fys__arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 
   .fys__style-title {
@@ -380,6 +462,7 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  /* Tab Switching */
   var tabs = document.querySelectorAll(".fys__tab");
   var panels = document.querySelectorAll(".fys__panel");
 
@@ -393,6 +476,66 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.add("fys__tab--active");
       var targetPanel = document.querySelector('.fys__panel[data-panel-index="' + index + '"]');
       if (targetPanel) targetPanel.classList.add("fys__panel--active");
+    });
+  });
+
+  /* Carousel */
+  document.querySelectorAll(".fys__arrow").forEach(function (arrow) {
+    arrow.addEventListener("click", function () {
+      var panelIdx = this.getAttribute("data-panel");
+      var carousel = document.querySelector('.fys__carousel[data-carousel="' + panelIdx + '"]');
+      if (!carousel) return;
+
+      var track = carousel.querySelector(".fys__carousel-track");
+      var cards = track.querySelectorAll(".fys__product-card");
+      if (cards.length === 0) return;
+
+      var cardWidth = cards[0].offsetWidth + 15;
+      var visibleWidth = carousel.offsetWidth;
+      var maxScroll = track.scrollWidth - visibleWidth;
+      var currentScroll = parseInt(track.getAttribute("data-scroll") || "0");
+
+      if (this.classList.contains("fys__arrow--next")) {
+        currentScroll += cardWidth;
+        if (currentScroll > maxScroll) currentScroll = 0;
+      } else {
+        currentScroll -= cardWidth;
+        if (currentScroll < 0) currentScroll = maxScroll;
+      }
+
+      track.style.transform = "translateX(-" + currentScroll + "px)";
+      track.setAttribute("data-scroll", currentScroll);
+    });
+  });
+
+  /* Add to Cart */
+  document.querySelectorAll(".fys__product-atc").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var variantId = this.getAttribute("data-variant-id");
+      if (!variantId) return;
+
+      var originalText = this.textContent;
+      this.textContent = "Adding...";
+      this.disabled = true;
+
+      fetch("/cart/add.js", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: parseInt(variantId), quantity: 1 })
+      })
+        .then(function (res) { return res.json(); })
+        .then(function () {
+          btn.textContent = "Added!";
+          setTimeout(function () {
+            btn.textContent = originalText;
+            btn.disabled = false;
+          }, 1500);
+        })
+        .catch(function () {
+          btn.textContent = originalText;
+          btn.disabled = false;
+        });
     });
   });
 });
