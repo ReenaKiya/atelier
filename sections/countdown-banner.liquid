@@ -94,12 +94,14 @@
 
 {% stylesheet %}
   .countdown-timer__overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
     padding: var(--overlay-padding, 40px 0);
     background-color: rgba(var(--overlay-background-color, 0, 0, 0, 0.4));
   }
