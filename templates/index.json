@@ -2283,8 +2283,8 @@
         "tab_CFAC63": {
           "type": "tab",
           "settings": {
-            "tab_label": "Lips",
-            "collection": ""
+            "tab_label": "Home page",
+            "collection": "frontpage"
           }
         },
         "tab_74GLkY": {
