@@ -20,6 +20,7 @@
     </div>
   {%- endif -%}
 
+  <div class="countdown-timer__overlay" style="--overlay-padding: {{ section.settings.overlay_padding }}px 0; --overlay-background-color: {{ section.settings.overlay_color.red }}, {{ section.settings.overlay_color.green }}, {{ section.settings.overlay_color.blue }}, {{ section.settings.overlay_opacity }};">
   <div class="countdown-banner__inner page-width">
     <div class="countdown-banner__content">
       {%- if heading != blank -%}
@@ -48,6 +49,7 @@
         <span class="countdown-banner__label">SECONDS</span>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -91,6 +93,17 @@
 </script>
 
 {% stylesheet %}
+  .countdown-timer__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--overlay-padding, 40px 0);
+    background-color: rgba(var(--overlay-background-color, 0, 0, 0, 0.4));
+  }
+
   .countdown-banner {
     position: relative;
     background: var(--countdown-bg-color);
@@ -259,6 +272,34 @@
       "id": "timer_text_color",
       "label": "Timer text color",
       "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Overlay"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.4
+    },
+    {
+      "type": "range",
+      "id": "overlay_padding",
+      "label": "Overlay padding (px)",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "default": 40
     }
   ],
   "presets": [
