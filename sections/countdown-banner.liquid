@@ -5,6 +5,7 @@
   assign background_image = section.settings.background_image
 -%}
 
+<div class="countdown-banner__top-bar" style="background-color: {{ section.settings.top_bar_color }};"></div>
 <section
   class="countdown-banner"
   style="
@@ -99,6 +100,11 @@
     margin: 0;
   }
 
+  .countdown-banner__top-bar {
+    width: 100%;
+    height: 20px;
+  }
+
   .countdown-timer__overlay {
     position: relative;
     z-index: 1;
@@ -135,47 +141,52 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 40px;
   }
 
   .countdown-banner__content {
-    flex: 0 1 auto;
+    flex: 1;
     text-align: left;
+    font-family: 'Nunito Sans', sans-serif;
   }
 
   .countdown-banner__heading {
-    margin: 0 0 8px;
-    font-family: var(--font-heading--family);
+    margin: 0 0 10px;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: clamp(28px, 4vw, 42px);
-    font-weight: 500;
+    font-weight: 700;
+    font-style: italic;
     color: var(--countdown-text-color);
     line-height: 1.2;
   }
 
   .countdown-banner__subheading {
     margin: 0;
-    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    font-style: italic;
     color: var(--countdown-text-color);
     opacity: 0.9;
     line-height: 1.5;
-    max-width: 400px;
+    max-width: 500px;
   }
 
   .countdown-banner__timer {
     display: flex;
-    gap: 4px;
+    gap: 0;
     background: var(--countdown-box-bg);
-    padding: 20px 30px;
+    padding: 25px 10px;
     border-radius: 4px;
+    flex-shrink: 0;
   }
 
   .countdown-banner__timer-box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 70px;
-    padding: 0 15px;
+    min-width: 80px;
+    padding: 0 30px;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
   }
 
@@ -184,18 +195,21 @@
   }
 
   .countdown-banner__number {
-    font-size: 36px;
-    font-weight: 500;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
     color: var(--countdown-box-text);
     line-height: 1;
   }
 
   .countdown-banner__label {
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 11px;
     color: var(--countdown-box-text);
-    opacity: 0.7;
+    opacity: 0.6;
     margin-top: 8px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
   }
 
   @media screen and (max-width: 899px) {
@@ -204,17 +218,21 @@
       text-align: center;
     }
 
+    .countdown-banner__content {
+      text-align: center;
+    }
+
     .countdown-banner__subheading {
       max-width: 100%;
     }
 
     .countdown-banner__timer {
-      padding: 15px 20px;
+      padding: 15px 5px;
     }
 
     .countdown-banner__timer-box {
       min-width: 55px;
-      padding: 0 10px;
+      padding: 0 15px;
     }
 
     .countdown-banner__number {
@@ -256,6 +274,12 @@
     {
       "type": "header",
       "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "top_bar_color",
+      "label": "Top bar color",
+      "default": "#f8e0e0"
     },
     {
       "type": "color",
