@@ -1951,24 +1951,6 @@
         "padding-inline-end": 0
       }
     },
-    "bulk_sales_C7nUn8": {
-      "type": "bulk-sales",
-      "custom_css": [],
-      "name": "Bulk Sales",
-      "settings": {
-        "image": "shopify://shop_images/5766638053525_3759b884-7c5d-4afb-a0dd-48b714a8a894.jpg",
-        "image_position": "left",
-        "heading": "Bulk Sales",
-        "text": "<p>We sell all of our ingredients in bulk, from our Buchu to our Rooibos tea, so you can create your own products with it.</p>",
-        "button_label": "More Info",
-        "button_link": "shopify://collections/baby-cloths",
-        "background_color": "#f6f2ea",
-        "button_background": "#d9c6b3",
-        "button_text_color": "#2b2b2b",
-        "padding_top": 60,
-        "padding_bottom": 60
-      }
-    },
     "countdown_collection_NPtjwA": {
       "type": "countdown-collection",
       "name": "Countdown Collection",
@@ -2271,10 +2253,58 @@
         "heading": "30% off - Limited Time",
         "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
         "end_date": "2026-02-14 23:59",
+        "top_bar_color": "#f8e0e0",
         "background_color": "#6b6b6b",
         "text_color": "#ffffff",
         "timer_background": "#ffffff",
-        "timer_text_color": "#000000"
+        "timer_text_color": "#000000",
+        "overlay_color": "#000000",
+        "overlay_opacity": 0.4,
+        "overlay_padding": 40
+      }
+    },
+    "shop_by_type_hVmC3P": {
+      "type": "shop-by-type",
+      "blocks": {
+        "tab_gLFmFU": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Ear",
+            "collection": ""
+          }
+        },
+        "tab_it9N4W": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Nose",
+            "collection": ""
+          }
+        },
+        "tab_CFAC63": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Lips",
+            "collection": ""
+          }
+        },
+        "tab_74GLkY": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "More",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_gLFmFU",
+        "tab_it9N4W",
+        "tab_CFAC63",
+        "tab_74GLkY"
+      ],
+      "name": "Shop by Type",
+      "settings": {
+        "heading": "Shop by Type",
+        "bg_color": "#fce4ec"
       }
     }
   },
@@ -2296,13 +2326,13 @@
     "1769590987e9ebc2e9",
     "1769667797293038ac",
     "trust_icons_c4CR3q",
-    "bulk_sales_C7nUn8",
     "countdown_collection_NPtjwA",
     "icon_marquee_xcMpmP",
     "valentine_hero_C3thD9",
     "valentine_offers_timeline_F9R4t4",
     "valentine_gifts_hotspot_TYm3J8",
     "find_your_style_dgFrbG",
-    "countdown_banner_b6rcjC"
+    "countdown_banner_b6rcjC",
+    "shop_by_type_hVmC3P"
   ]
 }
