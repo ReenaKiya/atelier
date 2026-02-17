@@ -1969,20 +1969,6 @@
         "padding_bottom": 60
       }
     },
-    "countdown_banner_b6rcjC": {
-      "type": "countdown-banner",
-      "name": "Countdown Banner",
-      "settings": {
-        "background_image": "shopify://shop_images/1768798324_0.jpg",
-        "heading": "30% off - Limited Time",
-        "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
-        "end_date": "2026-02-14 23:59",
-        "background_color": "#6b6b6b",
-        "text_color": "#ffffff",
-        "timer_background": "#ffffff",
-        "timer_text_color": "#000000"
-      }
-    },
     "countdown_collection_NPtjwA": {
       "type": "countdown-collection",
       "name": "Countdown Collection",
@@ -2275,6 +2261,20 @@
       "settings": {
         "heading": "Find Your Style",
         "subtext": "Discover the pieces that define your look"
+      }
+    },
+    "countdown_banner_b6rcjC": {
+      "type": "countdown-banner",
+      "name": "Countdown Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/coundown-banner-image.webp",
+        "heading": "30% off - Limited Time",
+        "subheading": "This Valentine's Day, let us give you a hand in gifting the best gifts that your loved ones deserve.",
+        "end_date": "2026-02-14 23:59",
+        "background_color": "#6b6b6b",
+        "text_color": "#ffffff",
+        "timer_background": "#ffffff",
+        "timer_text_color": "#000000"
       }
     }
   },
