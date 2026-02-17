@@ -2269,15 +2269,15 @@
         "tab_gLFmFU": {
           "type": "tab",
           "settings": {
-            "tab_label": "Ear",
-            "collection": ""
+            "tab_label": "Baby cloths",
+            "collection": "baby-cloths"
           }
         },
         "tab_it9N4W": {
           "type": "tab",
           "settings": {
-            "tab_label": "Nose",
-            "collection": ""
+            "tab_label": "Clothing",
+            "collection": "clothing"
           }
         },
         "tab_CFAC63": {
@@ -2303,6 +2303,7 @@
       ],
       "name": "Shop by Type",
       "settings": {
+        "image": "shopify://shop_images/col_2.jpg",
         "heading": "Shop by Type",
         "bg_color": "#fce4ec"
       }
