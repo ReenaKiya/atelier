@@ -2239,6 +2239,7 @@
           "settings": {
             "tab_label": "Clothing",
             "collection": "clothing",
+            "bg_image": "shopify://shop_images/Luxe.webp",
             "style_title": "Styles",
             "bg_color": "#fce4ec"
           }
