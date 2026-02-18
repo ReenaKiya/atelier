@@ -2303,7 +2303,7 @@
       ],
       "name": "Shop by Type",
       "settings": {
-        "image": "shopify://shop_images/col_2.jpg",
+        "image": "shopify://shop_images/shop_by_type.webp",
         "heading": "Shop by Type",
         "bg_color": "#fce4ec"
       }
