@@ -78,6 +78,13 @@
                 {% endfor %}
               {% endif %}
             </div>
+            <div class="sbt__view-more">
+              {% if collection != blank %}
+                <a href="{{ collection.url }}" class="sbt__view-more-btn">View More</a>
+              {% else %}
+                <a href="#" class="sbt__view-more-btn">View More</a>
+              {% endif %}
+            </div>
           </div>
         {% endfor %}
       </div>
@@ -143,26 +150,28 @@
 <style>
 /* Section */
 .sbt {
-  padding: 50px 20px;
+  padding: 0;
 }
 
 .sbt__inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   display: flex;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 0;
+  align-items: stretch;
 }
 
 /* Left Image */
 .sbt__image-col {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 43%;
+  max-width: 43%;
+  position: relative;
+  margin: 19px;
 }
 
 .sbt__image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   border-radius: 12px;
   object-fit: cover;
@@ -170,14 +179,16 @@
 
 .sbt__image-placeholder {
   width: 100%;
-  padding-bottom: 130%;
+  height: 100%;
+  min-height: 500px;
   background: #f0d0d0;
-  border-radius: 12px;
+  border-radius: 0;
 }
 
 /* Right Content */
 .sbt__content-col {
   flex: 1;
+  padding: 40px 40px 40px 40px;
 }
 
 .sbt__heading {
@@ -245,7 +256,7 @@
 /* Product Card */
 .sbt__card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
   border: 1px solid #eee;
   display: flex;
@@ -269,7 +280,7 @@
   width: 100%;
   height: 150px;
   background: #f5f5f5;
-  border-radius: 6px;
+  border-radius: 0;
 }
 
 .sbt__card-info {
@@ -325,10 +336,10 @@
   display: block;
   width: 100%;
   padding: 10px;
-  background: #2a9d8f;
+  background: #000000;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 0;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
@@ -340,7 +351,35 @@
 }
 
 .sbt__card-btn:hover {
-  background: #238b7e;
+  background: #333;
+  color: #fff;
+}
+
+/* View More */
+.sbt__view-more {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.sbt__view-more-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: transparent;
+  color: #111;
+  border: 2px solid #111;
+  border-radius: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sbt__view-more-btn:hover {
+  background: #111;
   color: #fff;
 }
 
@@ -354,12 +393,21 @@
     flex: none;
     max-width: 100%;
     width: 100%;
+    position: relative;
+    height: 400px;
   }
 
   .sbt__image {
-    max-height: 400px;
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sbt__content-col {
+    padding: 30px 20px;
   }
 }
 
