@@ -121,7 +121,10 @@
                         {% if rating_count > 0 %}
                           <div class="fbp-products__rating-stars">
                             {% for i in (1..5) %}
-                              {% if rating_value >= i %}
+                              {% assign half_value = i | minus: 0.5 %}
+
+{% if rating_value >= half_value %}
+
                                 <span class="fbp-star fbp-star--filled">&#9733;</span>
                               {% elsif rating_value >= i | minus: 0.5 %}
                                 <span class="fbp-star fbp-star--half">&#9733;</span>
