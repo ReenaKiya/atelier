@@ -362,6 +362,7 @@
         "group_KNFc4y",
         "footer_utilities_zVWazC"
       ],
+      "disabled": true,
       "name": "t:names.footer",
       "settings": {
         "content_direction": "column",
