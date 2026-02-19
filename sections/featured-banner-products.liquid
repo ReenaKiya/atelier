@@ -113,36 +113,35 @@
                           >
                         {% endif %}
                       </div>
-                      <h4 class="fbp-products__card-title">{{ product.title }}</h4>
+                      <div class="fbp-products__card-info">
+                        <h4 class="fbp-products__card-title">{{ product.title }}</h4>
 
-                      <div class="fbp-products__card-rating">
-                        {% assign rating_value = product.metafields.reviews.rating.value | default: 0 %}
-                        {% assign rating_count = product.metafields.reviews.rating_count | default: 0 %}
-                        {% if rating_count > 0 %}
-                       <div class="fbp-products__rating-stars">
-  {% for i in (1..5) %}
-    {% assign half_star = i | minus: 0.5 %}
+                        <div class="fbp-products__card-rating">
+                          {% assign rating_value = product.metafields.reviews.rating.value | default: 0 %}
+                          {% assign rating_count = product.metafields.reviews.rating_count | default: 0 %}
+                          {% if rating_count > 0 %}
+                            <div class="fbp-products__rating-stars">
+                              {% for i in (1..5) %}
+                                {% assign half_star = i | minus: 0.5 %}
+                                {% if rating_value >= i %}
+                                  <span class="fbp-star fbp-star--filled">&#9733;</span>
+                                {% elsif rating_value >= half_star %}
+                                  <span class="fbp-star fbp-star--half">&#9733;</span>
+                                {% else %}
+                                  <span class="fbp-star fbp-star--empty">&#9733;</span>
+                                {% endif %}
+                              {% endfor %}
+                            </div>
+                            <span class="fbp-products__rating-count">({{ rating_count }})</span>
+                          {% endif %}
+                        </div>
 
-    {% if rating_value >= i %}
-      <span class="fbp-star fbp-star--filled">&#9733;</span>
-    {% elsif rating_value >= half_star %}
-      <span class="fbp-star fbp-star--half">&#9733;</span>
-    {% else %}
-      <span class="fbp-star fbp-star--empty">&#9733;</span>
-    {% endif %}
-  {% endfor %}
-</div>
-
-
-                          <span class="fbp-products__rating-count">({{ rating_count }})</span>
-                        {% endif %}
-                      </div>
-
-                      <div class="fbp-products__card-price">
-                        <span class="money">{{ product.price | money }}</span>
-                        {% if product.compare_at_price > product.price %}
-                          <span class="fbp-products__card-compare-price">{{ product.compare_at_price | money }}</span>
-                        {% endif %}
+                        <div class="fbp-products__card-price">
+                          <span class="money">{{ product.price | money }}</span>
+                          {% if product.compare_at_price > product.price %}
+                            <span class="fbp-products__card-compare-price">{{ product.compare_at_price | money }}</span>
+                          {% endif %}
+                        </div>
                       </div>
                     </a>
 
@@ -255,11 +254,11 @@
 
 .fbp-banner__title {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: clamp(28px, 4vw, 42px);
-  font-weight: 800;
+  font-size: 20px;
+  font-weight: 400;
   color: var(--fbp-heading-color);
   margin: 0 0 12px;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .fbp-banner__description {
@@ -279,14 +278,14 @@
 
 .fbp-banner__button {
   display: inline-block;
-  padding: 12px 28px;
+  padding: 9px 35px;
   background: var(--fbp-btn-bg);
   color: var(--fbp-btn-text);
   border: 1px solid var(--fbp-btn-border);
-  border-radius: 6px;
+  border-radius: 3px;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -303,11 +302,11 @@
 
 .fbp-products__heading {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--fbp-card-bg);
+  font-size: 28px;
+  font-weight: 400;
+  color: #602124;
   text-align: center;
-  margin: 0 0 20px;
+  margin: 0 0 30px;
 }
 
 /* Slider */
@@ -365,7 +364,7 @@
 .fbp-products__card {
   background: var(--fbp-card-bg);
   border: 1px solid var(--fbp-card-border);
-  border-radius: 10px;
+  border-radius: unset;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -377,12 +376,12 @@
   flex-direction: column;
   text-decoration: none;
   flex: 1;
-  padding: 12px 12px 0;
+  padding: 0px;
 }
 
 .fbp-products__card-image {
   background: #fff;
-  border-radius: 8px;
+  border-radius: 0px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -395,6 +394,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.fbp-products__card-info {
+  padding: 10px 15px;
 }
 
 .fbp-products__card-title {
