@@ -1400,20 +1400,23 @@
         "bg_color": "#fce4ec"
       }
     },
-    "featured_banner_products_FbpNew": {
+    "featured_banner_products_tGYDYy": {
       "type": "featured-banner-products",
       "name": "Featured Banner Products",
       "settings": {
+        "banner_subtitle": "",
         "banner_title": "Valentine's Day Gifts for Her",
         "banner_description": "Valentines gifts to honour your love story",
         "btn_text_label": "Valentines Day Gifts",
+        "btn_link": "",
         "content_position": "left",
+        "collection": "",
         "products_heading": "Best Gifts for Valentine's Day",
         "products_limit": 10,
         "products_per_view": 5,
         "bg_color": "#fadddd",
         "banner_overlay_color": "#000000",
-        "banner_overlay_opacity": 0.0,
+        "banner_overlay_opacity": 0,
         "text_color": "#efefef",
         "heading_color": "#ffffff",
         "btn_bg": "#ffffff",
@@ -1445,6 +1448,6 @@
     "find_your_style_dgFrbG",
     "countdown_banner_b6rcjC",
     "shop_by_type_hVmC3P",
-    "featured_banner_products_FbpNew"
+    "featured_banner_products_tGYDYy"
   ]
 }
