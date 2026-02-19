@@ -678,6 +678,57 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "custom_footer_Ft7kXp": {
+      "type": "custom-footer",
+      "blocks": {
+        "menu_col_info": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Information"
+          }
+        },
+        "menu_col_policy": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "Business Policy"
+          }
+        },
+        "menu_col_guide": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "MP's Guide To"
+          }
+        },
+        "menu_col_ears": {
+          "type": "menu_column",
+          "settings": {
+            "heading": "All Ears"
+          }
+        },
+        "social_col_follow": {
+          "type": "social_column",
+          "settings": {
+            "heading": "Follow us"
+          }
+        }
+      },
+      "block_order": [
+        "menu_col_info",
+        "menu_col_policy",
+        "menu_col_guide",
+        "menu_col_ears",
+        "social_col_follow"
+      ],
+      "name": "Custom Footer",
+      "settings": {
+        "bg_color": "#111111",
+        "text_color": "#cccccc",
+        "heading_color": "#ffffff",
+        "bottom_bar_border": "#333333",
+        "copyright_text": "Copyright © 2026 Monster Piercing.",
+        "show_payment_icons": true
+      }
     }
   },
   "order": [
@@ -690,6 +741,7 @@
     "find_your_style_dgFrbG",
     "countdown_banner_b6rcjC",
     "shop_by_type_hVmC3P",
-    "featured_banner_products_tGYDYy"
+    "featured_banner_products_tGYDYy",
+    "custom_footer_Ft7kXp"
   ]
 }

@@ -142,23 +142,23 @@
                             <span class="fbp-products__card-compare-price">{{ product.compare_at_price | money }}</span>
                           {% endif %}
                         </div>
+
+                        {% if product.available %}
+                          <button
+                            class="fbp-products__card-atc"
+                            data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                            data-product-available="true"
+                            type="button"
+                          >
+                            Add to Cart
+                          </button>
+                        {% else %}
+                          <button class="fbp-products__card-atc fbp-products__card-atc--sold-out" disabled type="button">
+                            Sold Out
+                          </button>
+                        {% endif %}
                       </div>
                     </a>
-
-                    {% if product.available %}
-                      <button
-                        class="fbp-products__card-atc"
-                        data-variant-id="{{ product.selected_or_first_available_variant.id }}"
-                        data-product-available="true"
-                        type="button"
-                      >
-                        Add to Cart
-                      </button>
-                    {% else %}
-                      <button class="fbp-products__card-atc fbp-products__card-atc--sold-out" disabled type="button">
-                        Sold Out
-                      </button>
-                    {% endif %}
                   </div>
                 </div>
               {% endfor %}
@@ -341,8 +341,8 @@
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--fbp-card-bg);
-  background: #fff;
-  color: var(--fbp-card-bg);
+  background: #602124;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -352,8 +352,8 @@
 }
 
 .fbp-products__nav:hover {
-  background: var(--fbp-card-bg);
-  color: #fff;
+  background: #fff;
+  color: #602124;
 }
 
 .fbp-products__nav svg {
@@ -364,11 +364,17 @@
 .fbp-products__card {
   background: var(--fbp-card-bg);
   border: 1px solid var(--fbp-card-border);
-  border-radius: unset;
+  border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
+  transition: all 0.3s ease;
+}
+
+.fbp-products__card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 .fbp-products__card-link {
@@ -479,7 +485,7 @@
   color: var(--fbp-btn-text);
   border: none;
   border-top: 1px solid var(--fbp-card-border);
-  border-radius: 0 0 10px 10px;
+  border-radius: 4px;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
