@@ -17,9 +17,107 @@
       ],
       "name": "As Seen In",
       "settings": {}
+    },
+    "shop_by_type_MgWnXH": {
+      "type": "shop-by-type",
+      "blocks": {
+        "tab_JjDBiQ": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Ear",
+            "collection": ""
+          }
+        },
+        "tab_mFtb3k": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Nose",
+            "collection": ""
+          }
+        },
+        "tab_hT8Kwg": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Lips",
+            "collection": ""
+          }
+        },
+        "tab_QWCfnx": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "More",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_JjDBiQ",
+        "tab_mFtb3k",
+        "tab_hT8Kwg",
+        "tab_QWCfnx"
+      ],
+      "name": "Shop by Type",
+      "settings": {
+        "heading": "Shop by Type",
+        "bg_color": "#fce4ec"
+      }
+    },
+    "find_your_style_8HTpnc": {
+      "type": "find-your-style",
+      "blocks": {
+        "style_tab_ewV3RB": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Luxe",
+            "collection": "",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_yhVNxN": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Amour",
+            "collection": "",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_KrTH6B": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Mystic",
+            "collection": "",
+            "style_title": "Styles",
+            "bg_color": "#f3e5f5"
+          }
+        },
+        "style_tab_w49tJA": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Celestial",
+            "collection": "",
+            "style_title": "Styles",
+            "bg_color": "#e8eaf6"
+          }
+        }
+      },
+      "block_order": [
+        "style_tab_ewV3RB",
+        "style_tab_yhVNxN",
+        "style_tab_KrTH6B",
+        "style_tab_w49tJA"
+      ],
+      "name": "Find Your Style",
+      "settings": {
+        "heading": "Find Your Style",
+        "subtext": "Discover the pieces that define your look"
+      }
     }
   },
   "order": [
-    "as_seen_in_Fd8yFr"
+    "as_seen_in_Fd8yFr",
+    "shop_by_type_MgWnXH",
+    "find_your_style_8HTpnc"
   ]
 }
