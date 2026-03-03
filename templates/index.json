@@ -26,6 +26,7 @@
           "settings": {
             "tab_label": "Luxe",
             "collection": "",
+            "bg_image": "shopify://shop_images/luxe_1.webp",
             "style_title": "Styles",
             "bg_color": "#fce4ec"
           }
