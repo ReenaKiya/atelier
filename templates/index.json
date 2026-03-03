@@ -34,10 +34,10 @@
           "type": "style_tab",
           "settings": {
             "tab_label": "Amour",
-            "collection": "",
+            "collection": "ear",
             "bg_image": "shopify://shop_images/luxe_1.webp",
             "style_title": "Styles",
-            "bg_color": "#fce4ec"
+            "bg_color": "#ffffff"
           }
         },
         "style_tab_KrTH6B": {
