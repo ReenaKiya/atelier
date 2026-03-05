@@ -36,7 +36,7 @@
           "settings": {
             "tab_label": "Amour",
             "collection": "amour",
-            "bg_image": "shopify://shop_images/luxe_1.webp",
+            "bg_image": "shopify://shop_images/amour.png",
             "style_title": "Styles",
             "bg_color": "#ffffff"
           }
