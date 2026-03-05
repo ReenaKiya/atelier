@@ -35,7 +35,7 @@
           "type": "style_tab",
           "settings": {
             "tab_label": "Amour",
-            "collection": "ear",
+            "collection": "amour",
             "bg_image": "shopify://shop_images/luxe_1.webp",
             "style_title": "Styles",
             "bg_color": "#ffffff"
