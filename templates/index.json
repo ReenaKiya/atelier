@@ -45,7 +45,7 @@
           "type": "style_tab",
           "settings": {
             "tab_label": "Mystic",
-            "collection": "",
+            "collection": "mystic",
             "bg_image": "shopify://shop_images/mystic.png",
             "style_title": "Styles",
             "bg_color": "#f3e5f5"
