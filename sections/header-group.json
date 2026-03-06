@@ -27,6 +27,14 @@
     "header_nav": {
       "type": "header-navigation",
       "blocks": {
+        "featured_product_cA9W8e": {
+          "type": "featured_product",
+          "settings": {
+            "parent_menu_title": "'Solid Gold', 'By Jewellery Type'",
+            "category_title": "",
+            "product": "14k-gold"
+          }
+        },
         "featured_product_LwTJ4q": {
           "type": "featured_product",
           "settings": {
@@ -37,6 +45,7 @@
         }
       },
       "block_order": [
+        "featured_product_cA9W8e",
         "featured_product_LwTJ4q"
       ],
       "settings": {
