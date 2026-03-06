@@ -26,6 +26,19 @@
     },
     "header_nav": {
       "type": "header-navigation",
+      "blocks": {
+        "featured_product_LwTJ4q": {
+          "type": "featured_product",
+          "settings": {
+            "parent_menu_title": " 'Solid Gold', 'By Jewellery Type'",
+            "category_title": "",
+            "product": "9k-gold-classic"
+          }
+        }
+      },
+      "block_order": [
+        "featured_product_LwTJ4q"
+      ],
       "settings": {
         "menu": "monsterheader"
       }
