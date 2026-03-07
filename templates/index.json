@@ -287,62 +287,6 @@
         "padding-block-end": 0
       }
     },
-    "find_your_style_8HTpnc": {
-      "type": "find-your-style",
-      "blocks": {
-        "style_tab_ewV3RB": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Luxe",
-            "collection": "luxe",
-            "bg_image": "shopify://shop_images/luxe_1.webp",
-            "style_title": "Styles",
-            "bg_color": "#fce4ec"
-          }
-        },
-        "style_tab_yhVNxN": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Amour",
-            "collection": "amour",
-            "bg_image": "shopify://shop_images/amour.png",
-            "style_title": "Styles",
-            "bg_color": "#ffffff"
-          }
-        },
-        "style_tab_KrTH6B": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Mystic",
-            "collection": "mystic",
-            "bg_image": "shopify://shop_images/mystic.png",
-            "style_title": "Styles",
-            "bg_color": "#f3e5f5"
-          }
-        },
-        "style_tab_w49tJA": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Celestial",
-            "collection": "celestial",
-            "bg_image": "shopify://shop_images/celestial.png",
-            "style_title": "Styles",
-            "bg_color": "#e8eaf6"
-          }
-        }
-      },
-      "block_order": [
-        "style_tab_ewV3RB",
-        "style_tab_yhVNxN",
-        "style_tab_KrTH6B",
-        "style_tab_w49tJA"
-      ],
-      "name": "Find Your Style",
-      "settings": {
-        "heading": "Find Your Style",
-        "subtext": "Discover the pieces that define your look"
-      }
-    },
     "icon_marquee_9Ee3kD": {
       "type": "icon-marquee",
       "blocks": {
@@ -425,10 +369,66 @@
       "settings": {
         "speed": 20,
         "icon_size": 90,
-        "background_color": "#f5f5f5",
-        "border_color": "#c41e3a",
+        "background_color": "#ffffff",
+        "border_color": "#ffffff",
         "padding_top": 20,
         "padding_bottom": 20
+      }
+    },
+    "find_your_style_8HTpnc": {
+      "type": "find-your-style",
+      "blocks": {
+        "style_tab_ewV3RB": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Luxe",
+            "collection": "luxe",
+            "bg_image": "shopify://shop_images/luxe_1.webp",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_yhVNxN": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Amour",
+            "collection": "amour",
+            "bg_image": "shopify://shop_images/amour.png",
+            "style_title": "Styles",
+            "bg_color": "#ffffff"
+          }
+        },
+        "style_tab_KrTH6B": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Mystic",
+            "collection": "mystic",
+            "bg_image": "shopify://shop_images/mystic.png",
+            "style_title": "Styles",
+            "bg_color": "#f3e5f5"
+          }
+        },
+        "style_tab_w49tJA": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Celestial",
+            "collection": "celestial",
+            "bg_image": "shopify://shop_images/celestial.png",
+            "style_title": "Styles",
+            "bg_color": "#e8eaf6"
+          }
+        }
+      },
+      "block_order": [
+        "style_tab_ewV3RB",
+        "style_tab_yhVNxN",
+        "style_tab_KrTH6B",
+        "style_tab_w49tJA"
+      ],
+      "name": "Find Your Style",
+      "settings": {
+        "heading": "Find Your Style",
+        "subtext": "Discover the pieces that define your look"
       }
     },
     "trust_icons_LKdi9X": {
