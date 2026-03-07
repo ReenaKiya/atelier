@@ -398,7 +398,7 @@
         "tab_GCprjP"
       ],
       "custom_css": [
-        ".sbt__heading {font-weight: 700; }"
+        ".sbt__heading {font-weight: 700;}"
       ],
       "name": "Shop by Type",
       "settings": {
@@ -535,6 +535,56 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
+    },
+    "image_text_carousel_nediy3": {
+      "type": "image-text-carousel",
+      "blocks": {
+        "slide_RDzw6D": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify://shop_images/g4_13.avif",
+            "image_right": "shopify://shop_images/g4_3dc804a3-f6ea-4654-927c-621bf03af1aa.avif",
+            "heading": "Your new everyday stones",
+            "heading_color": "#6B2D8B",
+            "button_label": "SHOP NATURAL STONES",
+            "button_link": "",
+            "button_color": "#6B2D8B"
+          }
+        },
+        "slide_xXXLDK": {
+          "type": "slide",
+          "settings": {
+            "image_left": "shopify://shop_images/24_e3b94782-1478-4924-8d38-2098385dd174.avif",
+            "image_right": "shopify://shop_images/10_d3619bfa-eadd-4de4-ae2b-a54127508920.avif",
+            "heading": "Discover our collection",
+            "heading_color": "#6B2D8B",
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "button_color": "#6B2D8B"
+          }
+        },
+        "slide_XW6p8p": {
+          "type": "slide",
+          "settings": {
+            "heading": "Timeless elegance",
+            "heading_color": "#6B2D8B",
+            "button_label": "EXPLORE MORE",
+            "button_link": "",
+            "button_color": "#6B2D8B"
+          }
+        }
+      },
+      "block_order": [
+        "slide_RDzw6D",
+        "slide_xXXLDK",
+        "slide_XW6p8p"
+      ],
+      "name": "Image Text Carousel",
+      "settings": {
+        "autoplay_speed": 5,
+        "color_scheme": "",
+        "height": "medium"
+      }
     }
   },
   "order": [
@@ -543,6 +593,7 @@
     "icon_marquee_9Ee3kD",
     "shop_by_type_7pM9f4",
     "find_your_style_8HTpnc",
-    "trust_icons_LKdi9X"
+    "trust_icons_LKdi9X",
+    "image_text_carousel_nediy3"
   ]
 }
