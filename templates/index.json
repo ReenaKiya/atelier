@@ -104,14 +104,16 @@
         "icon_DYLMmh": {
           "type": "icon",
           "settings": {
-            "label": "Tongue",
+            "image": "shopify://shop_images/EAR.webp",
+            "label": "Ear",
             "link": ""
           }
         },
         "icon_fyhpJz": {
           "type": "icon",
           "settings": {
-            "label": "Nose",
+            "image": "shopify://shop_images/lip.webp",
+            "label": "Lips",
             "link": ""
           }
         },
