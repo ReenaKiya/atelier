@@ -416,7 +416,7 @@
       "name": "Shop by Type",
       "settings": {
         "image": "shopify://shop_images/new-arrivels.webp",
-        "heading": "Shop by Type",
+        "heading": "New Arrivals",
         "bg_color": "#fce4ec"
       }
     },
