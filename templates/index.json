@@ -120,7 +120,8 @@
         "icon_KzWFVx": {
           "type": "icon",
           "settings": {
-            "label": "Surface",
+            "image": "shopify://shop_images/nose.webp",
+            "label": "Nose",
             "link": ""
           }
         },
