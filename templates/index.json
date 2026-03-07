@@ -391,27 +391,11 @@
             "tab_label": "Nose",
             "collection": ""
           }
-        },
-        "tab_YHXyyE": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Lips",
-            "collection": ""
-          }
-        },
-        "tab_M6a3g3": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "More",
-            "collection": ""
-          }
         }
       },
       "block_order": [
         "tab_rz8DHt",
-        "tab_GCprjP",
-        "tab_YHXyyE",
-        "tab_M6a3g3"
+        "tab_GCprjP"
       ],
       "name": "Shop by Type",
       "settings": {
