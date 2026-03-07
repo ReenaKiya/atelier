@@ -73,10 +73,94 @@
         "heading": "Find Your Style",
         "subtext": "Discover the pieces that define your look"
       }
+    },
+    "icon_marquee_9Ee3kD": {
+      "type": "icon-marquee",
+      "blocks": {
+        "icon_Qpmn4Q": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/stretched_1.webp",
+            "label": "Stretched",
+            "link": ""
+          }
+        },
+        "icon_BrUYWt": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Belly.webp",
+            "label": "Belly",
+            "link": ""
+          }
+        },
+        "icon_zP87nQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/eyebrow.webp",
+            "label": "Eye",
+            "link": ""
+          }
+        },
+        "icon_DYLMmh": {
+          "type": "icon",
+          "settings": {
+            "label": "Tongue",
+            "link": ""
+          }
+        },
+        "icon_fyhpJz": {
+          "type": "icon",
+          "settings": {
+            "label": "Nose",
+            "link": ""
+          }
+        },
+        "icon_KzWFVx": {
+          "type": "icon",
+          "settings": {
+            "label": "Surface",
+            "link": ""
+          }
+        },
+        "icon_kENy8V": {
+          "type": "icon",
+          "settings": {
+            "label": "Stretch",
+            "link": ""
+          }
+        },
+        "icon_Xe7WUf": {
+          "type": "icon",
+          "settings": {
+            "label": "Lips",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_Qpmn4Q",
+        "icon_BrUYWt",
+        "icon_zP87nQ",
+        "icon_DYLMmh",
+        "icon_fyhpJz",
+        "icon_KzWFVx",
+        "icon_kENy8V",
+        "icon_Xe7WUf"
+      ],
+      "name": "Icon Marquee",
+      "settings": {
+        "speed": 20,
+        "icon_size": 90,
+        "background_color": "#F5F5F5",
+        "border_color": "#c41e3a",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "as_seen_in_Fd8yFr",
-    "find_your_style_8HTpnc"
+    "find_your_style_8HTpnc",
+    "icon_marquee_9Ee3kD"
   ]
 }
