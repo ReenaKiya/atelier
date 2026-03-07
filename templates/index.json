@@ -227,7 +227,7 @@
                 "text_i3wHtc": {
                   "type": "text",
                   "settings": {
-                    "text": "<h2>Bestsellers</h2>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
@@ -252,7 +252,7 @@
                 "text_L4wRbk": {
                   "type": "text",
                   "settings": {
-                    "text": "<p>Discover the bestsellers that have captured the hearts of our customers with their perfect blend of functionality and style.</p>",
+                    "text": "",
                     "width": "fit-content",
                     "max_width": "normal",
                     "alignment": "left",
