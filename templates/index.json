@@ -161,11 +161,131 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "trust_icons_LKdi9X": {
+      "type": "trust-icons",
+      "blocks": {
+        "badge_RAgFj7": {
+          "type": "badge",
+          "settings": {
+            "icon": "truck",
+            "icon_size": 44,
+            "text": "Free shipping",
+            "link": ""
+          }
+        },
+        "badge_EcdfXG": {
+          "type": "badge",
+          "settings": {
+            "icon": "bottle",
+            "icon_size": 44,
+            "text": "Piercing Aftercare",
+            "link": ""
+          }
+        },
+        "badge_6mbCGD": {
+          "type": "badge",
+          "settings": {
+            "icon": "return",
+            "icon_size": 44,
+            "text": "30-days returns",
+            "link": ""
+          }
+        },
+        "badge_rQLJQq": {
+          "type": "badge",
+          "settings": {
+            "icon": "star",
+            "icon_size": 44,
+            "text": "4.8/5 Reviews",
+            "link": ""
+          }
+        },
+        "badge_UY9VeJ": {
+          "type": "badge",
+          "settings": {
+            "icon": "check_box",
+            "icon_size": 44,
+            "text": "Premium Quality",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "badge_RAgFj7",
+        "badge_EcdfXG",
+        "badge_6mbCGD",
+        "badge_rQLJQq",
+        "badge_UY9VeJ"
+      ],
+      "name": "Trust icons",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "icon_color": "#b6465a",
+        "text_size": 16,
+        "icon_margin_bottom": 10,
+        "gap": 48,
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "border_color": "#00000014",
+        "padding-block-start": 24,
+        "padding-block-end": 24,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
+    "shop_by_type_7pM9f4": {
+      "type": "shop-by-type",
+      "blocks": {
+        "tab_rz8DHt": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Ear",
+            "collection": ""
+          }
+        },
+        "tab_GCprjP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Nose",
+            "collection": ""
+          }
+        },
+        "tab_YHXyyE": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Lips",
+            "collection": ""
+          }
+        },
+        "tab_M6a3g3": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "More",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_rz8DHt",
+        "tab_GCprjP",
+        "tab_YHXyyE",
+        "tab_M6a3g3"
+      ],
+      "name": "Shop by Type",
+      "settings": {
+        "image": "shopify://shop_images/new-arrivels.webp",
+        "heading": "Shop by Type",
+        "bg_color": "#fce4ec"
+      }
     }
   },
   "order": [
     "as_seen_in_Fd8yFr",
     "find_your_style_8HTpnc",
-    "icon_marquee_9Ee3kD"
+    "icon_marquee_9Ee3kD",
+    "trust_icons_LKdi9X",
+    "shop_by_type_7pM9f4"
   ]
 }
