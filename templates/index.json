@@ -18,268 +18,6 @@
       "name": "As Seen In",
       "settings": {}
     },
-    "find_your_style_8HTpnc": {
-      "type": "find-your-style",
-      "blocks": {
-        "style_tab_ewV3RB": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Luxe",
-            "collection": "luxe",
-            "bg_image": "shopify://shop_images/luxe_1.webp",
-            "style_title": "Styles",
-            "bg_color": "#fce4ec"
-          }
-        },
-        "style_tab_yhVNxN": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Amour",
-            "collection": "amour",
-            "bg_image": "shopify://shop_images/amour.png",
-            "style_title": "Styles",
-            "bg_color": "#ffffff"
-          }
-        },
-        "style_tab_KrTH6B": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Mystic",
-            "collection": "mystic",
-            "bg_image": "shopify://shop_images/mystic.png",
-            "style_title": "Styles",
-            "bg_color": "#f3e5f5"
-          }
-        },
-        "style_tab_w49tJA": {
-          "type": "style_tab",
-          "settings": {
-            "tab_label": "Celestial",
-            "collection": "celestial",
-            "bg_image": "shopify://shop_images/celestial.png",
-            "style_title": "Styles",
-            "bg_color": "#e8eaf6"
-          }
-        }
-      },
-      "block_order": [
-        "style_tab_ewV3RB",
-        "style_tab_yhVNxN",
-        "style_tab_KrTH6B",
-        "style_tab_w49tJA"
-      ],
-      "name": "Find Your Style",
-      "settings": {
-        "heading": "Find Your Style",
-        "subtext": "Discover the pieces that define your look"
-      }
-    },
-    "icon_marquee_9Ee3kD": {
-      "type": "icon-marquee",
-      "blocks": {
-        "icon_Qpmn4Q": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/stretched_1.webp",
-            "label": "Stretched",
-            "link": ""
-          }
-        },
-        "icon_BrUYWt": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Belly.webp",
-            "label": "Belly",
-            "link": ""
-          }
-        },
-        "icon_zP87nQ": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/eyebrow.webp",
-            "label": "Eye",
-            "link": ""
-          }
-        },
-        "icon_DYLMmh": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/EAR.webp",
-            "label": "Ear",
-            "link": ""
-          }
-        },
-        "icon_fyhpJz": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/lip.webp",
-            "label": "Lips",
-            "link": ""
-          }
-        },
-        "icon_KzWFVx": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/nose.webp",
-            "label": "Nose",
-            "link": ""
-          }
-        },
-        "icon_kENy8V": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/Tunge.webp",
-            "label": "tongue",
-            "link": ""
-          }
-        },
-        "icon_Xe7WUf": {
-          "type": "icon",
-          "settings": {
-            "image": "shopify://shop_images/surface.webp",
-            "label": "Surface",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "icon_Qpmn4Q",
-        "icon_BrUYWt",
-        "icon_zP87nQ",
-        "icon_DYLMmh",
-        "icon_fyhpJz",
-        "icon_KzWFVx",
-        "icon_kENy8V",
-        "icon_Xe7WUf"
-      ],
-      "name": "Icon Marquee",
-      "settings": {
-        "speed": 20,
-        "icon_size": 90,
-        "background_color": "#f5f5f5",
-        "border_color": "#c41e3a",
-        "padding_top": 20,
-        "padding_bottom": 20
-      }
-    },
-    "trust_icons_LKdi9X": {
-      "type": "trust-icons",
-      "blocks": {
-        "badge_RAgFj7": {
-          "type": "badge",
-          "settings": {
-            "icon": "truck",
-            "icon_size": 44,
-            "text": "Free shipping",
-            "link": ""
-          }
-        },
-        "badge_EcdfXG": {
-          "type": "badge",
-          "settings": {
-            "icon": "bottle",
-            "icon_size": 44,
-            "text": "Piercing Aftercare",
-            "link": ""
-          }
-        },
-        "badge_6mbCGD": {
-          "type": "badge",
-          "settings": {
-            "icon": "return",
-            "icon_size": 44,
-            "text": "30-days returns",
-            "link": ""
-          }
-        },
-        "badge_rQLJQq": {
-          "type": "badge",
-          "settings": {
-            "icon": "star",
-            "icon_size": 44,
-            "text": "4.8/5 Reviews",
-            "link": ""
-          }
-        },
-        "badge_UY9VeJ": {
-          "type": "badge",
-          "settings": {
-            "icon": "check_box",
-            "icon_size": 44,
-            "text": "Premium Quality",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "badge_RAgFj7",
-        "badge_EcdfXG",
-        "badge_6mbCGD",
-        "badge_rQLJQq",
-        "badge_UY9VeJ"
-      ],
-      "name": "Trust icons",
-      "settings": {
-        "color_scheme": "",
-        "section_width": "page-width",
-        "icon_color": "#b6465a",
-        "text_size": 16,
-        "icon_margin_bottom": 10,
-        "gap": 48,
-        "show_top_border": false,
-        "show_bottom_border": false,
-        "border_color": "#00000014",
-        "padding-block-start": 24,
-        "padding-block-end": 24,
-        "padding-inline-start": 0,
-        "padding-inline-end": 0
-      }
-    },
-    "shop_by_type_7pM9f4": {
-      "type": "shop-by-type",
-      "blocks": {
-        "tab_rz8DHt": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Ear",
-            "collection": ""
-          }
-        },
-        "tab_GCprjP": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Nose",
-            "collection": ""
-          }
-        },
-        "tab_YHXyyE": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Lips",
-            "collection": ""
-          }
-        },
-        "tab_M6a3g3": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "More",
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_rz8DHt",
-        "tab_GCprjP",
-        "tab_YHXyyE",
-        "tab_M6a3g3"
-      ],
-      "name": "Shop by Type",
-      "settings": {
-        "image": "shopify://shop_images/new-arrivels.webp",
-        "heading": "Shop by Type",
-        "bg_color": "#fce4ec"
-      }
-    },
     "slideshow_M7QttY": {
       "type": "slideshow",
       "blocks": {
@@ -580,14 +318,276 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "find_your_style_8HTpnc": {
+      "type": "find-your-style",
+      "blocks": {
+        "style_tab_ewV3RB": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Luxe",
+            "collection": "luxe",
+            "bg_image": "shopify://shop_images/luxe_1.webp",
+            "style_title": "Styles",
+            "bg_color": "#fce4ec"
+          }
+        },
+        "style_tab_yhVNxN": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Amour",
+            "collection": "amour",
+            "bg_image": "shopify://shop_images/amour.png",
+            "style_title": "Styles",
+            "bg_color": "#ffffff"
+          }
+        },
+        "style_tab_KrTH6B": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Mystic",
+            "collection": "mystic",
+            "bg_image": "shopify://shop_images/mystic.png",
+            "style_title": "Styles",
+            "bg_color": "#f3e5f5"
+          }
+        },
+        "style_tab_w49tJA": {
+          "type": "style_tab",
+          "settings": {
+            "tab_label": "Celestial",
+            "collection": "celestial",
+            "bg_image": "shopify://shop_images/celestial.png",
+            "style_title": "Styles",
+            "bg_color": "#e8eaf6"
+          }
+        }
+      },
+      "block_order": [
+        "style_tab_ewV3RB",
+        "style_tab_yhVNxN",
+        "style_tab_KrTH6B",
+        "style_tab_w49tJA"
+      ],
+      "name": "Find Your Style",
+      "settings": {
+        "heading": "Find Your Style",
+        "subtext": "Discover the pieces that define your look"
+      }
+    },
+    "icon_marquee_9Ee3kD": {
+      "type": "icon-marquee",
+      "blocks": {
+        "icon_Qpmn4Q": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/stretched_1.webp",
+            "label": "Stretched",
+            "link": ""
+          }
+        },
+        "icon_BrUYWt": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Belly.webp",
+            "label": "Belly",
+            "link": ""
+          }
+        },
+        "icon_zP87nQ": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/eyebrow.webp",
+            "label": "Eye",
+            "link": ""
+          }
+        },
+        "icon_DYLMmh": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/EAR.webp",
+            "label": "Ear",
+            "link": ""
+          }
+        },
+        "icon_fyhpJz": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/lip.webp",
+            "label": "Lips",
+            "link": ""
+          }
+        },
+        "icon_KzWFVx": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/nose.webp",
+            "label": "Nose",
+            "link": ""
+          }
+        },
+        "icon_kENy8V": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/Tunge.webp",
+            "label": "tongue",
+            "link": ""
+          }
+        },
+        "icon_Xe7WUf": {
+          "type": "icon",
+          "settings": {
+            "image": "shopify://shop_images/surface.webp",
+            "label": "Surface",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_Qpmn4Q",
+        "icon_BrUYWt",
+        "icon_zP87nQ",
+        "icon_DYLMmh",
+        "icon_fyhpJz",
+        "icon_KzWFVx",
+        "icon_kENy8V",
+        "icon_Xe7WUf"
+      ],
+      "name": "Icon Marquee",
+      "settings": {
+        "speed": 20,
+        "icon_size": 90,
+        "background_color": "#f5f5f5",
+        "border_color": "#c41e3a",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "trust_icons_LKdi9X": {
+      "type": "trust-icons",
+      "blocks": {
+        "badge_RAgFj7": {
+          "type": "badge",
+          "settings": {
+            "icon": "truck",
+            "icon_size": 44,
+            "text": "Free shipping",
+            "link": ""
+          }
+        },
+        "badge_EcdfXG": {
+          "type": "badge",
+          "settings": {
+            "icon": "bottle",
+            "icon_size": 44,
+            "text": "Piercing Aftercare",
+            "link": ""
+          }
+        },
+        "badge_6mbCGD": {
+          "type": "badge",
+          "settings": {
+            "icon": "return",
+            "icon_size": 44,
+            "text": "30-days returns",
+            "link": ""
+          }
+        },
+        "badge_rQLJQq": {
+          "type": "badge",
+          "settings": {
+            "icon": "star",
+            "icon_size": 44,
+            "text": "4.8/5 Reviews",
+            "link": ""
+          }
+        },
+        "badge_UY9VeJ": {
+          "type": "badge",
+          "settings": {
+            "icon": "check_box",
+            "icon_size": 44,
+            "text": "Premium Quality",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "badge_RAgFj7",
+        "badge_EcdfXG",
+        "badge_6mbCGD",
+        "badge_rQLJQq",
+        "badge_UY9VeJ"
+      ],
+      "name": "Trust icons",
+      "settings": {
+        "color_scheme": "",
+        "section_width": "page-width",
+        "icon_color": "#b6465a",
+        "text_size": 16,
+        "icon_margin_bottom": 10,
+        "gap": 48,
+        "show_top_border": false,
+        "show_bottom_border": false,
+        "border_color": "#00000014",
+        "padding-block-start": 24,
+        "padding-block-end": 24,
+        "padding-inline-start": 0,
+        "padding-inline-end": 0
+      }
+    },
+    "shop_by_type_7pM9f4": {
+      "type": "shop-by-type",
+      "blocks": {
+        "tab_rz8DHt": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Ear",
+            "collection": ""
+          }
+        },
+        "tab_GCprjP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Nose",
+            "collection": ""
+          }
+        },
+        "tab_YHXyyE": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Lips",
+            "collection": ""
+          }
+        },
+        "tab_M6a3g3": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "More",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_rz8DHt",
+        "tab_GCprjP",
+        "tab_YHXyyE",
+        "tab_M6a3g3"
+      ],
+      "name": "Shop by Type",
+      "settings": {
+        "image": "shopify://shop_images/new-arrivels.webp",
+        "heading": "Shop by Type",
+        "bg_color": "#fce4ec"
+      }
     }
   },
   "order": [
     "as_seen_in_Fd8yFr",
+    "slideshow_M7QttY",
     "find_your_style_8HTpnc",
     "icon_marquee_9Ee3kD",
     "trust_icons_LKdi9X",
-    "shop_by_type_7pM9f4",
-    "slideshow_M7QttY"
+    "shop_by_type_7pM9f4"
   ]
 }
