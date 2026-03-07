@@ -128,7 +128,8 @@
         "icon_kENy8V": {
           "type": "icon",
           "settings": {
-            "label": "Stretch",
+            "image": "shopify://shop_images/Tunge.webp",
+            "label": "tongue",
             "link": ""
           }
         },
