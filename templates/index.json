@@ -397,6 +397,9 @@
         "tab_rz8DHt",
         "tab_GCprjP"
       ],
+      "custom_css": [
+        ".sbt__heading {font-weight: 700; }"
+      ],
       "name": "Shop by Type",
       "settings": {
         "image": "shopify://shop_images/new-arrivels.webp",
