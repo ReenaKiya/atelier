@@ -375,6 +375,51 @@
         "padding_bottom": 20
       }
     },
+    "shop_by_type_7pM9f4": {
+      "type": "shop-by-type",
+      "blocks": {
+        "tab_rz8DHt": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Ear",
+            "collection": ""
+          }
+        },
+        "tab_GCprjP": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Nose",
+            "collection": ""
+          }
+        },
+        "tab_YHXyyE": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "Lips",
+            "collection": ""
+          }
+        },
+        "tab_M6a3g3": {
+          "type": "tab",
+          "settings": {
+            "tab_label": "More",
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_rz8DHt",
+        "tab_GCprjP",
+        "tab_YHXyyE",
+        "tab_M6a3g3"
+      ],
+      "name": "Shop by Type",
+      "settings": {
+        "image": "shopify://shop_images/new-arrivels.webp",
+        "heading": "Shop by Type",
+        "bg_color": "#fce4ec"
+      }
+    },
     "find_your_style_8HTpnc": {
       "type": "find-your-style",
       "blocks": {
@@ -503,59 +548,14 @@
         "padding-inline-start": 0,
         "padding-inline-end": 0
       }
-    },
-    "shop_by_type_7pM9f4": {
-      "type": "shop-by-type",
-      "blocks": {
-        "tab_rz8DHt": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Ear",
-            "collection": ""
-          }
-        },
-        "tab_GCprjP": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Nose",
-            "collection": ""
-          }
-        },
-        "tab_YHXyyE": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "Lips",
-            "collection": ""
-          }
-        },
-        "tab_M6a3g3": {
-          "type": "tab",
-          "settings": {
-            "tab_label": "More",
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_rz8DHt",
-        "tab_GCprjP",
-        "tab_YHXyyE",
-        "tab_M6a3g3"
-      ],
-      "name": "Shop by Type",
-      "settings": {
-        "image": "shopify://shop_images/new-arrivels.webp",
-        "heading": "Shop by Type",
-        "bg_color": "#fce4ec"
-      }
     }
   },
   "order": [
     "as_seen_in_Fd8yFr",
     "slideshow_M7QttY",
     "icon_marquee_9Ee3kD",
+    "shop_by_type_7pM9f4",
     "find_your_style_8HTpnc",
-    "trust_icons_LKdi9X",
-    "shop_by_type_7pM9f4"
+    "trust_icons_LKdi9X"
   ]
 }
